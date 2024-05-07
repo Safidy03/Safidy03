@@ -115,22 +115,3 @@ def BD_CLONING():
     print(' TOTAL CP ID '+str(len(cps)))
     input(' PRESS ENTER TO BACK  : ')
     MR_ITACHI()
-#------------ method crack def ---------#
-0 comments on commit e73db16
-Comment
- 
-Leave a comment
- 
- You’re not receiving notifications from this thread.
-Footer
-© 2024 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact
-Manage cookies
-Do not share my personal information
-Add files via upload · chrice999/chrice999@e73db16
