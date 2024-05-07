@@ -1,6 +1,6 @@
 
 # Définir le numéro de version
-version_actuelle = "1.5"
+version_actuelle = "2.0"
 
 
 
@@ -63,12 +63,10 @@ logo=(f'''{B}
                                  
                                             
 {warna}--------------------------------------------{B}
- Owner    : {M}CHRICE999{M}
- TOOL NAME : {warna}{P}NEIN{P}{warna}
- GROUPE-FB   : [TERMUX-COMAND]
- STATUE : {H}FREE{H}
- Facebook : {bblue}ITACHI SQ{bblue}
- Tools    : {warna}[{M}VERSION 1.5{warna}]{warna}
+ Owner    : {M}SAFIDY{M}
+ TOOL NAME : {warna}{P}NIAINA{P}{warna}
+ STATUE : {H}PAID{H}
+ Tools    : {warna}[{M}VERSION 2.0{warna}]{warna}
 --------------------------------------------{B}''')
 #-------------linex def -------------#
 def linex():
