@@ -1,7 +1,3 @@
-@@ -1,183 +1,4 @@
-# Définir le numéro de version
-version_actuelle = "1.5"
-
 
 
 import os
