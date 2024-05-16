@@ -210,11 +210,7 @@ def xerx1():
 			elif xerxfire =='5':yaari.submit(freeq,uid,pwx,tl)
 			elif xerxfire =='6':yaari.submit(d,uid,pwx,tl)
 			linex()
-    print(' LE CLONING EST FINI ')
-    print(' TOTAL OK ID '+str(len(oks)))
-    print(' TOTAL CP ID '+str(len(cps)))
-    input(' PRESS ENTER TO BACK  : ')
-    MR_ITACHI()
+			
 #------------ method crack def ---------#
 def method_crack(ids, passlist):
     global oks
