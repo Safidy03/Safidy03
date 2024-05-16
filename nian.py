@@ -88,13 +88,15 @@ logo=(f'''{B}
                                  
 
                                             
+
+{warna}--------------------------------------------{B}
  Owner    : {M}SAFIDINIAINA{M}
  TOOL NAME : {warna}{P}SAFIDY{P}{warna}
  GROUPE-FB   : NONE
  STATUE : {H}PAID{H}
  Facebook : {bblue}SM{bblue}
  Tools    : {warna}[{M}VERSION 2.0{warna}]{warna}
- 
+--------------------------------------------{B}''')
 #-------------linex def -------------#
 def linex():
     print(f'{warna}--------------------------------------------{B}')
@@ -103,6 +105,16 @@ def clear():
     os.system('clear')
     print(logo)
 #-------------main def------------#
+def MR_ITACHI():
+    clear()
+    print(f'{B} [{warna}01{B}] RANDOM CLONING ')
+    print(f'{B} [{warna}00{B}] EXIT TERMINAL ')
+    linex()
+    option=input(f' {B}[{warna}??{B}] CHOISIR MENU >> ')
+    if option in ['01','1']:
+        BD_CLONING()
+    else:
+        exit(' MERCI BEAUCOUP  :)')
 def cek_apk(session,coki):
     w=session.get("https://mbasic.facebook.com/settings/apps/tabbed/?tab=active",cookies={"cookie":coki}).text
     sop = BeautifulSoup(w,"html.parser")
