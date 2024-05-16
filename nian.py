@@ -75,31 +75,36 @@ def __init__(self):
         self.cp = []
         self.loop = 0
 
-logo = (""")
-##     ## ######## ########  ##     ## 
- ##   ##  ##       ##     ##  ##   ##  
-  ## ##   ##       ##     ##   ## ##   
-   ###    ######   ########     ###    
-  ## ##   ##       ##   ##     ## ##   
- ##   ##  ##       ##    ##   ##   ##  
-##     ## ######## ##     ## ##     ## 
+#-------------logo-----------------#
+logo=(f'''{B}
 
-[+]==============================================
-[+] CREATED BY   :  ARYANxROHIT
-[+] FB GROUP     :  TERMUX TEAM INP COMMAND 
-[+] ON GITHUB    :  XERX-XD
-[+] TOOL STATUS  :  RANDOM
-[+] TOOL VIRSION :  0.2
-[+]=============================================="""
 
-xxxx = str(len(ugen))
-#---------------------[LOOP MENU]---------------------#
-loop = 0
-oks = []
-cps = []
-baby =[]
+                                 
+,--.  ,--.,------.,--.,--.  ,--. 
+|  ,'.|  ||  .---'|  ||  ,'.|  | 
+|  |' '  ||  `--, |  ||  |' '  | 
+|  | `   ||  `---.|  ||  | `   | 
+`--'  `--'`------'`--'`--'  `--' 
+                                 
 
-#---------------------[APPLICATION CHECKER]---------------------#
+                                            
+
+{warna}--------------------------------------------{B}
+ Owner    : {M}SAFIDINIAINA{M}
+ TOOL NAME : {warna}{P}SAFIDY{P}{warna}
+ GROUPE-FB   : NONE
+ STATUE : {H}PAID{H}
+ Facebook : {bblue}SM{bblue}
+ Tools    : {warna}[{M}VERSION 2.0{warna}]{warna}
+--------------------------------------------{B}''')
+#-------------linex def -------------#
+def linex():
+    print(f'{warna}--------------------------------------------{B}')
+#-------------clear def -------------#
+def clear():
+    os.system('clear')
+    print(logo)
+#-------------main def------------#
 def cek_apk(session,coki):
     w=session.get("https://mbasic.facebook.com/settings/apps/tabbed/?tab=active",cookies={"cookie":coki}).text
     sop = BeautifulSoup(w,"html.parser")
