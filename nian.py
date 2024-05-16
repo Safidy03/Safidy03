@@ -88,15 +88,13 @@ logo=(f'''{B}
                                  
 
                                             
-
-{warna}--------------------------------------------{B}
  Owner    : {M}SAFIDINIAINA{M}
  TOOL NAME : {warna}{P}SAFIDY{P}{warna}
  GROUPE-FB   : NONE
  STATUE : {H}PAID{H}
  Facebook : {bblue}SM{bblue}
  Tools    : {warna}[{M}VERSION 2.0{warna}]{warna}
---------------------------------------------{B}''')
+ 
 #-------------linex def -------------#
 def linex():
     print(f'{warna}--------------------------------------------{B}')
