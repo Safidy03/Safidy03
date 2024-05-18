@@ -1,57 +1,108 @@
-
-# Définir le numéro de version
-version_actuelle = "1.5"
-
-
-
+from bs4 import BeautifulSoup as sop
+from concurrent.futures import ThreadPoolExecutor as tred
+import os,sys,time,json,random,re,string,platform,base64,platform,uuid
+import requests,random,sys,json,os,re
+from time import sleep
+from os import system
+import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,uuid,ipaddress,calendar,requests,mechanize,bs4,sys,os,subprocess,uuid,requests,sys,random,time,re,base64,json,platform
+import marshal
+import zlib
+import base64
+from datetime import date
+from datetime import datetime
+from time import sleep
+from time import sleep as waktu
+from random import random as acak
+from random import choice as pilih
+from random import randint
+from bs4 import BeautifulSoup
+import requests as ress
+from sys import exit as exit
+#print("WAIT INSTALLING MODULES")
+#os.system("pip install bs4")
+#os.system("pip install requests")
+#os.system("pip install rich")
+###----------[ IMPORT LIBRARY ]---------- ###
+import requests
+import bs4
+import sys
 import os
 import random
-import string 
-import uuid
+import time
+import re
 import json
+import uuid
 import subprocess
-from concurrent.futures import ThreadPoolExecutor as tred
-import requests
-import sys
-import secrets
-import getpass
+import marshal
+import rich
+import shutil
+import webbrowser
+from random import randint
+from concurrent.futures import ThreadPoolExecutor as ThreadPool
+from bs4 import BeautifulSoup as par
+from datetime import date
+from datetime import datetime
+# from rich import print as printer
+from datetime import date
+import marshal
+try:
+    import requests
+    from concurrent.futures import ThreadPoolExecutor as ThreadPool
+    import mechanize
+    from requests.exceptions import ConnectionError
+except ModuleNotFoundError:
+    os.system('pip install mechanize requests futures==2 > /dev/null')
+    os.system('python XERX.py')
+from bs4 import BeautifulSoup
+from datetime import date
+from datetime import datetime
+from time import sleep
+from time import sleep as waktu
 
-# Mot de passe pour déverrouiller le script
-mot_de_passe = "ITACHI2024"
 
-# Demander à l'utilisateur de saisir le mot de passe
-saisie_mot_de_passe = getpass.getpass("Veuillez entrer le mot de passe : ")
 
-# Vérifier si le mot de passe saisi est correct
-if saisie_mot_de_passe == mot_de_passe:
-    print("Mot de passe correct. Exécution de git pull...")
-    # Exécuter la commande git pull
-    try:
-        subprocess.run(["git", "pull"], check=True)
-    except subprocess.CalledProcessError as e:
-        print(f"Erreur lors de l'exécution de git pull : {e}")
-        exit(1)
-    print("Git pull terminé avec succès !")
+##useragent
+ugen2=[]
+ugen=[]
+xerx_xd = []
 
-#-------------color----------------#
-bblack="\033[1;30m"         # Black
-M="\033[1;31m"            # Red
-H="\033[1;32m"         # Green
-byellow="\033[1;33m"        # Yellow
-bblue="\033[1;34m"          # Blue
-P="\033[1;35m"        # Purple
-C="\033[1;36m"          # Cyan
-B="\033[1;37m"         # White
-my_color = [
- B,C,P,H]
-warna = random.choice(my_color)
-oks=[]
-cps=[]
-loop=0
-# Liste des couleurs pour le logo, les lignes et chaque mot
-logo_colors = [B, C, P, H]
-line_colors = [bblack, M, H, byellow, bblue, P, C, B]
-word_colors = [B, C, P, H, M, byellow, bblue, P, C, B]
+try:
+    prox= requests.get('https://api.proxyscrape.com/v2/?request=displayproxies&protocol=socks4&timeout=100000&country=all&ssl=all&anonymity=all').text
+    open('.proxy.txt','w').write(prox)
+except Exception as e:
+    exit(e)
+for xd in range(10000):
+    aa='Mozilla/5.0 (Linux; U; Android 11;'
+    b=random.choice(['6','7','8','9','10','11','12'])
+    c='fr-fr; Redmi Note 11 Build/'
+    d=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+    e=random.randrange(1, 999)
+    f=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+    g='AppleWebKit/537.36 (KHTML, like Gecko) Version/'
+    h=random.randrange(73,100)
+    i='0'
+    j=random.randrange(4200,4900)
+    k=random.randrange(40,150)
+    l=' Chrome/89.0.4389.116 Mobile Safari/537.36 XiaoMi/MiuiBrowser/12.22.0.3-gn'
+    uaku2=f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}'
+    ugen.append(uaku2)
+	def uaku2():
+	try:
+		ua=open('ua2.txt','r').read().splitlines()
+		for ub in ua : 
+			ugen.append(ub)
+	except:
+		a=requests.get('https://github.com/XERX-XD/XD/blob/main/ua2.txt').text
+		ua=open('.ua2.txt','w')
+		aa=re.findall('line">(.*?)<',str(a))
+		for un in aa:
+			ua.write(un+'\n')
+		ua=open('.ua2.txt','r').read().splitlines()
+		
+os.system("clear")
+print("FOLLOW US ON GITHUB")
+os.system("xdg-open https://github.com/XERX-XD")
+#app  check 
 #-------------logo-----------------#
 logo ="""
 ##     ## ######## ########  ##     ## 
@@ -275,10 +326,3 @@ def x(uid,pwx,tl):
 		pass
 #-------------end----------------#
 
-# Générateur de séquence aléatoire
-def generate_random_sequence(length):
-    sequence = [random.choice(string.digits) for _ in range(length)]
-    return sequence
-
-# Appel à la fonction MR_ITACHI pour démarrer le programme
-MR_ITACHI()
