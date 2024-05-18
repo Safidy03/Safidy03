@@ -86,23 +86,7 @@ for xd in range(10000):
     l=' Chrome/89.0.4389.116 Mobile Safari/537.36 XiaoMi/MiuiBrowser/12.22.0.3-gn'
     uaku2=f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}'
     ugen.append(uaku2)
-	def uaku2():
-	try:
-		ua=open('ua2.txt','r').read().splitlines()
-		for ub in ua : 
-			ugen.append(ub)
-	except:
-		a=requests.get('https://github.com/XERX-XD/XD/blob/main/ua2.txt').text
-		ua=open('.ua2.txt','w')
-		aa=re.findall('line">(.*?)<',str(a))
-		for un in aa:
-			ua.write(un+'\n')
-		ua=open('.ua2.txt','r').read().splitlines()
-		
-os.system("clear")
-print("FOLLOW US ON GITHUB")
-os.system("xdg-open https://github.com/XERX-XD")
-#app  check 
+
 #-------------logo-----------------#
 logo ="""
 ##     ## ######## ########  ##     ## 
