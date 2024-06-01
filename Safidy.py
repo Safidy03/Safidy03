@@ -1,4 +1,4 @@
-Hello# Définir le numéro de version
+# Définir le numéro de version
 version_actuelle = "2.0"
 
 
