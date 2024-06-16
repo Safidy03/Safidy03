@@ -95,7 +95,8 @@ def MR_ITACHI():
 def BD_CLONING():
     user=[]
     clear()
-    print('  CODE SIM MALAGASY : [032] [034] [038] [033]')
+    print(' CODE SIM MALAGASY : [+26132] [+26134] [+26138] [+26133]')
+    print(' 261=0 Madagascar : [032] [034] [038] [033]')
     code=input(' ENTER SIM CODE >> ')
     linex()
     print(' EXAMPLE LIMIT : [1000] [2000] [5000] [10000]')
